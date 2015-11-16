@@ -32,4 +32,4 @@ We've uploaded this class libary to [nuget](https://www.nuget.org/packages/trade
 
 In Visual Studio, type the following commmand in the `Package Manager Console`:
 
-    Install-Package tradera.net
+    Install-Package tradera.net -Pre
