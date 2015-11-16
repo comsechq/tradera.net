@@ -20,50 +20,40 @@ namespace TraderaWebService.SearchService {
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.SearchService.SearchResponse Search(TraderaWebService.SearchService.SearchRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/Search", ReplyAction="*")]
-        System.IAsyncResult BeginSearch(TraderaWebService.SearchService.SearchRequest request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.SearchService.SearchResponse EndSearch(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/Search", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.SearchService.SearchResponse> SearchAsync(TraderaWebService.SearchService.SearchRequest request);
         
         // CODEGEN: Generating message contract since message SearchAdvancedRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/SearchAdvanced", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.SearchService.SearchAdvancedResponse SearchAdvanced(TraderaWebService.SearchService.SearchAdvancedRequest1 request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/SearchAdvanced", ReplyAction="*")]
-        System.IAsyncResult BeginSearchAdvanced(TraderaWebService.SearchService.SearchAdvancedRequest1 request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.SearchService.SearchAdvancedResponse EndSearchAdvanced(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/SearchAdvanced", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.SearchService.SearchAdvancedResponse> SearchAdvancedAsync(TraderaWebService.SearchService.SearchAdvancedRequest1 request);
         
         // CODEGEN: Generating message contract since message SearchCategoryCountRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/SearchCategoryCount", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.SearchService.SearchCategoryCountResponse SearchCategoryCount(TraderaWebService.SearchService.SearchCategoryCountRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/SearchCategoryCount", ReplyAction="*")]
-        System.IAsyncResult BeginSearchCategoryCount(TraderaWebService.SearchService.SearchCategoryCountRequest request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.SearchService.SearchCategoryCountResponse EndSearchCategoryCount(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/SearchCategoryCount", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.SearchService.SearchCategoryCountResponse> SearchCategoryCountAsync(TraderaWebService.SearchService.SearchCategoryCountRequest request);
         
         // CODEGEN: Generating message contract since message SearchByFixedCriteriaRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/SearchByFixedCriteria", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.SearchService.SearchByFixedCriteriaResponse SearchByFixedCriteria(TraderaWebService.SearchService.SearchByFixedCriteriaRequest1 request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/SearchByFixedCriteria", ReplyAction="*")]
-        System.IAsyncResult BeginSearchByFixedCriteria(TraderaWebService.SearchService.SearchByFixedCriteriaRequest1 request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.SearchService.SearchByFixedCriteriaResponse EndSearchByFixedCriteria(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/SearchByFixedCriteria", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.SearchService.SearchByFixedCriteriaResponse> SearchByFixedCriteriaAsync(TraderaWebService.SearchService.SearchByFixedCriteriaRequest1 request);
         
         // CODEGEN: Generating message contract since message SearchByZipCodeRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/SearchByZipCode", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.SearchService.SearchByZipCodeResponse SearchByZipCode(TraderaWebService.SearchService.SearchByZipCodeRequest1 request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/SearchByZipCode", ReplyAction="*")]
-        System.IAsyncResult BeginSearchByZipCode(TraderaWebService.SearchService.SearchByZipCodeRequest1 request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.SearchService.SearchByZipCodeResponse EndSearchByZipCode(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/SearchByZipCode", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.SearchService.SearchByZipCodeResponse> SearchByZipCodeAsync(TraderaWebService.SearchService.SearchByZipCodeRequest1 request);
     }
     
     /// <remarks/>
@@ -1570,132 +1560,7 @@ namespace TraderaWebService.SearchService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class SearchCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public SearchCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public TraderaWebService.SearchService.SearchResult Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((TraderaWebService.SearchService.SearchResult)(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class SearchAdvancedCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public SearchAdvancedCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public TraderaWebService.SearchService.SearchResult Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((TraderaWebService.SearchService.SearchResult)(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class SearchCategoryCountCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public SearchCategoryCountCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public TraderaWebService.SearchService.CategoryCountResult Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((TraderaWebService.SearchService.CategoryCountResult)(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class SearchByFixedCriteriaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public SearchByFixedCriteriaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public TraderaWebService.SearchService.SearchResult Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((TraderaWebService.SearchService.SearchResult)(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class SearchByZipCodeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public SearchByZipCodeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public TraderaWebService.SearchService.SearchResult Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((TraderaWebService.SearchService.SearchResult)(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public partial class SearchServiceSoapClient : System.ServiceModel.ClientBase<TraderaWebService.SearchService.SearchServiceSoap>, TraderaWebService.SearchService.SearchServiceSoap {
-        
-        private BeginOperationDelegate onBeginSearchDelegate;
-        
-        private EndOperationDelegate onEndSearchDelegate;
-        
-        private System.Threading.SendOrPostCallback onSearchCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginSearchAdvancedDelegate;
-        
-        private EndOperationDelegate onEndSearchAdvancedDelegate;
-        
-        private System.Threading.SendOrPostCallback onSearchAdvancedCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginSearchCategoryCountDelegate;
-        
-        private EndOperationDelegate onEndSearchCategoryCountDelegate;
-        
-        private System.Threading.SendOrPostCallback onSearchCategoryCountCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginSearchByFixedCriteriaDelegate;
-        
-        private EndOperationDelegate onEndSearchByFixedCriteriaDelegate;
-        
-        private System.Threading.SendOrPostCallback onSearchByFixedCriteriaCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginSearchByZipCodeDelegate;
-        
-        private EndOperationDelegate onEndSearchByZipCodeDelegate;
-        
-        private System.Threading.SendOrPostCallback onSearchByZipCodeCompletedDelegate;
         
         public SearchServiceSoapClient() {
         }
@@ -1716,16 +1581,6 @@ namespace TraderaWebService.SearchService {
                 base(binding, remoteAddress) {
         }
         
-        public event System.EventHandler<SearchCompletedEventArgs> SearchCompleted;
-        
-        public event System.EventHandler<SearchAdvancedCompletedEventArgs> SearchAdvancedCompleted;
-        
-        public event System.EventHandler<SearchCategoryCountCompletedEventArgs> SearchCategoryCountCompleted;
-        
-        public event System.EventHandler<SearchByFixedCriteriaCompletedEventArgs> SearchByFixedCriteriaCompleted;
-        
-        public event System.EventHandler<SearchByZipCodeCompletedEventArgs> SearchByZipCodeCompleted;
-        
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         TraderaWebService.SearchService.SearchResponse TraderaWebService.SearchService.SearchServiceSoap.Search(TraderaWebService.SearchService.SearchRequest request) {
             return base.Channel.Search(request);
@@ -1744,12 +1599,11 @@ namespace TraderaWebService.SearchService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.SearchService.SearchServiceSoap.BeginSearch(TraderaWebService.SearchService.SearchRequest request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginSearch(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.SearchService.SearchResponse> TraderaWebService.SearchService.SearchServiceSoap.SearchAsync(TraderaWebService.SearchService.SearchRequest request) {
+            return base.Channel.SearchAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginSearch(TraderaWebService.SearchService.AuthenticationHeader AuthenticationHeader, TraderaWebService.SearchService.ConfigurationHeader ConfigurationHeader, string query, int categoryId, int pageNumber, string orderBy, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.SearchService.SearchResponse> SearchAsync(TraderaWebService.SearchService.AuthenticationHeader AuthenticationHeader, TraderaWebService.SearchService.ConfigurationHeader ConfigurationHeader, string query, int categoryId, int pageNumber, string orderBy) {
             TraderaWebService.SearchService.SearchRequest inValue = new TraderaWebService.SearchService.SearchRequest();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
@@ -1757,64 +1611,7 @@ namespace TraderaWebService.SearchService {
             inValue.categoryId = categoryId;
             inValue.pageNumber = pageNumber;
             inValue.orderBy = orderBy;
-            return ((TraderaWebService.SearchService.SearchServiceSoap)(this)).BeginSearch(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.SearchService.SearchResponse TraderaWebService.SearchService.SearchServiceSoap.EndSearch(System.IAsyncResult result) {
-            return base.Channel.EndSearch(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public TraderaWebService.SearchService.SearchResult EndSearch(System.IAsyncResult result) {
-            TraderaWebService.SearchService.SearchResponse retVal = ((TraderaWebService.SearchService.SearchServiceSoap)(this)).EndSearch(result);
-            return retVal.SearchResult;
-        }
-        
-        private System.IAsyncResult OnBeginSearch(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.SearchService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.SearchService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.SearchService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.SearchService.ConfigurationHeader)(inValues[1]));
-            string query = ((string)(inValues[2]));
-            int categoryId = ((int)(inValues[3]));
-            int pageNumber = ((int)(inValues[4]));
-            string orderBy = ((string)(inValues[5]));
-            return this.BeginSearch(AuthenticationHeader, ConfigurationHeader, query, categoryId, pageNumber, orderBy, callback, asyncState);
-        }
-        
-        private object[] OnEndSearch(System.IAsyncResult result) {
-            TraderaWebService.SearchService.SearchResult retVal = this.EndSearch(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnSearchCompleted(object state) {
-            if ((this.SearchCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.SearchCompleted(this, new SearchCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void SearchAsync(TraderaWebService.SearchService.AuthenticationHeader AuthenticationHeader, TraderaWebService.SearchService.ConfigurationHeader ConfigurationHeader, string query, int categoryId, int pageNumber, string orderBy) {
-            this.SearchAsync(AuthenticationHeader, ConfigurationHeader, query, categoryId, pageNumber, orderBy, null);
-        }
-        
-        public void SearchAsync(TraderaWebService.SearchService.AuthenticationHeader AuthenticationHeader, TraderaWebService.SearchService.ConfigurationHeader ConfigurationHeader, string query, int categoryId, int pageNumber, string orderBy, object userState) {
-            if ((this.onBeginSearchDelegate == null)) {
-                this.onBeginSearchDelegate = new BeginOperationDelegate(this.OnBeginSearch);
-            }
-            if ((this.onEndSearchDelegate == null)) {
-                this.onEndSearchDelegate = new EndOperationDelegate(this.OnEndSearch);
-            }
-            if ((this.onSearchCompletedDelegate == null)) {
-                this.onSearchCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnSearchCompleted);
-            }
-            base.InvokeAsync(this.onBeginSearchDelegate, new object[] {
-                        AuthenticationHeader,
-                        ConfigurationHeader,
-                        query,
-                        categoryId,
-                        pageNumber,
-                        orderBy}, this.onEndSearchDelegate, this.onSearchCompletedDelegate, userState);
+            return ((TraderaWebService.SearchService.SearchServiceSoap)(this)).SearchAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1832,68 +1629,16 @@ namespace TraderaWebService.SearchService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.SearchService.SearchServiceSoap.BeginSearchAdvanced(TraderaWebService.SearchService.SearchAdvancedRequest1 request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginSearchAdvanced(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.SearchService.SearchAdvancedResponse> TraderaWebService.SearchService.SearchServiceSoap.SearchAdvancedAsync(TraderaWebService.SearchService.SearchAdvancedRequest1 request) {
+            return base.Channel.SearchAdvancedAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginSearchAdvanced(TraderaWebService.SearchService.AuthenticationHeader AuthenticationHeader, TraderaWebService.SearchService.ConfigurationHeader ConfigurationHeader, TraderaWebService.SearchService.SearchAdvancedRequest request, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.SearchService.SearchAdvancedResponse> SearchAdvancedAsync(TraderaWebService.SearchService.AuthenticationHeader AuthenticationHeader, TraderaWebService.SearchService.ConfigurationHeader ConfigurationHeader, TraderaWebService.SearchService.SearchAdvancedRequest request) {
             TraderaWebService.SearchService.SearchAdvancedRequest1 inValue = new TraderaWebService.SearchService.SearchAdvancedRequest1();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
             inValue.request = request;
-            return ((TraderaWebService.SearchService.SearchServiceSoap)(this)).BeginSearchAdvanced(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.SearchService.SearchAdvancedResponse TraderaWebService.SearchService.SearchServiceSoap.EndSearchAdvanced(System.IAsyncResult result) {
-            return base.Channel.EndSearchAdvanced(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public TraderaWebService.SearchService.SearchResult EndSearchAdvanced(System.IAsyncResult result) {
-            TraderaWebService.SearchService.SearchAdvancedResponse retVal = ((TraderaWebService.SearchService.SearchServiceSoap)(this)).EndSearchAdvanced(result);
-            return retVal.SearchAdvancedResult;
-        }
-        
-        private System.IAsyncResult OnBeginSearchAdvanced(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.SearchService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.SearchService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.SearchService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.SearchService.ConfigurationHeader)(inValues[1]));
-            TraderaWebService.SearchService.SearchAdvancedRequest request = ((TraderaWebService.SearchService.SearchAdvancedRequest)(inValues[2]));
-            return this.BeginSearchAdvanced(AuthenticationHeader, ConfigurationHeader, request, callback, asyncState);
-        }
-        
-        private object[] OnEndSearchAdvanced(System.IAsyncResult result) {
-            TraderaWebService.SearchService.SearchResult retVal = this.EndSearchAdvanced(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnSearchAdvancedCompleted(object state) {
-            if ((this.SearchAdvancedCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.SearchAdvancedCompleted(this, new SearchAdvancedCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void SearchAdvancedAsync(TraderaWebService.SearchService.AuthenticationHeader AuthenticationHeader, TraderaWebService.SearchService.ConfigurationHeader ConfigurationHeader, TraderaWebService.SearchService.SearchAdvancedRequest request) {
-            this.SearchAdvancedAsync(AuthenticationHeader, ConfigurationHeader, request, null);
-        }
-        
-        public void SearchAdvancedAsync(TraderaWebService.SearchService.AuthenticationHeader AuthenticationHeader, TraderaWebService.SearchService.ConfigurationHeader ConfigurationHeader, TraderaWebService.SearchService.SearchAdvancedRequest request, object userState) {
-            if ((this.onBeginSearchAdvancedDelegate == null)) {
-                this.onBeginSearchAdvancedDelegate = new BeginOperationDelegate(this.OnBeginSearchAdvanced);
-            }
-            if ((this.onEndSearchAdvancedDelegate == null)) {
-                this.onEndSearchAdvancedDelegate = new EndOperationDelegate(this.OnEndSearchAdvanced);
-            }
-            if ((this.onSearchAdvancedCompletedDelegate == null)) {
-                this.onSearchAdvancedCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnSearchAdvancedCompleted);
-            }
-            base.InvokeAsync(this.onBeginSearchAdvancedDelegate, new object[] {
-                        AuthenticationHeader,
-                        ConfigurationHeader,
-                        request}, this.onEndSearchAdvancedDelegate, this.onSearchAdvancedCompletedDelegate, userState);
+            return ((TraderaWebService.SearchService.SearchServiceSoap)(this)).SearchAdvancedAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1911,68 +1656,16 @@ namespace TraderaWebService.SearchService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.SearchService.SearchServiceSoap.BeginSearchCategoryCount(TraderaWebService.SearchService.SearchCategoryCountRequest request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginSearchCategoryCount(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.SearchService.SearchCategoryCountResponse> TraderaWebService.SearchService.SearchServiceSoap.SearchCategoryCountAsync(TraderaWebService.SearchService.SearchCategoryCountRequest request) {
+            return base.Channel.SearchCategoryCountAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginSearchCategoryCount(TraderaWebService.SearchService.AuthenticationHeader AuthenticationHeader, TraderaWebService.SearchService.ConfigurationHeader ConfigurationHeader, TraderaWebService.SearchService.CategoryCountRequest request, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.SearchService.SearchCategoryCountResponse> SearchCategoryCountAsync(TraderaWebService.SearchService.AuthenticationHeader AuthenticationHeader, TraderaWebService.SearchService.ConfigurationHeader ConfigurationHeader, TraderaWebService.SearchService.CategoryCountRequest request) {
             TraderaWebService.SearchService.SearchCategoryCountRequest inValue = new TraderaWebService.SearchService.SearchCategoryCountRequest();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
             inValue.request = request;
-            return ((TraderaWebService.SearchService.SearchServiceSoap)(this)).BeginSearchCategoryCount(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.SearchService.SearchCategoryCountResponse TraderaWebService.SearchService.SearchServiceSoap.EndSearchCategoryCount(System.IAsyncResult result) {
-            return base.Channel.EndSearchCategoryCount(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public TraderaWebService.SearchService.CategoryCountResult EndSearchCategoryCount(System.IAsyncResult result) {
-            TraderaWebService.SearchService.SearchCategoryCountResponse retVal = ((TraderaWebService.SearchService.SearchServiceSoap)(this)).EndSearchCategoryCount(result);
-            return retVal.SearchCategoryCountResult;
-        }
-        
-        private System.IAsyncResult OnBeginSearchCategoryCount(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.SearchService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.SearchService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.SearchService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.SearchService.ConfigurationHeader)(inValues[1]));
-            TraderaWebService.SearchService.CategoryCountRequest request = ((TraderaWebService.SearchService.CategoryCountRequest)(inValues[2]));
-            return this.BeginSearchCategoryCount(AuthenticationHeader, ConfigurationHeader, request, callback, asyncState);
-        }
-        
-        private object[] OnEndSearchCategoryCount(System.IAsyncResult result) {
-            TraderaWebService.SearchService.CategoryCountResult retVal = this.EndSearchCategoryCount(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnSearchCategoryCountCompleted(object state) {
-            if ((this.SearchCategoryCountCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.SearchCategoryCountCompleted(this, new SearchCategoryCountCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void SearchCategoryCountAsync(TraderaWebService.SearchService.AuthenticationHeader AuthenticationHeader, TraderaWebService.SearchService.ConfigurationHeader ConfigurationHeader, TraderaWebService.SearchService.CategoryCountRequest request) {
-            this.SearchCategoryCountAsync(AuthenticationHeader, ConfigurationHeader, request, null);
-        }
-        
-        public void SearchCategoryCountAsync(TraderaWebService.SearchService.AuthenticationHeader AuthenticationHeader, TraderaWebService.SearchService.ConfigurationHeader ConfigurationHeader, TraderaWebService.SearchService.CategoryCountRequest request, object userState) {
-            if ((this.onBeginSearchCategoryCountDelegate == null)) {
-                this.onBeginSearchCategoryCountDelegate = new BeginOperationDelegate(this.OnBeginSearchCategoryCount);
-            }
-            if ((this.onEndSearchCategoryCountDelegate == null)) {
-                this.onEndSearchCategoryCountDelegate = new EndOperationDelegate(this.OnEndSearchCategoryCount);
-            }
-            if ((this.onSearchCategoryCountCompletedDelegate == null)) {
-                this.onSearchCategoryCountCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnSearchCategoryCountCompleted);
-            }
-            base.InvokeAsync(this.onBeginSearchCategoryCountDelegate, new object[] {
-                        AuthenticationHeader,
-                        ConfigurationHeader,
-                        request}, this.onEndSearchCategoryCountDelegate, this.onSearchCategoryCountCompletedDelegate, userState);
+            return ((TraderaWebService.SearchService.SearchServiceSoap)(this)).SearchCategoryCountAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1990,68 +1683,16 @@ namespace TraderaWebService.SearchService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.SearchService.SearchServiceSoap.BeginSearchByFixedCriteria(TraderaWebService.SearchService.SearchByFixedCriteriaRequest1 request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginSearchByFixedCriteria(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.SearchService.SearchByFixedCriteriaResponse> TraderaWebService.SearchService.SearchServiceSoap.SearchByFixedCriteriaAsync(TraderaWebService.SearchService.SearchByFixedCriteriaRequest1 request) {
+            return base.Channel.SearchByFixedCriteriaAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginSearchByFixedCriteria(TraderaWebService.SearchService.AuthenticationHeader AuthenticationHeader, TraderaWebService.SearchService.ConfigurationHeader ConfigurationHeader, TraderaWebService.SearchService.SearchByFixedCriteriaRequest request, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.SearchService.SearchByFixedCriteriaResponse> SearchByFixedCriteriaAsync(TraderaWebService.SearchService.AuthenticationHeader AuthenticationHeader, TraderaWebService.SearchService.ConfigurationHeader ConfigurationHeader, TraderaWebService.SearchService.SearchByFixedCriteriaRequest request) {
             TraderaWebService.SearchService.SearchByFixedCriteriaRequest1 inValue = new TraderaWebService.SearchService.SearchByFixedCriteriaRequest1();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
             inValue.request = request;
-            return ((TraderaWebService.SearchService.SearchServiceSoap)(this)).BeginSearchByFixedCriteria(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.SearchService.SearchByFixedCriteriaResponse TraderaWebService.SearchService.SearchServiceSoap.EndSearchByFixedCriteria(System.IAsyncResult result) {
-            return base.Channel.EndSearchByFixedCriteria(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public TraderaWebService.SearchService.SearchResult EndSearchByFixedCriteria(System.IAsyncResult result) {
-            TraderaWebService.SearchService.SearchByFixedCriteriaResponse retVal = ((TraderaWebService.SearchService.SearchServiceSoap)(this)).EndSearchByFixedCriteria(result);
-            return retVal.SearchByFixedCriteriaResult;
-        }
-        
-        private System.IAsyncResult OnBeginSearchByFixedCriteria(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.SearchService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.SearchService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.SearchService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.SearchService.ConfigurationHeader)(inValues[1]));
-            TraderaWebService.SearchService.SearchByFixedCriteriaRequest request = ((TraderaWebService.SearchService.SearchByFixedCriteriaRequest)(inValues[2]));
-            return this.BeginSearchByFixedCriteria(AuthenticationHeader, ConfigurationHeader, request, callback, asyncState);
-        }
-        
-        private object[] OnEndSearchByFixedCriteria(System.IAsyncResult result) {
-            TraderaWebService.SearchService.SearchResult retVal = this.EndSearchByFixedCriteria(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnSearchByFixedCriteriaCompleted(object state) {
-            if ((this.SearchByFixedCriteriaCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.SearchByFixedCriteriaCompleted(this, new SearchByFixedCriteriaCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void SearchByFixedCriteriaAsync(TraderaWebService.SearchService.AuthenticationHeader AuthenticationHeader, TraderaWebService.SearchService.ConfigurationHeader ConfigurationHeader, TraderaWebService.SearchService.SearchByFixedCriteriaRequest request) {
-            this.SearchByFixedCriteriaAsync(AuthenticationHeader, ConfigurationHeader, request, null);
-        }
-        
-        public void SearchByFixedCriteriaAsync(TraderaWebService.SearchService.AuthenticationHeader AuthenticationHeader, TraderaWebService.SearchService.ConfigurationHeader ConfigurationHeader, TraderaWebService.SearchService.SearchByFixedCriteriaRequest request, object userState) {
-            if ((this.onBeginSearchByFixedCriteriaDelegate == null)) {
-                this.onBeginSearchByFixedCriteriaDelegate = new BeginOperationDelegate(this.OnBeginSearchByFixedCriteria);
-            }
-            if ((this.onEndSearchByFixedCriteriaDelegate == null)) {
-                this.onEndSearchByFixedCriteriaDelegate = new EndOperationDelegate(this.OnEndSearchByFixedCriteria);
-            }
-            if ((this.onSearchByFixedCriteriaCompletedDelegate == null)) {
-                this.onSearchByFixedCriteriaCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnSearchByFixedCriteriaCompleted);
-            }
-            base.InvokeAsync(this.onBeginSearchByFixedCriteriaDelegate, new object[] {
-                        AuthenticationHeader,
-                        ConfigurationHeader,
-                        request}, this.onEndSearchByFixedCriteriaDelegate, this.onSearchByFixedCriteriaCompletedDelegate, userState);
+            return ((TraderaWebService.SearchService.SearchServiceSoap)(this)).SearchByFixedCriteriaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2069,68 +1710,16 @@ namespace TraderaWebService.SearchService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.SearchService.SearchServiceSoap.BeginSearchByZipCode(TraderaWebService.SearchService.SearchByZipCodeRequest1 request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginSearchByZipCode(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.SearchService.SearchByZipCodeResponse> TraderaWebService.SearchService.SearchServiceSoap.SearchByZipCodeAsync(TraderaWebService.SearchService.SearchByZipCodeRequest1 request) {
+            return base.Channel.SearchByZipCodeAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginSearchByZipCode(TraderaWebService.SearchService.AuthenticationHeader AuthenticationHeader, TraderaWebService.SearchService.ConfigurationHeader ConfigurationHeader, TraderaWebService.SearchService.SearchByZipCodeRequest request, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.SearchService.SearchByZipCodeResponse> SearchByZipCodeAsync(TraderaWebService.SearchService.AuthenticationHeader AuthenticationHeader, TraderaWebService.SearchService.ConfigurationHeader ConfigurationHeader, TraderaWebService.SearchService.SearchByZipCodeRequest request) {
             TraderaWebService.SearchService.SearchByZipCodeRequest1 inValue = new TraderaWebService.SearchService.SearchByZipCodeRequest1();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
             inValue.request = request;
-            return ((TraderaWebService.SearchService.SearchServiceSoap)(this)).BeginSearchByZipCode(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.SearchService.SearchByZipCodeResponse TraderaWebService.SearchService.SearchServiceSoap.EndSearchByZipCode(System.IAsyncResult result) {
-            return base.Channel.EndSearchByZipCode(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public TraderaWebService.SearchService.SearchResult EndSearchByZipCode(System.IAsyncResult result) {
-            TraderaWebService.SearchService.SearchByZipCodeResponse retVal = ((TraderaWebService.SearchService.SearchServiceSoap)(this)).EndSearchByZipCode(result);
-            return retVal.SearchByZipCodeResult;
-        }
-        
-        private System.IAsyncResult OnBeginSearchByZipCode(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.SearchService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.SearchService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.SearchService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.SearchService.ConfigurationHeader)(inValues[1]));
-            TraderaWebService.SearchService.SearchByZipCodeRequest request = ((TraderaWebService.SearchService.SearchByZipCodeRequest)(inValues[2]));
-            return this.BeginSearchByZipCode(AuthenticationHeader, ConfigurationHeader, request, callback, asyncState);
-        }
-        
-        private object[] OnEndSearchByZipCode(System.IAsyncResult result) {
-            TraderaWebService.SearchService.SearchResult retVal = this.EndSearchByZipCode(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnSearchByZipCodeCompleted(object state) {
-            if ((this.SearchByZipCodeCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.SearchByZipCodeCompleted(this, new SearchByZipCodeCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void SearchByZipCodeAsync(TraderaWebService.SearchService.AuthenticationHeader AuthenticationHeader, TraderaWebService.SearchService.ConfigurationHeader ConfigurationHeader, TraderaWebService.SearchService.SearchByZipCodeRequest request) {
-            this.SearchByZipCodeAsync(AuthenticationHeader, ConfigurationHeader, request, null);
-        }
-        
-        public void SearchByZipCodeAsync(TraderaWebService.SearchService.AuthenticationHeader AuthenticationHeader, TraderaWebService.SearchService.ConfigurationHeader ConfigurationHeader, TraderaWebService.SearchService.SearchByZipCodeRequest request, object userState) {
-            if ((this.onBeginSearchByZipCodeDelegate == null)) {
-                this.onBeginSearchByZipCodeDelegate = new BeginOperationDelegate(this.OnBeginSearchByZipCode);
-            }
-            if ((this.onEndSearchByZipCodeDelegate == null)) {
-                this.onEndSearchByZipCodeDelegate = new EndOperationDelegate(this.OnEndSearchByZipCode);
-            }
-            if ((this.onSearchByZipCodeCompletedDelegate == null)) {
-                this.onSearchByZipCodeCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnSearchByZipCodeCompleted);
-            }
-            base.InvokeAsync(this.onBeginSearchByZipCodeDelegate, new object[] {
-                        AuthenticationHeader,
-                        ConfigurationHeader,
-                        request}, this.onEndSearchByZipCodeDelegate, this.onSearchByZipCodeCompletedDelegate, userState);
+            return ((TraderaWebService.SearchService.SearchServiceSoap)(this)).SearchByZipCodeAsync(inValue);
         }
     }
 }

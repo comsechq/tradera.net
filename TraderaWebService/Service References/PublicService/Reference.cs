@@ -20,200 +20,160 @@ namespace TraderaWebService.PublicService {
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.PublicService.GetItemResponse GetItem(TraderaWebService.PublicService.GetItemRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/GetItem", ReplyAction="*")]
-        System.IAsyncResult BeginGetItem(TraderaWebService.PublicService.GetItemRequest request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.PublicService.GetItemResponse EndGetItem(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetItem", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetItemResponse> GetItemAsync(TraderaWebService.PublicService.GetItemRequest request);
         
         // CODEGEN: Generating message contract since message GetSellerItemsRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetSellerItems", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.PublicService.GetSellerItemsResponse GetSellerItems(TraderaWebService.PublicService.GetSellerItemsRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/GetSellerItems", ReplyAction="*")]
-        System.IAsyncResult BeginGetSellerItems(TraderaWebService.PublicService.GetSellerItemsRequest request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.PublicService.GetSellerItemsResponse EndGetSellerItems(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetSellerItems", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetSellerItemsResponse> GetSellerItemsAsync(TraderaWebService.PublicService.GetSellerItemsRequest request);
         
         // CODEGEN: Generating message contract since message GetSellerItemsQuickInfoRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetSellerItemsQuickInfo", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.PublicService.GetSellerItemsQuickInfoResponse GetSellerItemsQuickInfo(TraderaWebService.PublicService.GetSellerItemsQuickInfoRequest1 request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/GetSellerItemsQuickInfo", ReplyAction="*")]
-        System.IAsyncResult BeginGetSellerItemsQuickInfo(TraderaWebService.PublicService.GetSellerItemsQuickInfoRequest1 request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.PublicService.GetSellerItemsQuickInfoResponse EndGetSellerItemsQuickInfo(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetSellerItemsQuickInfo", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetSellerItemsQuickInfoResponse> GetSellerItemsQuickInfoAsync(TraderaWebService.PublicService.GetSellerItemsQuickInfoRequest1 request);
         
         // CODEGEN: Generating message contract since message GetSearchResultRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetSearchResult", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.PublicService.GetSearchResultResponse GetSearchResult(TraderaWebService.PublicService.GetSearchResultRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/GetSearchResult", ReplyAction="*")]
-        System.IAsyncResult BeginGetSearchResult(TraderaWebService.PublicService.GetSearchResultRequest request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.PublicService.GetSearchResultResponse EndGetSearchResult(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetSearchResult", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetSearchResultResponse> GetSearchResultAsync(TraderaWebService.PublicService.GetSearchResultRequest request);
         
         // CODEGEN: Generating message contract since message GetSearchResultAdvancedRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetSearchResultAdvanced", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.PublicService.GetSearchResultAdvancedResponse GetSearchResultAdvanced(TraderaWebService.PublicService.GetSearchResultAdvancedRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/GetSearchResultAdvanced", ReplyAction="*")]
-        System.IAsyncResult BeginGetSearchResultAdvanced(TraderaWebService.PublicService.GetSearchResultAdvancedRequest request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.PublicService.GetSearchResultAdvancedResponse EndGetSearchResultAdvanced(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetSearchResultAdvanced", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetSearchResultAdvancedResponse> GetSearchResultAdvancedAsync(TraderaWebService.PublicService.GetSearchResultAdvancedRequest request);
         
         // CODEGEN: Generating message contract since message GetSearchResultAdvancedXmlRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetSearchResultAdvancedXml", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.PublicService.GetSearchResultAdvancedXmlResponse GetSearchResultAdvancedXml(TraderaWebService.PublicService.GetSearchResultAdvancedXmlRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/GetSearchResultAdvancedXml", ReplyAction="*")]
-        System.IAsyncResult BeginGetSearchResultAdvancedXml(TraderaWebService.PublicService.GetSearchResultAdvancedXmlRequest request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.PublicService.GetSearchResultAdvancedXmlResponse EndGetSearchResultAdvancedXml(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetSearchResultAdvancedXml", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetSearchResultAdvancedXmlResponse> GetSearchResultAdvancedXmlAsync(TraderaWebService.PublicService.GetSearchResultAdvancedXmlRequest request);
         
         // CODEGEN: Generating message contract since message GetUserByAliasRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetUserByAlias", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.PublicService.GetUserByAliasResponse GetUserByAlias(TraderaWebService.PublicService.GetUserByAliasRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/GetUserByAlias", ReplyAction="*")]
-        System.IAsyncResult BeginGetUserByAlias(TraderaWebService.PublicService.GetUserByAliasRequest request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.PublicService.GetUserByAliasResponse EndGetUserByAlias(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetUserByAlias", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetUserByAliasResponse> GetUserByAliasAsync(TraderaWebService.PublicService.GetUserByAliasRequest request);
         
         // CODEGEN: Generating message contract since message FetchTokenRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/FetchToken", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.PublicService.FetchTokenResponse FetchToken(TraderaWebService.PublicService.FetchTokenRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/FetchToken", ReplyAction="*")]
-        System.IAsyncResult BeginFetchToken(TraderaWebService.PublicService.FetchTokenRequest request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.PublicService.FetchTokenResponse EndFetchToken(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/FetchToken", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.FetchTokenResponse> FetchTokenAsync(TraderaWebService.PublicService.FetchTokenRequest request);
         
         // CODEGEN: Generating message contract since message GetOfficalTimeRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetOfficalTime", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.PublicService.GetOfficalTimeResponse GetOfficalTime(TraderaWebService.PublicService.GetOfficalTimeRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/GetOfficalTime", ReplyAction="*")]
-        System.IAsyncResult BeginGetOfficalTime(TraderaWebService.PublicService.GetOfficalTimeRequest request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.PublicService.GetOfficalTimeResponse EndGetOfficalTime(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetOfficalTime", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetOfficalTimeResponse> GetOfficalTimeAsync(TraderaWebService.PublicService.GetOfficalTimeRequest request);
         
         // CODEGEN: Generating message contract since message GetCategoriesRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetCategories", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.PublicService.GetCategoriesResponse GetCategories(TraderaWebService.PublicService.GetCategoriesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/GetCategories", ReplyAction="*")]
-        System.IAsyncResult BeginGetCategories(TraderaWebService.PublicService.GetCategoriesRequest request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.PublicService.GetCategoriesResponse EndGetCategories(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetCategories", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetCategoriesResponse> GetCategoriesAsync(TraderaWebService.PublicService.GetCategoriesRequest request);
         
         // CODEGEN: Generating message contract since message GetPaymentTypesRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetPaymentTypes", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.PublicService.GetPaymentTypesResponse GetPaymentTypes(TraderaWebService.PublicService.GetPaymentTypesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/GetPaymentTypes", ReplyAction="*")]
-        System.IAsyncResult BeginGetPaymentTypes(TraderaWebService.PublicService.GetPaymentTypesRequest request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.PublicService.GetPaymentTypesResponse EndGetPaymentTypes(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetPaymentTypes", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetPaymentTypesResponse> GetPaymentTypesAsync(TraderaWebService.PublicService.GetPaymentTypesRequest request);
         
         // CODEGEN: Generating message contract since message GetAcceptedBidderTypesRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetAcceptedBidderTypes", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.PublicService.GetAcceptedBidderTypesResponse GetAcceptedBidderTypes(TraderaWebService.PublicService.GetAcceptedBidderTypesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/GetAcceptedBidderTypes", ReplyAction="*")]
-        System.IAsyncResult BeginGetAcceptedBidderTypes(TraderaWebService.PublicService.GetAcceptedBidderTypesRequest request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.PublicService.GetAcceptedBidderTypesResponse EndGetAcceptedBidderTypes(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetAcceptedBidderTypes", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetAcceptedBidderTypesResponse> GetAcceptedBidderTypesAsync(TraderaWebService.PublicService.GetAcceptedBidderTypesRequest request);
         
         // CODEGEN: Generating message contract since message GetExpoItemTypesRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetExpoItemTypes", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.PublicService.GetExpoItemTypesResponse GetExpoItemTypes(TraderaWebService.PublicService.GetExpoItemTypesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/GetExpoItemTypes", ReplyAction="*")]
-        System.IAsyncResult BeginGetExpoItemTypes(TraderaWebService.PublicService.GetExpoItemTypesRequest request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.PublicService.GetExpoItemTypesResponse EndGetExpoItemTypes(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetExpoItemTypes", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetExpoItemTypesResponse> GetExpoItemTypesAsync(TraderaWebService.PublicService.GetExpoItemTypesRequest request);
         
         // CODEGEN: Generating message contract since message GetShippingTypesRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetShippingTypes", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.PublicService.GetShippingTypesResponse GetShippingTypes(TraderaWebService.PublicService.GetShippingTypesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/GetShippingTypes", ReplyAction="*")]
-        System.IAsyncResult BeginGetShippingTypes(TraderaWebService.PublicService.GetShippingTypesRequest request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.PublicService.GetShippingTypesResponse EndGetShippingTypes(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetShippingTypes", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetShippingTypesResponse> GetShippingTypesAsync(TraderaWebService.PublicService.GetShippingTypesRequest request);
         
         // CODEGEN: Generating message contract since message GetItemTypesRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetItemTypes", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.PublicService.GetItemTypesResponse GetItemTypes(TraderaWebService.PublicService.GetItemTypesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/GetItemTypes", ReplyAction="*")]
-        System.IAsyncResult BeginGetItemTypes(TraderaWebService.PublicService.GetItemTypesRequest request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.PublicService.GetItemTypesResponse EndGetItemTypes(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetItemTypes", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetItemTypesResponse> GetItemTypesAsync(TraderaWebService.PublicService.GetItemTypesRequest request);
         
         // CODEGEN: Generating message contract since message GetCountiesRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetCounties", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.PublicService.GetCountiesResponse GetCounties(TraderaWebService.PublicService.GetCountiesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/GetCounties", ReplyAction="*")]
-        System.IAsyncResult BeginGetCounties(TraderaWebService.PublicService.GetCountiesRequest request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.PublicService.GetCountiesResponse EndGetCounties(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetCounties", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetCountiesResponse> GetCountiesAsync(TraderaWebService.PublicService.GetCountiesRequest request);
         
         // CODEGEN: Generating message contract since message GetItemFieldValuesRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetItemFieldValues", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.PublicService.GetItemFieldValuesResponse GetItemFieldValues(TraderaWebService.PublicService.GetItemFieldValuesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/GetItemFieldValues", ReplyAction="*")]
-        System.IAsyncResult BeginGetItemFieldValues(TraderaWebService.PublicService.GetItemFieldValuesRequest request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.PublicService.GetItemFieldValuesResponse EndGetItemFieldValues(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetItemFieldValues", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetItemFieldValuesResponse> GetItemFieldValuesAsync(TraderaWebService.PublicService.GetItemFieldValuesRequest request);
         
         // CODEGEN: Generating message contract since message GetItemAddedDescriptionsRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetItemAddedDescriptions", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.PublicService.GetItemAddedDescriptionsResponse GetItemAddedDescriptions(TraderaWebService.PublicService.GetItemAddedDescriptionsRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/GetItemAddedDescriptions", ReplyAction="*")]
-        System.IAsyncResult BeginGetItemAddedDescriptions(TraderaWebService.PublicService.GetItemAddedDescriptionsRequest request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.PublicService.GetItemAddedDescriptionsResponse EndGetItemAddedDescriptions(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetItemAddedDescriptions", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetItemAddedDescriptionsResponse> GetItemAddedDescriptionsAsync(TraderaWebService.PublicService.GetItemAddedDescriptionsRequest request);
         
         // CODEGEN: Generating message contract since message GetFeedbackRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetFeedback", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.PublicService.GetFeedbackResponse GetFeedback(TraderaWebService.PublicService.GetFeedbackRequest1 request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/GetFeedback", ReplyAction="*")]
-        System.IAsyncResult BeginGetFeedback(TraderaWebService.PublicService.GetFeedbackRequest1 request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.PublicService.GetFeedbackResponse EndGetFeedback(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetFeedback", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetFeedbackResponse> GetFeedbackAsync(TraderaWebService.PublicService.GetFeedbackRequest1 request);
         
         // CODEGEN: Generating message contract since message GetFeedbackSummaryRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetFeedbackSummary", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.PublicService.GetFeedbackSummaryResponse1 GetFeedbackSummary(TraderaWebService.PublicService.GetFeedbackSummaryRequest1 request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/GetFeedbackSummary", ReplyAction="*")]
-        System.IAsyncResult BeginGetFeedbackSummary(TraderaWebService.PublicService.GetFeedbackSummaryRequest1 request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.PublicService.GetFeedbackSummaryResponse1 EndGetFeedbackSummary(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetFeedbackSummary", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetFeedbackSummaryResponse1> GetFeedbackSummaryAsync(TraderaWebService.PublicService.GetFeedbackSummaryRequest1 request);
     }
     
     /// <remarks/>
@@ -3492,507 +3452,7 @@ namespace TraderaWebService.PublicService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class GetItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public GetItemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public TraderaWebService.PublicService.Item Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((TraderaWebService.PublicService.Item)(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class GetSellerItemsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public GetSellerItemsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public TraderaWebService.PublicService.Item[] Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((TraderaWebService.PublicService.Item[])(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class GetSellerItemsQuickInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public GetSellerItemsQuickInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public TraderaWebService.PublicService.ItemQuickInfo[] Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((TraderaWebService.PublicService.ItemQuickInfo[])(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class GetSearchResultCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public GetSearchResultCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public TraderaWebService.PublicService.SearchResult Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((TraderaWebService.PublicService.SearchResult)(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class GetSearchResultAdvancedCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public GetSearchResultAdvancedCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public TraderaWebService.PublicService.SearchResult Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((TraderaWebService.PublicService.SearchResult)(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class GetSearchResultAdvancedXmlCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public GetSearchResultAdvancedXmlCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public TraderaWebService.PublicService.SearchResult Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((TraderaWebService.PublicService.SearchResult)(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class GetUserByAliasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public GetUserByAliasCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public TraderaWebService.PublicService.User Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((TraderaWebService.PublicService.User)(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class FetchTokenCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public FetchTokenCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public TraderaWebService.PublicService.Token Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((TraderaWebService.PublicService.Token)(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class GetOfficalTimeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public GetOfficalTimeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public System.DateTime Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((System.DateTime)(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class GetCategoriesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public GetCategoriesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public TraderaWebService.PublicService.Category[] Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((TraderaWebService.PublicService.Category[])(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class GetPaymentTypesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public GetPaymentTypesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public TraderaWebService.PublicService.IdDescriptionPair[] Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((TraderaWebService.PublicService.IdDescriptionPair[])(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class GetAcceptedBidderTypesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public GetAcceptedBidderTypesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public TraderaWebService.PublicService.IdDescriptionPair[] Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((TraderaWebService.PublicService.IdDescriptionPair[])(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class GetExpoItemTypesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public GetExpoItemTypesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public TraderaWebService.PublicService.IdDescriptionPair[] Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((TraderaWebService.PublicService.IdDescriptionPair[])(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class GetShippingTypesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public GetShippingTypesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public TraderaWebService.PublicService.IdDescriptionPair[] Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((TraderaWebService.PublicService.IdDescriptionPair[])(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class GetItemTypesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public GetItemTypesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public TraderaWebService.PublicService.IdDescriptionPair[] Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((TraderaWebService.PublicService.IdDescriptionPair[])(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class GetCountiesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public GetCountiesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public TraderaWebService.PublicService.IdDescriptionPair[] Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((TraderaWebService.PublicService.IdDescriptionPair[])(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class GetItemFieldValuesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public GetItemFieldValuesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public TraderaWebService.PublicService.ItemFieldsResponse Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((TraderaWebService.PublicService.ItemFieldsResponse)(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class GetItemAddedDescriptionsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public GetItemAddedDescriptionsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public TraderaWebService.PublicService.ItemAddedDescription[] Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((TraderaWebService.PublicService.ItemAddedDescription[])(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class GetFeedbackCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public GetFeedbackCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public TraderaWebService.PublicService.GetFeedback[] Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((TraderaWebService.PublicService.GetFeedback[])(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class GetFeedbackSummaryCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public GetFeedbackSummaryCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public TraderaWebService.PublicService.GetFeedbackSummaryResponse Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((TraderaWebService.PublicService.GetFeedbackSummaryResponse)(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public partial class PublicServiceSoapClient : System.ServiceModel.ClientBase<TraderaWebService.PublicService.PublicServiceSoap>, TraderaWebService.PublicService.PublicServiceSoap {
-        
-        private BeginOperationDelegate onBeginGetItemDelegate;
-        
-        private EndOperationDelegate onEndGetItemDelegate;
-        
-        private System.Threading.SendOrPostCallback onGetItemCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginGetSellerItemsDelegate;
-        
-        private EndOperationDelegate onEndGetSellerItemsDelegate;
-        
-        private System.Threading.SendOrPostCallback onGetSellerItemsCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginGetSellerItemsQuickInfoDelegate;
-        
-        private EndOperationDelegate onEndGetSellerItemsQuickInfoDelegate;
-        
-        private System.Threading.SendOrPostCallback onGetSellerItemsQuickInfoCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginGetSearchResultDelegate;
-        
-        private EndOperationDelegate onEndGetSearchResultDelegate;
-        
-        private System.Threading.SendOrPostCallback onGetSearchResultCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginGetSearchResultAdvancedDelegate;
-        
-        private EndOperationDelegate onEndGetSearchResultAdvancedDelegate;
-        
-        private System.Threading.SendOrPostCallback onGetSearchResultAdvancedCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginGetSearchResultAdvancedXmlDelegate;
-        
-        private EndOperationDelegate onEndGetSearchResultAdvancedXmlDelegate;
-        
-        private System.Threading.SendOrPostCallback onGetSearchResultAdvancedXmlCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginGetUserByAliasDelegate;
-        
-        private EndOperationDelegate onEndGetUserByAliasDelegate;
-        
-        private System.Threading.SendOrPostCallback onGetUserByAliasCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginFetchTokenDelegate;
-        
-        private EndOperationDelegate onEndFetchTokenDelegate;
-        
-        private System.Threading.SendOrPostCallback onFetchTokenCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginGetOfficalTimeDelegate;
-        
-        private EndOperationDelegate onEndGetOfficalTimeDelegate;
-        
-        private System.Threading.SendOrPostCallback onGetOfficalTimeCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginGetCategoriesDelegate;
-        
-        private EndOperationDelegate onEndGetCategoriesDelegate;
-        
-        private System.Threading.SendOrPostCallback onGetCategoriesCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginGetPaymentTypesDelegate;
-        
-        private EndOperationDelegate onEndGetPaymentTypesDelegate;
-        
-        private System.Threading.SendOrPostCallback onGetPaymentTypesCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginGetAcceptedBidderTypesDelegate;
-        
-        private EndOperationDelegate onEndGetAcceptedBidderTypesDelegate;
-        
-        private System.Threading.SendOrPostCallback onGetAcceptedBidderTypesCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginGetExpoItemTypesDelegate;
-        
-        private EndOperationDelegate onEndGetExpoItemTypesDelegate;
-        
-        private System.Threading.SendOrPostCallback onGetExpoItemTypesCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginGetShippingTypesDelegate;
-        
-        private EndOperationDelegate onEndGetShippingTypesDelegate;
-        
-        private System.Threading.SendOrPostCallback onGetShippingTypesCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginGetItemTypesDelegate;
-        
-        private EndOperationDelegate onEndGetItemTypesDelegate;
-        
-        private System.Threading.SendOrPostCallback onGetItemTypesCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginGetCountiesDelegate;
-        
-        private EndOperationDelegate onEndGetCountiesDelegate;
-        
-        private System.Threading.SendOrPostCallback onGetCountiesCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginGetItemFieldValuesDelegate;
-        
-        private EndOperationDelegate onEndGetItemFieldValuesDelegate;
-        
-        private System.Threading.SendOrPostCallback onGetItemFieldValuesCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginGetItemAddedDescriptionsDelegate;
-        
-        private EndOperationDelegate onEndGetItemAddedDescriptionsDelegate;
-        
-        private System.Threading.SendOrPostCallback onGetItemAddedDescriptionsCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginGetFeedbackDelegate;
-        
-        private EndOperationDelegate onEndGetFeedbackDelegate;
-        
-        private System.Threading.SendOrPostCallback onGetFeedbackCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginGetFeedbackSummaryDelegate;
-        
-        private EndOperationDelegate onEndGetFeedbackSummaryDelegate;
-        
-        private System.Threading.SendOrPostCallback onGetFeedbackSummaryCompletedDelegate;
         
         public PublicServiceSoapClient() {
         }
@@ -4013,46 +3473,6 @@ namespace TraderaWebService.PublicService {
                 base(binding, remoteAddress) {
         }
         
-        public event System.EventHandler<GetItemCompletedEventArgs> GetItemCompleted;
-        
-        public event System.EventHandler<GetSellerItemsCompletedEventArgs> GetSellerItemsCompleted;
-        
-        public event System.EventHandler<GetSellerItemsQuickInfoCompletedEventArgs> GetSellerItemsQuickInfoCompleted;
-        
-        public event System.EventHandler<GetSearchResultCompletedEventArgs> GetSearchResultCompleted;
-        
-        public event System.EventHandler<GetSearchResultAdvancedCompletedEventArgs> GetSearchResultAdvancedCompleted;
-        
-        public event System.EventHandler<GetSearchResultAdvancedXmlCompletedEventArgs> GetSearchResultAdvancedXmlCompleted;
-        
-        public event System.EventHandler<GetUserByAliasCompletedEventArgs> GetUserByAliasCompleted;
-        
-        public event System.EventHandler<FetchTokenCompletedEventArgs> FetchTokenCompleted;
-        
-        public event System.EventHandler<GetOfficalTimeCompletedEventArgs> GetOfficalTimeCompleted;
-        
-        public event System.EventHandler<GetCategoriesCompletedEventArgs> GetCategoriesCompleted;
-        
-        public event System.EventHandler<GetPaymentTypesCompletedEventArgs> GetPaymentTypesCompleted;
-        
-        public event System.EventHandler<GetAcceptedBidderTypesCompletedEventArgs> GetAcceptedBidderTypesCompleted;
-        
-        public event System.EventHandler<GetExpoItemTypesCompletedEventArgs> GetExpoItemTypesCompleted;
-        
-        public event System.EventHandler<GetShippingTypesCompletedEventArgs> GetShippingTypesCompleted;
-        
-        public event System.EventHandler<GetItemTypesCompletedEventArgs> GetItemTypesCompleted;
-        
-        public event System.EventHandler<GetCountiesCompletedEventArgs> GetCountiesCompleted;
-        
-        public event System.EventHandler<GetItemFieldValuesCompletedEventArgs> GetItemFieldValuesCompleted;
-        
-        public event System.EventHandler<GetItemAddedDescriptionsCompletedEventArgs> GetItemAddedDescriptionsCompleted;
-        
-        public event System.EventHandler<GetFeedbackCompletedEventArgs> GetFeedbackCompleted;
-        
-        public event System.EventHandler<GetFeedbackSummaryCompletedEventArgs> GetFeedbackSummaryCompleted;
-        
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         TraderaWebService.PublicService.GetItemResponse TraderaWebService.PublicService.PublicServiceSoap.GetItem(TraderaWebService.PublicService.GetItemRequest request) {
             return base.Channel.GetItem(request);
@@ -4068,68 +3488,16 @@ namespace TraderaWebService.PublicService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.PublicService.PublicServiceSoap.BeginGetItem(TraderaWebService.PublicService.GetItemRequest request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginGetItem(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetItemResponse> TraderaWebService.PublicService.PublicServiceSoap.GetItemAsync(TraderaWebService.PublicService.GetItemRequest request) {
+            return base.Channel.GetItemAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginGetItem(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, int itemId, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.PublicService.GetItemResponse> GetItemAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, int itemId) {
             TraderaWebService.PublicService.GetItemRequest inValue = new TraderaWebService.PublicService.GetItemRequest();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
             inValue.itemId = itemId;
-            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).BeginGetItem(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.PublicService.GetItemResponse TraderaWebService.PublicService.PublicServiceSoap.EndGetItem(System.IAsyncResult result) {
-            return base.Channel.EndGetItem(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public TraderaWebService.PublicService.Item EndGetItem(System.IAsyncResult result) {
-            TraderaWebService.PublicService.GetItemResponse retVal = ((TraderaWebService.PublicService.PublicServiceSoap)(this)).EndGetItem(result);
-            return retVal.GetItemResult;
-        }
-        
-        private System.IAsyncResult OnBeginGetItem(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.PublicService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.PublicService.ConfigurationHeader)(inValues[1]));
-            int itemId = ((int)(inValues[2]));
-            return this.BeginGetItem(AuthenticationHeader, ConfigurationHeader, itemId, callback, asyncState);
-        }
-        
-        private object[] OnEndGetItem(System.IAsyncResult result) {
-            TraderaWebService.PublicService.Item retVal = this.EndGetItem(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnGetItemCompleted(object state) {
-            if ((this.GetItemCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetItemCompleted(this, new GetItemCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void GetItemAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, int itemId) {
-            this.GetItemAsync(AuthenticationHeader, ConfigurationHeader, itemId, null);
-        }
-        
-        public void GetItemAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, int itemId, object userState) {
-            if ((this.onBeginGetItemDelegate == null)) {
-                this.onBeginGetItemDelegate = new BeginOperationDelegate(this.OnBeginGetItem);
-            }
-            if ((this.onEndGetItemDelegate == null)) {
-                this.onEndGetItemDelegate = new EndOperationDelegate(this.OnEndGetItem);
-            }
-            if ((this.onGetItemCompletedDelegate == null)) {
-                this.onGetItemCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetItemCompleted);
-            }
-            base.InvokeAsync(this.onBeginGetItemDelegate, new object[] {
-                        AuthenticationHeader,
-                        ConfigurationHeader,
-                        itemId}, this.onEndGetItemDelegate, this.onGetItemCompletedDelegate, userState);
+            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).GetItemAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4152,12 +3520,11 @@ namespace TraderaWebService.PublicService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.PublicService.PublicServiceSoap.BeginGetSellerItems(TraderaWebService.PublicService.GetSellerItemsRequest request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginGetSellerItems(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetSellerItemsResponse> TraderaWebService.PublicService.PublicServiceSoap.GetSellerItemsAsync(TraderaWebService.PublicService.GetSellerItemsRequest request) {
+            return base.Channel.GetSellerItemsAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginGetSellerItems(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, int userId, int categoryId, TraderaWebService.PublicService.ActiveFilter filterActive, System.Nullable<System.DateTime> minEndDate, System.Nullable<System.DateTime> maxEndDate, TraderaWebService.PublicService.ItemTypeFilter filterItemType, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.PublicService.GetSellerItemsResponse> GetSellerItemsAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, int userId, int categoryId, TraderaWebService.PublicService.ActiveFilter filterActive, System.Nullable<System.DateTime> minEndDate, System.Nullable<System.DateTime> maxEndDate, TraderaWebService.PublicService.ItemTypeFilter filterItemType) {
             TraderaWebService.PublicService.GetSellerItemsRequest inValue = new TraderaWebService.PublicService.GetSellerItemsRequest();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
@@ -4167,68 +3534,7 @@ namespace TraderaWebService.PublicService {
             inValue.minEndDate = minEndDate;
             inValue.maxEndDate = maxEndDate;
             inValue.filterItemType = filterItemType;
-            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).BeginGetSellerItems(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.PublicService.GetSellerItemsResponse TraderaWebService.PublicService.PublicServiceSoap.EndGetSellerItems(System.IAsyncResult result) {
-            return base.Channel.EndGetSellerItems(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public TraderaWebService.PublicService.Item[] EndGetSellerItems(System.IAsyncResult result) {
-            TraderaWebService.PublicService.GetSellerItemsResponse retVal = ((TraderaWebService.PublicService.PublicServiceSoap)(this)).EndGetSellerItems(result);
-            return retVal.GetSellerItemsResult;
-        }
-        
-        private System.IAsyncResult OnBeginGetSellerItems(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.PublicService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.PublicService.ConfigurationHeader)(inValues[1]));
-            int userId = ((int)(inValues[2]));
-            int categoryId = ((int)(inValues[3]));
-            TraderaWebService.PublicService.ActiveFilter filterActive = ((TraderaWebService.PublicService.ActiveFilter)(inValues[4]));
-            System.Nullable<System.DateTime> minEndDate = ((System.Nullable<System.DateTime>)(inValues[5]));
-            System.Nullable<System.DateTime> maxEndDate = ((System.Nullable<System.DateTime>)(inValues[6]));
-            TraderaWebService.PublicService.ItemTypeFilter filterItemType = ((TraderaWebService.PublicService.ItemTypeFilter)(inValues[7]));
-            return this.BeginGetSellerItems(AuthenticationHeader, ConfigurationHeader, userId, categoryId, filterActive, minEndDate, maxEndDate, filterItemType, callback, asyncState);
-        }
-        
-        private object[] OnEndGetSellerItems(System.IAsyncResult result) {
-            TraderaWebService.PublicService.Item[] retVal = this.EndGetSellerItems(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnGetSellerItemsCompleted(object state) {
-            if ((this.GetSellerItemsCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetSellerItemsCompleted(this, new GetSellerItemsCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void GetSellerItemsAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, int userId, int categoryId, TraderaWebService.PublicService.ActiveFilter filterActive, System.Nullable<System.DateTime> minEndDate, System.Nullable<System.DateTime> maxEndDate, TraderaWebService.PublicService.ItemTypeFilter filterItemType) {
-            this.GetSellerItemsAsync(AuthenticationHeader, ConfigurationHeader, userId, categoryId, filterActive, minEndDate, maxEndDate, filterItemType, null);
-        }
-        
-        public void GetSellerItemsAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, int userId, int categoryId, TraderaWebService.PublicService.ActiveFilter filterActive, System.Nullable<System.DateTime> minEndDate, System.Nullable<System.DateTime> maxEndDate, TraderaWebService.PublicService.ItemTypeFilter filterItemType, object userState) {
-            if ((this.onBeginGetSellerItemsDelegate == null)) {
-                this.onBeginGetSellerItemsDelegate = new BeginOperationDelegate(this.OnBeginGetSellerItems);
-            }
-            if ((this.onEndGetSellerItemsDelegate == null)) {
-                this.onEndGetSellerItemsDelegate = new EndOperationDelegate(this.OnEndGetSellerItems);
-            }
-            if ((this.onGetSellerItemsCompletedDelegate == null)) {
-                this.onGetSellerItemsCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetSellerItemsCompleted);
-            }
-            base.InvokeAsync(this.onBeginGetSellerItemsDelegate, new object[] {
-                        AuthenticationHeader,
-                        ConfigurationHeader,
-                        userId,
-                        categoryId,
-                        filterActive,
-                        minEndDate,
-                        maxEndDate,
-                        filterItemType}, this.onEndGetSellerItemsDelegate, this.onGetSellerItemsCompletedDelegate, userState);
+            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).GetSellerItemsAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4246,68 +3552,16 @@ namespace TraderaWebService.PublicService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.PublicService.PublicServiceSoap.BeginGetSellerItemsQuickInfo(TraderaWebService.PublicService.GetSellerItemsQuickInfoRequest1 request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginGetSellerItemsQuickInfo(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetSellerItemsQuickInfoResponse> TraderaWebService.PublicService.PublicServiceSoap.GetSellerItemsQuickInfoAsync(TraderaWebService.PublicService.GetSellerItemsQuickInfoRequest1 request) {
+            return base.Channel.GetSellerItemsQuickInfoAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginGetSellerItemsQuickInfo(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, TraderaWebService.PublicService.GetSellerItemsQuickInfoRequest request, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.PublicService.GetSellerItemsQuickInfoResponse> GetSellerItemsQuickInfoAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, TraderaWebService.PublicService.GetSellerItemsQuickInfoRequest request) {
             TraderaWebService.PublicService.GetSellerItemsQuickInfoRequest1 inValue = new TraderaWebService.PublicService.GetSellerItemsQuickInfoRequest1();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
             inValue.request = request;
-            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).BeginGetSellerItemsQuickInfo(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.PublicService.GetSellerItemsQuickInfoResponse TraderaWebService.PublicService.PublicServiceSoap.EndGetSellerItemsQuickInfo(System.IAsyncResult result) {
-            return base.Channel.EndGetSellerItemsQuickInfo(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public TraderaWebService.PublicService.ItemQuickInfo[] EndGetSellerItemsQuickInfo(System.IAsyncResult result) {
-            TraderaWebService.PublicService.GetSellerItemsQuickInfoResponse retVal = ((TraderaWebService.PublicService.PublicServiceSoap)(this)).EndGetSellerItemsQuickInfo(result);
-            return retVal.GetSellerItemsQuickInfoResult;
-        }
-        
-        private System.IAsyncResult OnBeginGetSellerItemsQuickInfo(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.PublicService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.PublicService.ConfigurationHeader)(inValues[1]));
-            TraderaWebService.PublicService.GetSellerItemsQuickInfoRequest request = ((TraderaWebService.PublicService.GetSellerItemsQuickInfoRequest)(inValues[2]));
-            return this.BeginGetSellerItemsQuickInfo(AuthenticationHeader, ConfigurationHeader, request, callback, asyncState);
-        }
-        
-        private object[] OnEndGetSellerItemsQuickInfo(System.IAsyncResult result) {
-            TraderaWebService.PublicService.ItemQuickInfo[] retVal = this.EndGetSellerItemsQuickInfo(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnGetSellerItemsQuickInfoCompleted(object state) {
-            if ((this.GetSellerItemsQuickInfoCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetSellerItemsQuickInfoCompleted(this, new GetSellerItemsQuickInfoCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void GetSellerItemsQuickInfoAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, TraderaWebService.PublicService.GetSellerItemsQuickInfoRequest request) {
-            this.GetSellerItemsQuickInfoAsync(AuthenticationHeader, ConfigurationHeader, request, null);
-        }
-        
-        public void GetSellerItemsQuickInfoAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, TraderaWebService.PublicService.GetSellerItemsQuickInfoRequest request, object userState) {
-            if ((this.onBeginGetSellerItemsQuickInfoDelegate == null)) {
-                this.onBeginGetSellerItemsQuickInfoDelegate = new BeginOperationDelegate(this.OnBeginGetSellerItemsQuickInfo);
-            }
-            if ((this.onEndGetSellerItemsQuickInfoDelegate == null)) {
-                this.onEndGetSellerItemsQuickInfoDelegate = new EndOperationDelegate(this.OnEndGetSellerItemsQuickInfo);
-            }
-            if ((this.onGetSellerItemsQuickInfoCompletedDelegate == null)) {
-                this.onGetSellerItemsQuickInfoCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetSellerItemsQuickInfoCompleted);
-            }
-            base.InvokeAsync(this.onBeginGetSellerItemsQuickInfoDelegate, new object[] {
-                        AuthenticationHeader,
-                        ConfigurationHeader,
-                        request}, this.onEndGetSellerItemsQuickInfoDelegate, this.onGetSellerItemsQuickInfoCompletedDelegate, userState);
+            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).GetSellerItemsQuickInfoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4328,12 +3582,11 @@ namespace TraderaWebService.PublicService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.PublicService.PublicServiceSoap.BeginGetSearchResult(TraderaWebService.PublicService.GetSearchResultRequest request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginGetSearchResult(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetSearchResultResponse> TraderaWebService.PublicService.PublicServiceSoap.GetSearchResultAsync(TraderaWebService.PublicService.GetSearchResultRequest request) {
+            return base.Channel.GetSearchResultAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginGetSearchResult(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, string query, int categoryId, int pageNumber, TraderaWebService.PublicService.SearchOrderBy orderBy, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.PublicService.GetSearchResultResponse> GetSearchResultAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, string query, int categoryId, int pageNumber, TraderaWebService.PublicService.SearchOrderBy orderBy) {
             TraderaWebService.PublicService.GetSearchResultRequest inValue = new TraderaWebService.PublicService.GetSearchResultRequest();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
@@ -4341,64 +3594,7 @@ namespace TraderaWebService.PublicService {
             inValue.categoryId = categoryId;
             inValue.pageNumber = pageNumber;
             inValue.orderBy = orderBy;
-            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).BeginGetSearchResult(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.PublicService.GetSearchResultResponse TraderaWebService.PublicService.PublicServiceSoap.EndGetSearchResult(System.IAsyncResult result) {
-            return base.Channel.EndGetSearchResult(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public TraderaWebService.PublicService.SearchResult EndGetSearchResult(System.IAsyncResult result) {
-            TraderaWebService.PublicService.GetSearchResultResponse retVal = ((TraderaWebService.PublicService.PublicServiceSoap)(this)).EndGetSearchResult(result);
-            return retVal.GetSearchResultResult;
-        }
-        
-        private System.IAsyncResult OnBeginGetSearchResult(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.PublicService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.PublicService.ConfigurationHeader)(inValues[1]));
-            string query = ((string)(inValues[2]));
-            int categoryId = ((int)(inValues[3]));
-            int pageNumber = ((int)(inValues[4]));
-            TraderaWebService.PublicService.SearchOrderBy orderBy = ((TraderaWebService.PublicService.SearchOrderBy)(inValues[5]));
-            return this.BeginGetSearchResult(AuthenticationHeader, ConfigurationHeader, query, categoryId, pageNumber, orderBy, callback, asyncState);
-        }
-        
-        private object[] OnEndGetSearchResult(System.IAsyncResult result) {
-            TraderaWebService.PublicService.SearchResult retVal = this.EndGetSearchResult(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnGetSearchResultCompleted(object state) {
-            if ((this.GetSearchResultCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetSearchResultCompleted(this, new GetSearchResultCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void GetSearchResultAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, string query, int categoryId, int pageNumber, TraderaWebService.PublicService.SearchOrderBy orderBy) {
-            this.GetSearchResultAsync(AuthenticationHeader, ConfigurationHeader, query, categoryId, pageNumber, orderBy, null);
-        }
-        
-        public void GetSearchResultAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, string query, int categoryId, int pageNumber, TraderaWebService.PublicService.SearchOrderBy orderBy, object userState) {
-            if ((this.onBeginGetSearchResultDelegate == null)) {
-                this.onBeginGetSearchResultDelegate = new BeginOperationDelegate(this.OnBeginGetSearchResult);
-            }
-            if ((this.onEndGetSearchResultDelegate == null)) {
-                this.onEndGetSearchResultDelegate = new EndOperationDelegate(this.OnEndGetSearchResult);
-            }
-            if ((this.onGetSearchResultCompletedDelegate == null)) {
-                this.onGetSearchResultCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetSearchResultCompleted);
-            }
-            base.InvokeAsync(this.onBeginGetSearchResultDelegate, new object[] {
-                        AuthenticationHeader,
-                        ConfigurationHeader,
-                        query,
-                        categoryId,
-                        pageNumber,
-                        orderBy}, this.onEndGetSearchResultDelegate, this.onGetSearchResultCompletedDelegate, userState);
+            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).GetSearchResultAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4416,68 +3612,16 @@ namespace TraderaWebService.PublicService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.PublicService.PublicServiceSoap.BeginGetSearchResultAdvanced(TraderaWebService.PublicService.GetSearchResultAdvancedRequest request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginGetSearchResultAdvanced(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetSearchResultAdvancedResponse> TraderaWebService.PublicService.PublicServiceSoap.GetSearchResultAdvancedAsync(TraderaWebService.PublicService.GetSearchResultAdvancedRequest request) {
+            return base.Channel.GetSearchResultAdvancedAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginGetSearchResultAdvanced(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, TraderaWebService.PublicService.Query query, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.PublicService.GetSearchResultAdvancedResponse> GetSearchResultAdvancedAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, TraderaWebService.PublicService.Query query) {
             TraderaWebService.PublicService.GetSearchResultAdvancedRequest inValue = new TraderaWebService.PublicService.GetSearchResultAdvancedRequest();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
             inValue.query = query;
-            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).BeginGetSearchResultAdvanced(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.PublicService.GetSearchResultAdvancedResponse TraderaWebService.PublicService.PublicServiceSoap.EndGetSearchResultAdvanced(System.IAsyncResult result) {
-            return base.Channel.EndGetSearchResultAdvanced(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public TraderaWebService.PublicService.SearchResult EndGetSearchResultAdvanced(System.IAsyncResult result) {
-            TraderaWebService.PublicService.GetSearchResultAdvancedResponse retVal = ((TraderaWebService.PublicService.PublicServiceSoap)(this)).EndGetSearchResultAdvanced(result);
-            return retVal.GetSearchResultAdvancedResult;
-        }
-        
-        private System.IAsyncResult OnBeginGetSearchResultAdvanced(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.PublicService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.PublicService.ConfigurationHeader)(inValues[1]));
-            TraderaWebService.PublicService.Query query = ((TraderaWebService.PublicService.Query)(inValues[2]));
-            return this.BeginGetSearchResultAdvanced(AuthenticationHeader, ConfigurationHeader, query, callback, asyncState);
-        }
-        
-        private object[] OnEndGetSearchResultAdvanced(System.IAsyncResult result) {
-            TraderaWebService.PublicService.SearchResult retVal = this.EndGetSearchResultAdvanced(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnGetSearchResultAdvancedCompleted(object state) {
-            if ((this.GetSearchResultAdvancedCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetSearchResultAdvancedCompleted(this, new GetSearchResultAdvancedCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void GetSearchResultAdvancedAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, TraderaWebService.PublicService.Query query) {
-            this.GetSearchResultAdvancedAsync(AuthenticationHeader, ConfigurationHeader, query, null);
-        }
-        
-        public void GetSearchResultAdvancedAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, TraderaWebService.PublicService.Query query, object userState) {
-            if ((this.onBeginGetSearchResultAdvancedDelegate == null)) {
-                this.onBeginGetSearchResultAdvancedDelegate = new BeginOperationDelegate(this.OnBeginGetSearchResultAdvanced);
-            }
-            if ((this.onEndGetSearchResultAdvancedDelegate == null)) {
-                this.onEndGetSearchResultAdvancedDelegate = new EndOperationDelegate(this.OnEndGetSearchResultAdvanced);
-            }
-            if ((this.onGetSearchResultAdvancedCompletedDelegate == null)) {
-                this.onGetSearchResultAdvancedCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetSearchResultAdvancedCompleted);
-            }
-            base.InvokeAsync(this.onBeginGetSearchResultAdvancedDelegate, new object[] {
-                        AuthenticationHeader,
-                        ConfigurationHeader,
-                        query}, this.onEndGetSearchResultAdvancedDelegate, this.onGetSearchResultAdvancedCompletedDelegate, userState);
+            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).GetSearchResultAdvancedAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4495,68 +3639,16 @@ namespace TraderaWebService.PublicService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.PublicService.PublicServiceSoap.BeginGetSearchResultAdvancedXml(TraderaWebService.PublicService.GetSearchResultAdvancedXmlRequest request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginGetSearchResultAdvancedXml(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetSearchResultAdvancedXmlResponse> TraderaWebService.PublicService.PublicServiceSoap.GetSearchResultAdvancedXmlAsync(TraderaWebService.PublicService.GetSearchResultAdvancedXmlRequest request) {
+            return base.Channel.GetSearchResultAdvancedXmlAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginGetSearchResultAdvancedXml(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, string queryXml, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.PublicService.GetSearchResultAdvancedXmlResponse> GetSearchResultAdvancedXmlAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, string queryXml) {
             TraderaWebService.PublicService.GetSearchResultAdvancedXmlRequest inValue = new TraderaWebService.PublicService.GetSearchResultAdvancedXmlRequest();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
             inValue.queryXml = queryXml;
-            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).BeginGetSearchResultAdvancedXml(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.PublicService.GetSearchResultAdvancedXmlResponse TraderaWebService.PublicService.PublicServiceSoap.EndGetSearchResultAdvancedXml(System.IAsyncResult result) {
-            return base.Channel.EndGetSearchResultAdvancedXml(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public TraderaWebService.PublicService.SearchResult EndGetSearchResultAdvancedXml(System.IAsyncResult result) {
-            TraderaWebService.PublicService.GetSearchResultAdvancedXmlResponse retVal = ((TraderaWebService.PublicService.PublicServiceSoap)(this)).EndGetSearchResultAdvancedXml(result);
-            return retVal.GetSearchResultAdvancedXmlResult;
-        }
-        
-        private System.IAsyncResult OnBeginGetSearchResultAdvancedXml(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.PublicService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.PublicService.ConfigurationHeader)(inValues[1]));
-            string queryXml = ((string)(inValues[2]));
-            return this.BeginGetSearchResultAdvancedXml(AuthenticationHeader, ConfigurationHeader, queryXml, callback, asyncState);
-        }
-        
-        private object[] OnEndGetSearchResultAdvancedXml(System.IAsyncResult result) {
-            TraderaWebService.PublicService.SearchResult retVal = this.EndGetSearchResultAdvancedXml(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnGetSearchResultAdvancedXmlCompleted(object state) {
-            if ((this.GetSearchResultAdvancedXmlCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetSearchResultAdvancedXmlCompleted(this, new GetSearchResultAdvancedXmlCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void GetSearchResultAdvancedXmlAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, string queryXml) {
-            this.GetSearchResultAdvancedXmlAsync(AuthenticationHeader, ConfigurationHeader, queryXml, null);
-        }
-        
-        public void GetSearchResultAdvancedXmlAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, string queryXml, object userState) {
-            if ((this.onBeginGetSearchResultAdvancedXmlDelegate == null)) {
-                this.onBeginGetSearchResultAdvancedXmlDelegate = new BeginOperationDelegate(this.OnBeginGetSearchResultAdvancedXml);
-            }
-            if ((this.onEndGetSearchResultAdvancedXmlDelegate == null)) {
-                this.onEndGetSearchResultAdvancedXmlDelegate = new EndOperationDelegate(this.OnEndGetSearchResultAdvancedXml);
-            }
-            if ((this.onGetSearchResultAdvancedXmlCompletedDelegate == null)) {
-                this.onGetSearchResultAdvancedXmlCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetSearchResultAdvancedXmlCompleted);
-            }
-            base.InvokeAsync(this.onBeginGetSearchResultAdvancedXmlDelegate, new object[] {
-                        AuthenticationHeader,
-                        ConfigurationHeader,
-                        queryXml}, this.onEndGetSearchResultAdvancedXmlDelegate, this.onGetSearchResultAdvancedXmlCompletedDelegate, userState);
+            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).GetSearchResultAdvancedXmlAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4574,68 +3666,16 @@ namespace TraderaWebService.PublicService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.PublicService.PublicServiceSoap.BeginGetUserByAlias(TraderaWebService.PublicService.GetUserByAliasRequest request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginGetUserByAlias(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetUserByAliasResponse> TraderaWebService.PublicService.PublicServiceSoap.GetUserByAliasAsync(TraderaWebService.PublicService.GetUserByAliasRequest request) {
+            return base.Channel.GetUserByAliasAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginGetUserByAlias(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, string alias, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.PublicService.GetUserByAliasResponse> GetUserByAliasAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, string alias) {
             TraderaWebService.PublicService.GetUserByAliasRequest inValue = new TraderaWebService.PublicService.GetUserByAliasRequest();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
             inValue.alias = alias;
-            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).BeginGetUserByAlias(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.PublicService.GetUserByAliasResponse TraderaWebService.PublicService.PublicServiceSoap.EndGetUserByAlias(System.IAsyncResult result) {
-            return base.Channel.EndGetUserByAlias(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public TraderaWebService.PublicService.User EndGetUserByAlias(System.IAsyncResult result) {
-            TraderaWebService.PublicService.GetUserByAliasResponse retVal = ((TraderaWebService.PublicService.PublicServiceSoap)(this)).EndGetUserByAlias(result);
-            return retVal.GetUserByAliasResult;
-        }
-        
-        private System.IAsyncResult OnBeginGetUserByAlias(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.PublicService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.PublicService.ConfigurationHeader)(inValues[1]));
-            string alias = ((string)(inValues[2]));
-            return this.BeginGetUserByAlias(AuthenticationHeader, ConfigurationHeader, alias, callback, asyncState);
-        }
-        
-        private object[] OnEndGetUserByAlias(System.IAsyncResult result) {
-            TraderaWebService.PublicService.User retVal = this.EndGetUserByAlias(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnGetUserByAliasCompleted(object state) {
-            if ((this.GetUserByAliasCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetUserByAliasCompleted(this, new GetUserByAliasCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void GetUserByAliasAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, string alias) {
-            this.GetUserByAliasAsync(AuthenticationHeader, ConfigurationHeader, alias, null);
-        }
-        
-        public void GetUserByAliasAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, string alias, object userState) {
-            if ((this.onBeginGetUserByAliasDelegate == null)) {
-                this.onBeginGetUserByAliasDelegate = new BeginOperationDelegate(this.OnBeginGetUserByAlias);
-            }
-            if ((this.onEndGetUserByAliasDelegate == null)) {
-                this.onEndGetUserByAliasDelegate = new EndOperationDelegate(this.OnEndGetUserByAlias);
-            }
-            if ((this.onGetUserByAliasCompletedDelegate == null)) {
-                this.onGetUserByAliasCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetUserByAliasCompleted);
-            }
-            base.InvokeAsync(this.onBeginGetUserByAliasDelegate, new object[] {
-                        AuthenticationHeader,
-                        ConfigurationHeader,
-                        alias}, this.onEndGetUserByAliasDelegate, this.onGetUserByAliasCompletedDelegate, userState);
+            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).GetUserByAliasAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4654,71 +3694,17 @@ namespace TraderaWebService.PublicService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.PublicService.PublicServiceSoap.BeginFetchToken(TraderaWebService.PublicService.FetchTokenRequest request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginFetchToken(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.FetchTokenResponse> TraderaWebService.PublicService.PublicServiceSoap.FetchTokenAsync(TraderaWebService.PublicService.FetchTokenRequest request) {
+            return base.Channel.FetchTokenAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginFetchToken(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, int userId, string secretKey, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.PublicService.FetchTokenResponse> FetchTokenAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, int userId, string secretKey) {
             TraderaWebService.PublicService.FetchTokenRequest inValue = new TraderaWebService.PublicService.FetchTokenRequest();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
             inValue.userId = userId;
             inValue.secretKey = secretKey;
-            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).BeginFetchToken(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.PublicService.FetchTokenResponse TraderaWebService.PublicService.PublicServiceSoap.EndFetchToken(System.IAsyncResult result) {
-            return base.Channel.EndFetchToken(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public TraderaWebService.PublicService.Token EndFetchToken(System.IAsyncResult result) {
-            TraderaWebService.PublicService.FetchTokenResponse retVal = ((TraderaWebService.PublicService.PublicServiceSoap)(this)).EndFetchToken(result);
-            return retVal.FetchTokenResult;
-        }
-        
-        private System.IAsyncResult OnBeginFetchToken(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.PublicService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.PublicService.ConfigurationHeader)(inValues[1]));
-            int userId = ((int)(inValues[2]));
-            string secretKey = ((string)(inValues[3]));
-            return this.BeginFetchToken(AuthenticationHeader, ConfigurationHeader, userId, secretKey, callback, asyncState);
-        }
-        
-        private object[] OnEndFetchToken(System.IAsyncResult result) {
-            TraderaWebService.PublicService.Token retVal = this.EndFetchToken(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnFetchTokenCompleted(object state) {
-            if ((this.FetchTokenCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.FetchTokenCompleted(this, new FetchTokenCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void FetchTokenAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, int userId, string secretKey) {
-            this.FetchTokenAsync(AuthenticationHeader, ConfigurationHeader, userId, secretKey, null);
-        }
-        
-        public void FetchTokenAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, int userId, string secretKey, object userState) {
-            if ((this.onBeginFetchTokenDelegate == null)) {
-                this.onBeginFetchTokenDelegate = new BeginOperationDelegate(this.OnBeginFetchToken);
-            }
-            if ((this.onEndFetchTokenDelegate == null)) {
-                this.onEndFetchTokenDelegate = new EndOperationDelegate(this.OnEndFetchToken);
-            }
-            if ((this.onFetchTokenCompletedDelegate == null)) {
-                this.onFetchTokenCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnFetchTokenCompleted);
-            }
-            base.InvokeAsync(this.onBeginFetchTokenDelegate, new object[] {
-                        AuthenticationHeader,
-                        ConfigurationHeader,
-                        userId,
-                        secretKey}, this.onEndFetchTokenDelegate, this.onFetchTokenCompletedDelegate, userState);
+            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).FetchTokenAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4735,65 +3721,15 @@ namespace TraderaWebService.PublicService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.PublicService.PublicServiceSoap.BeginGetOfficalTime(TraderaWebService.PublicService.GetOfficalTimeRequest request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginGetOfficalTime(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetOfficalTimeResponse> TraderaWebService.PublicService.PublicServiceSoap.GetOfficalTimeAsync(TraderaWebService.PublicService.GetOfficalTimeRequest request) {
+            return base.Channel.GetOfficalTimeAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginGetOfficalTime(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.PublicService.GetOfficalTimeResponse> GetOfficalTimeAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader) {
             TraderaWebService.PublicService.GetOfficalTimeRequest inValue = new TraderaWebService.PublicService.GetOfficalTimeRequest();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
-            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).BeginGetOfficalTime(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.PublicService.GetOfficalTimeResponse TraderaWebService.PublicService.PublicServiceSoap.EndGetOfficalTime(System.IAsyncResult result) {
-            return base.Channel.EndGetOfficalTime(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.DateTime EndGetOfficalTime(System.IAsyncResult result) {
-            TraderaWebService.PublicService.GetOfficalTimeResponse retVal = ((TraderaWebService.PublicService.PublicServiceSoap)(this)).EndGetOfficalTime(result);
-            return retVal.GetOfficalTimeResult;
-        }
-        
-        private System.IAsyncResult OnBeginGetOfficalTime(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.PublicService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.PublicService.ConfigurationHeader)(inValues[1]));
-            return this.BeginGetOfficalTime(AuthenticationHeader, ConfigurationHeader, callback, asyncState);
-        }
-        
-        private object[] OnEndGetOfficalTime(System.IAsyncResult result) {
-            System.DateTime retVal = this.EndGetOfficalTime(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnGetOfficalTimeCompleted(object state) {
-            if ((this.GetOfficalTimeCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetOfficalTimeCompleted(this, new GetOfficalTimeCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void GetOfficalTimeAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader) {
-            this.GetOfficalTimeAsync(AuthenticationHeader, ConfigurationHeader, null);
-        }
-        
-        public void GetOfficalTimeAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, object userState) {
-            if ((this.onBeginGetOfficalTimeDelegate == null)) {
-                this.onBeginGetOfficalTimeDelegate = new BeginOperationDelegate(this.OnBeginGetOfficalTime);
-            }
-            if ((this.onEndGetOfficalTimeDelegate == null)) {
-                this.onEndGetOfficalTimeDelegate = new EndOperationDelegate(this.OnEndGetOfficalTime);
-            }
-            if ((this.onGetOfficalTimeCompletedDelegate == null)) {
-                this.onGetOfficalTimeCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetOfficalTimeCompleted);
-            }
-            base.InvokeAsync(this.onBeginGetOfficalTimeDelegate, new object[] {
-                        AuthenticationHeader,
-                        ConfigurationHeader}, this.onEndGetOfficalTimeDelegate, this.onGetOfficalTimeCompletedDelegate, userState);
+            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).GetOfficalTimeAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4810,65 +3746,15 @@ namespace TraderaWebService.PublicService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.PublicService.PublicServiceSoap.BeginGetCategories(TraderaWebService.PublicService.GetCategoriesRequest request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginGetCategories(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetCategoriesResponse> TraderaWebService.PublicService.PublicServiceSoap.GetCategoriesAsync(TraderaWebService.PublicService.GetCategoriesRequest request) {
+            return base.Channel.GetCategoriesAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginGetCategories(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.PublicService.GetCategoriesResponse> GetCategoriesAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader) {
             TraderaWebService.PublicService.GetCategoriesRequest inValue = new TraderaWebService.PublicService.GetCategoriesRequest();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
-            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).BeginGetCategories(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.PublicService.GetCategoriesResponse TraderaWebService.PublicService.PublicServiceSoap.EndGetCategories(System.IAsyncResult result) {
-            return base.Channel.EndGetCategories(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public TraderaWebService.PublicService.Category[] EndGetCategories(System.IAsyncResult result) {
-            TraderaWebService.PublicService.GetCategoriesResponse retVal = ((TraderaWebService.PublicService.PublicServiceSoap)(this)).EndGetCategories(result);
-            return retVal.GetCategoriesResult;
-        }
-        
-        private System.IAsyncResult OnBeginGetCategories(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.PublicService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.PublicService.ConfigurationHeader)(inValues[1]));
-            return this.BeginGetCategories(AuthenticationHeader, ConfigurationHeader, callback, asyncState);
-        }
-        
-        private object[] OnEndGetCategories(System.IAsyncResult result) {
-            TraderaWebService.PublicService.Category[] retVal = this.EndGetCategories(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnGetCategoriesCompleted(object state) {
-            if ((this.GetCategoriesCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetCategoriesCompleted(this, new GetCategoriesCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void GetCategoriesAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader) {
-            this.GetCategoriesAsync(AuthenticationHeader, ConfigurationHeader, null);
-        }
-        
-        public void GetCategoriesAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, object userState) {
-            if ((this.onBeginGetCategoriesDelegate == null)) {
-                this.onBeginGetCategoriesDelegate = new BeginOperationDelegate(this.OnBeginGetCategories);
-            }
-            if ((this.onEndGetCategoriesDelegate == null)) {
-                this.onEndGetCategoriesDelegate = new EndOperationDelegate(this.OnEndGetCategories);
-            }
-            if ((this.onGetCategoriesCompletedDelegate == null)) {
-                this.onGetCategoriesCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetCategoriesCompleted);
-            }
-            base.InvokeAsync(this.onBeginGetCategoriesDelegate, new object[] {
-                        AuthenticationHeader,
-                        ConfigurationHeader}, this.onEndGetCategoriesDelegate, this.onGetCategoriesCompletedDelegate, userState);
+            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).GetCategoriesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4885,65 +3771,15 @@ namespace TraderaWebService.PublicService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.PublicService.PublicServiceSoap.BeginGetPaymentTypes(TraderaWebService.PublicService.GetPaymentTypesRequest request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginGetPaymentTypes(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetPaymentTypesResponse> TraderaWebService.PublicService.PublicServiceSoap.GetPaymentTypesAsync(TraderaWebService.PublicService.GetPaymentTypesRequest request) {
+            return base.Channel.GetPaymentTypesAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginGetPaymentTypes(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.PublicService.GetPaymentTypesResponse> GetPaymentTypesAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader) {
             TraderaWebService.PublicService.GetPaymentTypesRequest inValue = new TraderaWebService.PublicService.GetPaymentTypesRequest();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
-            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).BeginGetPaymentTypes(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.PublicService.GetPaymentTypesResponse TraderaWebService.PublicService.PublicServiceSoap.EndGetPaymentTypes(System.IAsyncResult result) {
-            return base.Channel.EndGetPaymentTypes(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public TraderaWebService.PublicService.IdDescriptionPair[] EndGetPaymentTypes(System.IAsyncResult result) {
-            TraderaWebService.PublicService.GetPaymentTypesResponse retVal = ((TraderaWebService.PublicService.PublicServiceSoap)(this)).EndGetPaymentTypes(result);
-            return retVal.GetPaymentTypesResult;
-        }
-        
-        private System.IAsyncResult OnBeginGetPaymentTypes(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.PublicService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.PublicService.ConfigurationHeader)(inValues[1]));
-            return this.BeginGetPaymentTypes(AuthenticationHeader, ConfigurationHeader, callback, asyncState);
-        }
-        
-        private object[] OnEndGetPaymentTypes(System.IAsyncResult result) {
-            TraderaWebService.PublicService.IdDescriptionPair[] retVal = this.EndGetPaymentTypes(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnGetPaymentTypesCompleted(object state) {
-            if ((this.GetPaymentTypesCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetPaymentTypesCompleted(this, new GetPaymentTypesCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void GetPaymentTypesAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader) {
-            this.GetPaymentTypesAsync(AuthenticationHeader, ConfigurationHeader, null);
-        }
-        
-        public void GetPaymentTypesAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, object userState) {
-            if ((this.onBeginGetPaymentTypesDelegate == null)) {
-                this.onBeginGetPaymentTypesDelegate = new BeginOperationDelegate(this.OnBeginGetPaymentTypes);
-            }
-            if ((this.onEndGetPaymentTypesDelegate == null)) {
-                this.onEndGetPaymentTypesDelegate = new EndOperationDelegate(this.OnEndGetPaymentTypes);
-            }
-            if ((this.onGetPaymentTypesCompletedDelegate == null)) {
-                this.onGetPaymentTypesCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetPaymentTypesCompleted);
-            }
-            base.InvokeAsync(this.onBeginGetPaymentTypesDelegate, new object[] {
-                        AuthenticationHeader,
-                        ConfigurationHeader}, this.onEndGetPaymentTypesDelegate, this.onGetPaymentTypesCompletedDelegate, userState);
+            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).GetPaymentTypesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4960,65 +3796,15 @@ namespace TraderaWebService.PublicService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.PublicService.PublicServiceSoap.BeginGetAcceptedBidderTypes(TraderaWebService.PublicService.GetAcceptedBidderTypesRequest request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginGetAcceptedBidderTypes(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetAcceptedBidderTypesResponse> TraderaWebService.PublicService.PublicServiceSoap.GetAcceptedBidderTypesAsync(TraderaWebService.PublicService.GetAcceptedBidderTypesRequest request) {
+            return base.Channel.GetAcceptedBidderTypesAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginGetAcceptedBidderTypes(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.PublicService.GetAcceptedBidderTypesResponse> GetAcceptedBidderTypesAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader) {
             TraderaWebService.PublicService.GetAcceptedBidderTypesRequest inValue = new TraderaWebService.PublicService.GetAcceptedBidderTypesRequest();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
-            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).BeginGetAcceptedBidderTypes(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.PublicService.GetAcceptedBidderTypesResponse TraderaWebService.PublicService.PublicServiceSoap.EndGetAcceptedBidderTypes(System.IAsyncResult result) {
-            return base.Channel.EndGetAcceptedBidderTypes(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public TraderaWebService.PublicService.IdDescriptionPair[] EndGetAcceptedBidderTypes(System.IAsyncResult result) {
-            TraderaWebService.PublicService.GetAcceptedBidderTypesResponse retVal = ((TraderaWebService.PublicService.PublicServiceSoap)(this)).EndGetAcceptedBidderTypes(result);
-            return retVal.GetAcceptedBidderTypesResult;
-        }
-        
-        private System.IAsyncResult OnBeginGetAcceptedBidderTypes(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.PublicService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.PublicService.ConfigurationHeader)(inValues[1]));
-            return this.BeginGetAcceptedBidderTypes(AuthenticationHeader, ConfigurationHeader, callback, asyncState);
-        }
-        
-        private object[] OnEndGetAcceptedBidderTypes(System.IAsyncResult result) {
-            TraderaWebService.PublicService.IdDescriptionPair[] retVal = this.EndGetAcceptedBidderTypes(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnGetAcceptedBidderTypesCompleted(object state) {
-            if ((this.GetAcceptedBidderTypesCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetAcceptedBidderTypesCompleted(this, new GetAcceptedBidderTypesCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void GetAcceptedBidderTypesAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader) {
-            this.GetAcceptedBidderTypesAsync(AuthenticationHeader, ConfigurationHeader, null);
-        }
-        
-        public void GetAcceptedBidderTypesAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, object userState) {
-            if ((this.onBeginGetAcceptedBidderTypesDelegate == null)) {
-                this.onBeginGetAcceptedBidderTypesDelegate = new BeginOperationDelegate(this.OnBeginGetAcceptedBidderTypes);
-            }
-            if ((this.onEndGetAcceptedBidderTypesDelegate == null)) {
-                this.onEndGetAcceptedBidderTypesDelegate = new EndOperationDelegate(this.OnEndGetAcceptedBidderTypes);
-            }
-            if ((this.onGetAcceptedBidderTypesCompletedDelegate == null)) {
-                this.onGetAcceptedBidderTypesCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetAcceptedBidderTypesCompleted);
-            }
-            base.InvokeAsync(this.onBeginGetAcceptedBidderTypesDelegate, new object[] {
-                        AuthenticationHeader,
-                        ConfigurationHeader}, this.onEndGetAcceptedBidderTypesDelegate, this.onGetAcceptedBidderTypesCompletedDelegate, userState);
+            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).GetAcceptedBidderTypesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5035,65 +3821,15 @@ namespace TraderaWebService.PublicService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.PublicService.PublicServiceSoap.BeginGetExpoItemTypes(TraderaWebService.PublicService.GetExpoItemTypesRequest request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginGetExpoItemTypes(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetExpoItemTypesResponse> TraderaWebService.PublicService.PublicServiceSoap.GetExpoItemTypesAsync(TraderaWebService.PublicService.GetExpoItemTypesRequest request) {
+            return base.Channel.GetExpoItemTypesAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginGetExpoItemTypes(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.PublicService.GetExpoItemTypesResponse> GetExpoItemTypesAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader) {
             TraderaWebService.PublicService.GetExpoItemTypesRequest inValue = new TraderaWebService.PublicService.GetExpoItemTypesRequest();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
-            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).BeginGetExpoItemTypes(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.PublicService.GetExpoItemTypesResponse TraderaWebService.PublicService.PublicServiceSoap.EndGetExpoItemTypes(System.IAsyncResult result) {
-            return base.Channel.EndGetExpoItemTypes(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public TraderaWebService.PublicService.IdDescriptionPair[] EndGetExpoItemTypes(System.IAsyncResult result) {
-            TraderaWebService.PublicService.GetExpoItemTypesResponse retVal = ((TraderaWebService.PublicService.PublicServiceSoap)(this)).EndGetExpoItemTypes(result);
-            return retVal.GetExpoItemTypesResult;
-        }
-        
-        private System.IAsyncResult OnBeginGetExpoItemTypes(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.PublicService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.PublicService.ConfigurationHeader)(inValues[1]));
-            return this.BeginGetExpoItemTypes(AuthenticationHeader, ConfigurationHeader, callback, asyncState);
-        }
-        
-        private object[] OnEndGetExpoItemTypes(System.IAsyncResult result) {
-            TraderaWebService.PublicService.IdDescriptionPair[] retVal = this.EndGetExpoItemTypes(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnGetExpoItemTypesCompleted(object state) {
-            if ((this.GetExpoItemTypesCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetExpoItemTypesCompleted(this, new GetExpoItemTypesCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void GetExpoItemTypesAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader) {
-            this.GetExpoItemTypesAsync(AuthenticationHeader, ConfigurationHeader, null);
-        }
-        
-        public void GetExpoItemTypesAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, object userState) {
-            if ((this.onBeginGetExpoItemTypesDelegate == null)) {
-                this.onBeginGetExpoItemTypesDelegate = new BeginOperationDelegate(this.OnBeginGetExpoItemTypes);
-            }
-            if ((this.onEndGetExpoItemTypesDelegate == null)) {
-                this.onEndGetExpoItemTypesDelegate = new EndOperationDelegate(this.OnEndGetExpoItemTypes);
-            }
-            if ((this.onGetExpoItemTypesCompletedDelegate == null)) {
-                this.onGetExpoItemTypesCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetExpoItemTypesCompleted);
-            }
-            base.InvokeAsync(this.onBeginGetExpoItemTypesDelegate, new object[] {
-                        AuthenticationHeader,
-                        ConfigurationHeader}, this.onEndGetExpoItemTypesDelegate, this.onGetExpoItemTypesCompletedDelegate, userState);
+            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).GetExpoItemTypesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5110,65 +3846,15 @@ namespace TraderaWebService.PublicService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.PublicService.PublicServiceSoap.BeginGetShippingTypes(TraderaWebService.PublicService.GetShippingTypesRequest request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginGetShippingTypes(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetShippingTypesResponse> TraderaWebService.PublicService.PublicServiceSoap.GetShippingTypesAsync(TraderaWebService.PublicService.GetShippingTypesRequest request) {
+            return base.Channel.GetShippingTypesAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginGetShippingTypes(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.PublicService.GetShippingTypesResponse> GetShippingTypesAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader) {
             TraderaWebService.PublicService.GetShippingTypesRequest inValue = new TraderaWebService.PublicService.GetShippingTypesRequest();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
-            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).BeginGetShippingTypes(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.PublicService.GetShippingTypesResponse TraderaWebService.PublicService.PublicServiceSoap.EndGetShippingTypes(System.IAsyncResult result) {
-            return base.Channel.EndGetShippingTypes(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public TraderaWebService.PublicService.IdDescriptionPair[] EndGetShippingTypes(System.IAsyncResult result) {
-            TraderaWebService.PublicService.GetShippingTypesResponse retVal = ((TraderaWebService.PublicService.PublicServiceSoap)(this)).EndGetShippingTypes(result);
-            return retVal.GetShippingTypesResult;
-        }
-        
-        private System.IAsyncResult OnBeginGetShippingTypes(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.PublicService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.PublicService.ConfigurationHeader)(inValues[1]));
-            return this.BeginGetShippingTypes(AuthenticationHeader, ConfigurationHeader, callback, asyncState);
-        }
-        
-        private object[] OnEndGetShippingTypes(System.IAsyncResult result) {
-            TraderaWebService.PublicService.IdDescriptionPair[] retVal = this.EndGetShippingTypes(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnGetShippingTypesCompleted(object state) {
-            if ((this.GetShippingTypesCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetShippingTypesCompleted(this, new GetShippingTypesCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void GetShippingTypesAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader) {
-            this.GetShippingTypesAsync(AuthenticationHeader, ConfigurationHeader, null);
-        }
-        
-        public void GetShippingTypesAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, object userState) {
-            if ((this.onBeginGetShippingTypesDelegate == null)) {
-                this.onBeginGetShippingTypesDelegate = new BeginOperationDelegate(this.OnBeginGetShippingTypes);
-            }
-            if ((this.onEndGetShippingTypesDelegate == null)) {
-                this.onEndGetShippingTypesDelegate = new EndOperationDelegate(this.OnEndGetShippingTypes);
-            }
-            if ((this.onGetShippingTypesCompletedDelegate == null)) {
-                this.onGetShippingTypesCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetShippingTypesCompleted);
-            }
-            base.InvokeAsync(this.onBeginGetShippingTypesDelegate, new object[] {
-                        AuthenticationHeader,
-                        ConfigurationHeader}, this.onEndGetShippingTypesDelegate, this.onGetShippingTypesCompletedDelegate, userState);
+            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).GetShippingTypesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5185,65 +3871,15 @@ namespace TraderaWebService.PublicService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.PublicService.PublicServiceSoap.BeginGetItemTypes(TraderaWebService.PublicService.GetItemTypesRequest request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginGetItemTypes(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetItemTypesResponse> TraderaWebService.PublicService.PublicServiceSoap.GetItemTypesAsync(TraderaWebService.PublicService.GetItemTypesRequest request) {
+            return base.Channel.GetItemTypesAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginGetItemTypes(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.PublicService.GetItemTypesResponse> GetItemTypesAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader) {
             TraderaWebService.PublicService.GetItemTypesRequest inValue = new TraderaWebService.PublicService.GetItemTypesRequest();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
-            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).BeginGetItemTypes(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.PublicService.GetItemTypesResponse TraderaWebService.PublicService.PublicServiceSoap.EndGetItemTypes(System.IAsyncResult result) {
-            return base.Channel.EndGetItemTypes(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public TraderaWebService.PublicService.IdDescriptionPair[] EndGetItemTypes(System.IAsyncResult result) {
-            TraderaWebService.PublicService.GetItemTypesResponse retVal = ((TraderaWebService.PublicService.PublicServiceSoap)(this)).EndGetItemTypes(result);
-            return retVal.GetItemTypesResult;
-        }
-        
-        private System.IAsyncResult OnBeginGetItemTypes(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.PublicService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.PublicService.ConfigurationHeader)(inValues[1]));
-            return this.BeginGetItemTypes(AuthenticationHeader, ConfigurationHeader, callback, asyncState);
-        }
-        
-        private object[] OnEndGetItemTypes(System.IAsyncResult result) {
-            TraderaWebService.PublicService.IdDescriptionPair[] retVal = this.EndGetItemTypes(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnGetItemTypesCompleted(object state) {
-            if ((this.GetItemTypesCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetItemTypesCompleted(this, new GetItemTypesCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void GetItemTypesAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader) {
-            this.GetItemTypesAsync(AuthenticationHeader, ConfigurationHeader, null);
-        }
-        
-        public void GetItemTypesAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, object userState) {
-            if ((this.onBeginGetItemTypesDelegate == null)) {
-                this.onBeginGetItemTypesDelegate = new BeginOperationDelegate(this.OnBeginGetItemTypes);
-            }
-            if ((this.onEndGetItemTypesDelegate == null)) {
-                this.onEndGetItemTypesDelegate = new EndOperationDelegate(this.OnEndGetItemTypes);
-            }
-            if ((this.onGetItemTypesCompletedDelegate == null)) {
-                this.onGetItemTypesCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetItemTypesCompleted);
-            }
-            base.InvokeAsync(this.onBeginGetItemTypesDelegate, new object[] {
-                        AuthenticationHeader,
-                        ConfigurationHeader}, this.onEndGetItemTypesDelegate, this.onGetItemTypesCompletedDelegate, userState);
+            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).GetItemTypesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5260,65 +3896,15 @@ namespace TraderaWebService.PublicService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.PublicService.PublicServiceSoap.BeginGetCounties(TraderaWebService.PublicService.GetCountiesRequest request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginGetCounties(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetCountiesResponse> TraderaWebService.PublicService.PublicServiceSoap.GetCountiesAsync(TraderaWebService.PublicService.GetCountiesRequest request) {
+            return base.Channel.GetCountiesAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginGetCounties(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.PublicService.GetCountiesResponse> GetCountiesAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader) {
             TraderaWebService.PublicService.GetCountiesRequest inValue = new TraderaWebService.PublicService.GetCountiesRequest();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
-            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).BeginGetCounties(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.PublicService.GetCountiesResponse TraderaWebService.PublicService.PublicServiceSoap.EndGetCounties(System.IAsyncResult result) {
-            return base.Channel.EndGetCounties(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public TraderaWebService.PublicService.IdDescriptionPair[] EndGetCounties(System.IAsyncResult result) {
-            TraderaWebService.PublicService.GetCountiesResponse retVal = ((TraderaWebService.PublicService.PublicServiceSoap)(this)).EndGetCounties(result);
-            return retVal.GetCountiesResult;
-        }
-        
-        private System.IAsyncResult OnBeginGetCounties(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.PublicService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.PublicService.ConfigurationHeader)(inValues[1]));
-            return this.BeginGetCounties(AuthenticationHeader, ConfigurationHeader, callback, asyncState);
-        }
-        
-        private object[] OnEndGetCounties(System.IAsyncResult result) {
-            TraderaWebService.PublicService.IdDescriptionPair[] retVal = this.EndGetCounties(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnGetCountiesCompleted(object state) {
-            if ((this.GetCountiesCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetCountiesCompleted(this, new GetCountiesCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void GetCountiesAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader) {
-            this.GetCountiesAsync(AuthenticationHeader, ConfigurationHeader, null);
-        }
-        
-        public void GetCountiesAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, object userState) {
-            if ((this.onBeginGetCountiesDelegate == null)) {
-                this.onBeginGetCountiesDelegate = new BeginOperationDelegate(this.OnBeginGetCounties);
-            }
-            if ((this.onEndGetCountiesDelegate == null)) {
-                this.onEndGetCountiesDelegate = new EndOperationDelegate(this.OnEndGetCounties);
-            }
-            if ((this.onGetCountiesCompletedDelegate == null)) {
-                this.onGetCountiesCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetCountiesCompleted);
-            }
-            base.InvokeAsync(this.onBeginGetCountiesDelegate, new object[] {
-                        AuthenticationHeader,
-                        ConfigurationHeader}, this.onEndGetCountiesDelegate, this.onGetCountiesCompletedDelegate, userState);
+            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).GetCountiesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5335,65 +3921,15 @@ namespace TraderaWebService.PublicService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.PublicService.PublicServiceSoap.BeginGetItemFieldValues(TraderaWebService.PublicService.GetItemFieldValuesRequest request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginGetItemFieldValues(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetItemFieldValuesResponse> TraderaWebService.PublicService.PublicServiceSoap.GetItemFieldValuesAsync(TraderaWebService.PublicService.GetItemFieldValuesRequest request) {
+            return base.Channel.GetItemFieldValuesAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginGetItemFieldValues(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.PublicService.GetItemFieldValuesResponse> GetItemFieldValuesAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader) {
             TraderaWebService.PublicService.GetItemFieldValuesRequest inValue = new TraderaWebService.PublicService.GetItemFieldValuesRequest();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
-            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).BeginGetItemFieldValues(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.PublicService.GetItemFieldValuesResponse TraderaWebService.PublicService.PublicServiceSoap.EndGetItemFieldValues(System.IAsyncResult result) {
-            return base.Channel.EndGetItemFieldValues(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public TraderaWebService.PublicService.ItemFieldsResponse EndGetItemFieldValues(System.IAsyncResult result) {
-            TraderaWebService.PublicService.GetItemFieldValuesResponse retVal = ((TraderaWebService.PublicService.PublicServiceSoap)(this)).EndGetItemFieldValues(result);
-            return retVal.GetItemFieldValuesResult;
-        }
-        
-        private System.IAsyncResult OnBeginGetItemFieldValues(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.PublicService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.PublicService.ConfigurationHeader)(inValues[1]));
-            return this.BeginGetItemFieldValues(AuthenticationHeader, ConfigurationHeader, callback, asyncState);
-        }
-        
-        private object[] OnEndGetItemFieldValues(System.IAsyncResult result) {
-            TraderaWebService.PublicService.ItemFieldsResponse retVal = this.EndGetItemFieldValues(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnGetItemFieldValuesCompleted(object state) {
-            if ((this.GetItemFieldValuesCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetItemFieldValuesCompleted(this, new GetItemFieldValuesCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void GetItemFieldValuesAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader) {
-            this.GetItemFieldValuesAsync(AuthenticationHeader, ConfigurationHeader, null);
-        }
-        
-        public void GetItemFieldValuesAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, object userState) {
-            if ((this.onBeginGetItemFieldValuesDelegate == null)) {
-                this.onBeginGetItemFieldValuesDelegate = new BeginOperationDelegate(this.OnBeginGetItemFieldValues);
-            }
-            if ((this.onEndGetItemFieldValuesDelegate == null)) {
-                this.onEndGetItemFieldValuesDelegate = new EndOperationDelegate(this.OnEndGetItemFieldValues);
-            }
-            if ((this.onGetItemFieldValuesCompletedDelegate == null)) {
-                this.onGetItemFieldValuesCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetItemFieldValuesCompleted);
-            }
-            base.InvokeAsync(this.onBeginGetItemFieldValuesDelegate, new object[] {
-                        AuthenticationHeader,
-                        ConfigurationHeader}, this.onEndGetItemFieldValuesDelegate, this.onGetItemFieldValuesCompletedDelegate, userState);
+            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).GetItemFieldValuesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5411,68 +3947,16 @@ namespace TraderaWebService.PublicService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.PublicService.PublicServiceSoap.BeginGetItemAddedDescriptions(TraderaWebService.PublicService.GetItemAddedDescriptionsRequest request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginGetItemAddedDescriptions(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetItemAddedDescriptionsResponse> TraderaWebService.PublicService.PublicServiceSoap.GetItemAddedDescriptionsAsync(TraderaWebService.PublicService.GetItemAddedDescriptionsRequest request) {
+            return base.Channel.GetItemAddedDescriptionsAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginGetItemAddedDescriptions(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, int itemId, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.PublicService.GetItemAddedDescriptionsResponse> GetItemAddedDescriptionsAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, int itemId) {
             TraderaWebService.PublicService.GetItemAddedDescriptionsRequest inValue = new TraderaWebService.PublicService.GetItemAddedDescriptionsRequest();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
             inValue.itemId = itemId;
-            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).BeginGetItemAddedDescriptions(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.PublicService.GetItemAddedDescriptionsResponse TraderaWebService.PublicService.PublicServiceSoap.EndGetItemAddedDescriptions(System.IAsyncResult result) {
-            return base.Channel.EndGetItemAddedDescriptions(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public TraderaWebService.PublicService.ItemAddedDescription[] EndGetItemAddedDescriptions(System.IAsyncResult result) {
-            TraderaWebService.PublicService.GetItemAddedDescriptionsResponse retVal = ((TraderaWebService.PublicService.PublicServiceSoap)(this)).EndGetItemAddedDescriptions(result);
-            return retVal.GetItemAddedDescriptionsResult;
-        }
-        
-        private System.IAsyncResult OnBeginGetItemAddedDescriptions(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.PublicService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.PublicService.ConfigurationHeader)(inValues[1]));
-            int itemId = ((int)(inValues[2]));
-            return this.BeginGetItemAddedDescriptions(AuthenticationHeader, ConfigurationHeader, itemId, callback, asyncState);
-        }
-        
-        private object[] OnEndGetItemAddedDescriptions(System.IAsyncResult result) {
-            TraderaWebService.PublicService.ItemAddedDescription[] retVal = this.EndGetItemAddedDescriptions(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnGetItemAddedDescriptionsCompleted(object state) {
-            if ((this.GetItemAddedDescriptionsCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetItemAddedDescriptionsCompleted(this, new GetItemAddedDescriptionsCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void GetItemAddedDescriptionsAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, int itemId) {
-            this.GetItemAddedDescriptionsAsync(AuthenticationHeader, ConfigurationHeader, itemId, null);
-        }
-        
-        public void GetItemAddedDescriptionsAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, int itemId, object userState) {
-            if ((this.onBeginGetItemAddedDescriptionsDelegate == null)) {
-                this.onBeginGetItemAddedDescriptionsDelegate = new BeginOperationDelegate(this.OnBeginGetItemAddedDescriptions);
-            }
-            if ((this.onEndGetItemAddedDescriptionsDelegate == null)) {
-                this.onEndGetItemAddedDescriptionsDelegate = new EndOperationDelegate(this.OnEndGetItemAddedDescriptions);
-            }
-            if ((this.onGetItemAddedDescriptionsCompletedDelegate == null)) {
-                this.onGetItemAddedDescriptionsCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetItemAddedDescriptionsCompleted);
-            }
-            base.InvokeAsync(this.onBeginGetItemAddedDescriptionsDelegate, new object[] {
-                        AuthenticationHeader,
-                        ConfigurationHeader,
-                        itemId}, this.onEndGetItemAddedDescriptionsDelegate, this.onGetItemAddedDescriptionsCompletedDelegate, userState);
+            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).GetItemAddedDescriptionsAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5490,68 +3974,16 @@ namespace TraderaWebService.PublicService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.PublicService.PublicServiceSoap.BeginGetFeedback(TraderaWebService.PublicService.GetFeedbackRequest1 request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginGetFeedback(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetFeedbackResponse> TraderaWebService.PublicService.PublicServiceSoap.GetFeedbackAsync(TraderaWebService.PublicService.GetFeedbackRequest1 request) {
+            return base.Channel.GetFeedbackAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginGetFeedback(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, TraderaWebService.PublicService.GetFeedbackRequest getFeedbackRequest, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.PublicService.GetFeedbackResponse> GetFeedbackAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, TraderaWebService.PublicService.GetFeedbackRequest getFeedbackRequest) {
             TraderaWebService.PublicService.GetFeedbackRequest1 inValue = new TraderaWebService.PublicService.GetFeedbackRequest1();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
             inValue.getFeedbackRequest = getFeedbackRequest;
-            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).BeginGetFeedback(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.PublicService.GetFeedbackResponse TraderaWebService.PublicService.PublicServiceSoap.EndGetFeedback(System.IAsyncResult result) {
-            return base.Channel.EndGetFeedback(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public TraderaWebService.PublicService.GetFeedback[] EndGetFeedback(System.IAsyncResult result) {
-            TraderaWebService.PublicService.GetFeedbackResponse retVal = ((TraderaWebService.PublicService.PublicServiceSoap)(this)).EndGetFeedback(result);
-            return retVal.GetFeedbackResult;
-        }
-        
-        private System.IAsyncResult OnBeginGetFeedback(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.PublicService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.PublicService.ConfigurationHeader)(inValues[1]));
-            TraderaWebService.PublicService.GetFeedbackRequest getFeedbackRequest = ((TraderaWebService.PublicService.GetFeedbackRequest)(inValues[2]));
-            return this.BeginGetFeedback(AuthenticationHeader, ConfigurationHeader, getFeedbackRequest, callback, asyncState);
-        }
-        
-        private object[] OnEndGetFeedback(System.IAsyncResult result) {
-            TraderaWebService.PublicService.GetFeedback[] retVal = this.EndGetFeedback(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnGetFeedbackCompleted(object state) {
-            if ((this.GetFeedbackCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetFeedbackCompleted(this, new GetFeedbackCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void GetFeedbackAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, TraderaWebService.PublicService.GetFeedbackRequest getFeedbackRequest) {
-            this.GetFeedbackAsync(AuthenticationHeader, ConfigurationHeader, getFeedbackRequest, null);
-        }
-        
-        public void GetFeedbackAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, TraderaWebService.PublicService.GetFeedbackRequest getFeedbackRequest, object userState) {
-            if ((this.onBeginGetFeedbackDelegate == null)) {
-                this.onBeginGetFeedbackDelegate = new BeginOperationDelegate(this.OnBeginGetFeedback);
-            }
-            if ((this.onEndGetFeedbackDelegate == null)) {
-                this.onEndGetFeedbackDelegate = new EndOperationDelegate(this.OnEndGetFeedback);
-            }
-            if ((this.onGetFeedbackCompletedDelegate == null)) {
-                this.onGetFeedbackCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetFeedbackCompleted);
-            }
-            base.InvokeAsync(this.onBeginGetFeedbackDelegate, new object[] {
-                        AuthenticationHeader,
-                        ConfigurationHeader,
-                        getFeedbackRequest}, this.onEndGetFeedbackDelegate, this.onGetFeedbackCompletedDelegate, userState);
+            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).GetFeedbackAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5569,68 +4001,16 @@ namespace TraderaWebService.PublicService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.PublicService.PublicServiceSoap.BeginGetFeedbackSummary(TraderaWebService.PublicService.GetFeedbackSummaryRequest1 request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginGetFeedbackSummary(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetFeedbackSummaryResponse1> TraderaWebService.PublicService.PublicServiceSoap.GetFeedbackSummaryAsync(TraderaWebService.PublicService.GetFeedbackSummaryRequest1 request) {
+            return base.Channel.GetFeedbackSummaryAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginGetFeedbackSummary(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, TraderaWebService.PublicService.GetFeedbackSummaryRequest getFeedbackSummaryRequest, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.PublicService.GetFeedbackSummaryResponse1> GetFeedbackSummaryAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, TraderaWebService.PublicService.GetFeedbackSummaryRequest getFeedbackSummaryRequest) {
             TraderaWebService.PublicService.GetFeedbackSummaryRequest1 inValue = new TraderaWebService.PublicService.GetFeedbackSummaryRequest1();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
             inValue.getFeedbackSummaryRequest = getFeedbackSummaryRequest;
-            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).BeginGetFeedbackSummary(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.PublicService.GetFeedbackSummaryResponse1 TraderaWebService.PublicService.PublicServiceSoap.EndGetFeedbackSummary(System.IAsyncResult result) {
-            return base.Channel.EndGetFeedbackSummary(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public TraderaWebService.PublicService.GetFeedbackSummaryResponse EndGetFeedbackSummary(System.IAsyncResult result) {
-            TraderaWebService.PublicService.GetFeedbackSummaryResponse1 retVal = ((TraderaWebService.PublicService.PublicServiceSoap)(this)).EndGetFeedbackSummary(result);
-            return retVal.GetFeedbackSummaryResult;
-        }
-        
-        private System.IAsyncResult OnBeginGetFeedbackSummary(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.PublicService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.PublicService.ConfigurationHeader)(inValues[1]));
-            TraderaWebService.PublicService.GetFeedbackSummaryRequest getFeedbackSummaryRequest = ((TraderaWebService.PublicService.GetFeedbackSummaryRequest)(inValues[2]));
-            return this.BeginGetFeedbackSummary(AuthenticationHeader, ConfigurationHeader, getFeedbackSummaryRequest, callback, asyncState);
-        }
-        
-        private object[] OnEndGetFeedbackSummary(System.IAsyncResult result) {
-            TraderaWebService.PublicService.GetFeedbackSummaryResponse retVal = this.EndGetFeedbackSummary(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnGetFeedbackSummaryCompleted(object state) {
-            if ((this.GetFeedbackSummaryCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetFeedbackSummaryCompleted(this, new GetFeedbackSummaryCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void GetFeedbackSummaryAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, TraderaWebService.PublicService.GetFeedbackSummaryRequest getFeedbackSummaryRequest) {
-            this.GetFeedbackSummaryAsync(AuthenticationHeader, ConfigurationHeader, getFeedbackSummaryRequest, null);
-        }
-        
-        public void GetFeedbackSummaryAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, TraderaWebService.PublicService.GetFeedbackSummaryRequest getFeedbackSummaryRequest, object userState) {
-            if ((this.onBeginGetFeedbackSummaryDelegate == null)) {
-                this.onBeginGetFeedbackSummaryDelegate = new BeginOperationDelegate(this.OnBeginGetFeedbackSummary);
-            }
-            if ((this.onEndGetFeedbackSummaryDelegate == null)) {
-                this.onEndGetFeedbackSummaryDelegate = new EndOperationDelegate(this.OnEndGetFeedbackSummary);
-            }
-            if ((this.onGetFeedbackSummaryCompletedDelegate == null)) {
-                this.onGetFeedbackSummaryCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetFeedbackSummaryCompleted);
-            }
-            base.InvokeAsync(this.onBeginGetFeedbackSummaryDelegate, new object[] {
-                        AuthenticationHeader,
-                        ConfigurationHeader,
-                        getFeedbackSummaryRequest}, this.onEndGetFeedbackSummaryDelegate, this.onGetFeedbackSummaryCompletedDelegate, userState);
+            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).GetFeedbackSummaryAsync(inValue);
         }
     }
 }

@@ -20,120 +20,96 @@ namespace TraderaWebService.BuyerService {
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.BuyerService.BidResponse Bid(TraderaWebService.BuyerService.BidRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/Bid", ReplyAction="*")]
-        System.IAsyncResult BeginBid(TraderaWebService.BuyerService.BidRequest request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.BuyerService.BidResponse EndBid(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/Bid", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.BuyerService.BidResponse> BidAsync(TraderaWebService.BuyerService.BidRequest request);
         
         // CODEGEN: Generating message contract since message BuyRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/Buy", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.BuyerService.BuyResponse Buy(TraderaWebService.BuyerService.BuyRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/Buy", ReplyAction="*")]
-        System.IAsyncResult BeginBuy(TraderaWebService.BuyerService.BuyRequest request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.BuyerService.BuyResponse EndBuy(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/Buy", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.BuyerService.BuyResponse> BuyAsync(TraderaWebService.BuyerService.BuyRequest request);
         
         // CODEGEN: Generating message contract since message GetMemorylistItemsRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetMemorylistItems", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.BuyerService.GetMemorylistItemsResponse GetMemorylistItems(TraderaWebService.BuyerService.GetMemorylistItemsRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/GetMemorylistItems", ReplyAction="*")]
-        System.IAsyncResult BeginGetMemorylistItems(TraderaWebService.BuyerService.GetMemorylistItemsRequest request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.BuyerService.GetMemorylistItemsResponse EndGetMemorylistItems(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetMemorylistItems", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.BuyerService.GetMemorylistItemsResponse> GetMemorylistItemsAsync(TraderaWebService.BuyerService.GetMemorylistItemsRequest request);
         
         // CODEGEN: Generating message contract since message AddToMemorylistRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/AddToMemorylist", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.BuyerService.AddToMemorylistResponse AddToMemorylist(TraderaWebService.BuyerService.AddToMemorylistRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/AddToMemorylist", ReplyAction="*")]
-        System.IAsyncResult BeginAddToMemorylist(TraderaWebService.BuyerService.AddToMemorylistRequest request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.BuyerService.AddToMemorylistResponse EndAddToMemorylist(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/AddToMemorylist", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.BuyerService.AddToMemorylistResponse> AddToMemorylistAsync(TraderaWebService.BuyerService.AddToMemorylistRequest request);
         
         // CODEGEN: Generating message contract since message RemoveFromMemorylistRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/RemoveFromMemorylist", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.BuyerService.RemoveFromMemorylistResponse RemoveFromMemorylist(TraderaWebService.BuyerService.RemoveFromMemorylistRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/RemoveFromMemorylist", ReplyAction="*")]
-        System.IAsyncResult BeginRemoveFromMemorylist(TraderaWebService.BuyerService.RemoveFromMemorylistRequest request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.BuyerService.RemoveFromMemorylistResponse EndRemoveFromMemorylist(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/RemoveFromMemorylist", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.BuyerService.RemoveFromMemorylistResponse> RemoveFromMemorylistAsync(TraderaWebService.BuyerService.RemoveFromMemorylistRequest request);
         
         // CODEGEN: Generating message contract since message GetBuyerTransactionsRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetBuyerTransactions", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.BuyerService.GetBuyerTransactionsResponse GetBuyerTransactions(TraderaWebService.BuyerService.GetBuyerTransactionsRequest1 request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/GetBuyerTransactions", ReplyAction="*")]
-        System.IAsyncResult BeginGetBuyerTransactions(TraderaWebService.BuyerService.GetBuyerTransactionsRequest1 request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.BuyerService.GetBuyerTransactionsResponse EndGetBuyerTransactions(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetBuyerTransactions", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.BuyerService.GetBuyerTransactionsResponse> GetBuyerTransactionsAsync(TraderaWebService.BuyerService.GetBuyerTransactionsRequest1 request);
         
         // CODEGEN: Generating message contract since message GetBiddingInfoRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetBiddingInfo", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.BuyerService.GetBiddingInfoResponse GetBiddingInfo(TraderaWebService.BuyerService.GetBiddingInfoRequest1 request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/GetBiddingInfo", ReplyAction="*")]
-        System.IAsyncResult BeginGetBiddingInfo(TraderaWebService.BuyerService.GetBiddingInfoRequest1 request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.BuyerService.GetBiddingInfoResponse EndGetBiddingInfo(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetBiddingInfo", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.BuyerService.GetBiddingInfoResponse> GetBiddingInfoAsync(TraderaWebService.BuyerService.GetBiddingInfoRequest1 request);
         
         // CODEGEN: Generating message contract since message GetSellerInfoRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetSellerInfo", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.BuyerService.GetSellerInfoResponse GetSellerInfo(TraderaWebService.BuyerService.GetSellerInfoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/GetSellerInfo", ReplyAction="*")]
-        System.IAsyncResult BeginGetSellerInfo(TraderaWebService.BuyerService.GetSellerInfoRequest request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.BuyerService.GetSellerInfoResponse EndGetSellerInfo(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetSellerInfo", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.BuyerService.GetSellerInfoResponse> GetSellerInfoAsync(TraderaWebService.BuyerService.GetSellerInfoRequest request);
         
         // CODEGEN: Generating message contract since message MarkTransactionsPaidRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/MarkTransactionsPaid", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.BuyerService.MarkTransactionsPaidResponse MarkTransactionsPaid(TraderaWebService.BuyerService.MarkTransactionsPaidRequest1 request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/MarkTransactionsPaid", ReplyAction="*")]
-        System.IAsyncResult BeginMarkTransactionsPaid(TraderaWebService.BuyerService.MarkTransactionsPaidRequest1 request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.BuyerService.MarkTransactionsPaidResponse EndMarkTransactionsPaid(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/MarkTransactionsPaid", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.BuyerService.MarkTransactionsPaidResponse> MarkTransactionsPaidAsync(TraderaWebService.BuyerService.MarkTransactionsPaidRequest1 request);
         
         // CODEGEN: Generating message contract since message SendQuestionToSellerRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/SendQuestionToSeller", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.BuyerService.SendQuestionToSellerResponse SendQuestionToSeller(TraderaWebService.BuyerService.SendQuestionToSellerRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/SendQuestionToSeller", ReplyAction="*")]
-        System.IAsyncResult BeginSendQuestionToSeller(TraderaWebService.BuyerService.SendQuestionToSellerRequest request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.BuyerService.SendQuestionToSellerResponse EndSendQuestionToSeller(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/SendQuestionToSeller", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.BuyerService.SendQuestionToSellerResponse> SendQuestionToSellerAsync(TraderaWebService.BuyerService.SendQuestionToSellerRequest request);
         
         // CODEGEN: Generating message contract since message InitPayPalPaymentRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/InitPayPalPayment", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.BuyerService.InitPayPalPaymentResponse InitPayPalPayment(TraderaWebService.BuyerService.InitPayPalPaymentRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/InitPayPalPayment", ReplyAction="*")]
-        System.IAsyncResult BeginInitPayPalPayment(TraderaWebService.BuyerService.InitPayPalPaymentRequest request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.BuyerService.InitPayPalPaymentResponse EndInitPayPalPayment(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/InitPayPalPayment", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.BuyerService.InitPayPalPaymentResponse> InitPayPalPaymentAsync(TraderaWebService.BuyerService.InitPayPalPaymentRequest request);
         
         // CODEGEN: Generating message contract since message VerifyPayPalPaymentRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/VerifyPayPalPayment", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         TraderaWebService.BuyerService.VerifyPayPalPaymentResponse VerifyPayPalPayment(TraderaWebService.BuyerService.VerifyPayPalPaymentRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://api.tradera.com/VerifyPayPalPayment", ReplyAction="*")]
-        System.IAsyncResult BeginVerifyPayPalPayment(TraderaWebService.BuyerService.VerifyPayPalPaymentRequest request, System.AsyncCallback callback, object asyncState);
-        
-        TraderaWebService.BuyerService.VerifyPayPalPaymentResponse EndVerifyPayPalPayment(System.IAsyncResult result);
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/VerifyPayPalPayment", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.BuyerService.VerifyPayPalPaymentResponse> VerifyPayPalPaymentAsync(TraderaWebService.BuyerService.VerifyPayPalPaymentRequest request);
     }
     
     /// <remarks/>
@@ -3187,250 +3163,7 @@ namespace TraderaWebService.BuyerService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class BidCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public BidCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public TraderaWebService.BuyerService.BidResult Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((TraderaWebService.BuyerService.BidResult)(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class BuyCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public BuyCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public TraderaWebService.BuyerService.BuyResult Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((TraderaWebService.BuyerService.BuyResult)(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class GetMemorylistItemsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public GetMemorylistItemsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public TraderaWebService.BuyerService.Item[] Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((TraderaWebService.BuyerService.Item[])(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class GetBuyerTransactionsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public GetBuyerTransactionsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public TraderaWebService.BuyerService.Transaction[] Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((TraderaWebService.BuyerService.Transaction[])(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class GetBiddingInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public GetBiddingInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public TraderaWebService.BuyerService.AuctionBiddingInfo[] Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((TraderaWebService.BuyerService.AuctionBiddingInfo[])(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class GetSellerInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public GetSellerInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public TraderaWebService.BuyerService.SellerInfo Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((TraderaWebService.BuyerService.SellerInfo)(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class SendQuestionToSellerCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public SendQuestionToSellerCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public TraderaWebService.BuyerService.ContactSellerResult Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((TraderaWebService.BuyerService.ContactSellerResult)(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class InitPayPalPaymentCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public InitPayPalPaymentCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public TraderaWebService.BuyerService.InitPayPalPaymentResult Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((TraderaWebService.BuyerService.InitPayPalPaymentResult)(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class VerifyPayPalPaymentCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public VerifyPayPalPaymentCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public TraderaWebService.BuyerService.VerifyPayPalPaymentResult Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((TraderaWebService.BuyerService.VerifyPayPalPaymentResult)(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public partial class BuyerServiceSoapClient : System.ServiceModel.ClientBase<TraderaWebService.BuyerService.BuyerServiceSoap>, TraderaWebService.BuyerService.BuyerServiceSoap {
-        
-        private BeginOperationDelegate onBeginBidDelegate;
-        
-        private EndOperationDelegate onEndBidDelegate;
-        
-        private System.Threading.SendOrPostCallback onBidCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginBuyDelegate;
-        
-        private EndOperationDelegate onEndBuyDelegate;
-        
-        private System.Threading.SendOrPostCallback onBuyCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginGetMemorylistItemsDelegate;
-        
-        private EndOperationDelegate onEndGetMemorylistItemsDelegate;
-        
-        private System.Threading.SendOrPostCallback onGetMemorylistItemsCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginAddToMemorylistDelegate;
-        
-        private EndOperationDelegate onEndAddToMemorylistDelegate;
-        
-        private System.Threading.SendOrPostCallback onAddToMemorylistCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginRemoveFromMemorylistDelegate;
-        
-        private EndOperationDelegate onEndRemoveFromMemorylistDelegate;
-        
-        private System.Threading.SendOrPostCallback onRemoveFromMemorylistCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginGetBuyerTransactionsDelegate;
-        
-        private EndOperationDelegate onEndGetBuyerTransactionsDelegate;
-        
-        private System.Threading.SendOrPostCallback onGetBuyerTransactionsCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginGetBiddingInfoDelegate;
-        
-        private EndOperationDelegate onEndGetBiddingInfoDelegate;
-        
-        private System.Threading.SendOrPostCallback onGetBiddingInfoCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginGetSellerInfoDelegate;
-        
-        private EndOperationDelegate onEndGetSellerInfoDelegate;
-        
-        private System.Threading.SendOrPostCallback onGetSellerInfoCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginMarkTransactionsPaidDelegate;
-        
-        private EndOperationDelegate onEndMarkTransactionsPaidDelegate;
-        
-        private System.Threading.SendOrPostCallback onMarkTransactionsPaidCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginSendQuestionToSellerDelegate;
-        
-        private EndOperationDelegate onEndSendQuestionToSellerDelegate;
-        
-        private System.Threading.SendOrPostCallback onSendQuestionToSellerCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginInitPayPalPaymentDelegate;
-        
-        private EndOperationDelegate onEndInitPayPalPaymentDelegate;
-        
-        private System.Threading.SendOrPostCallback onInitPayPalPaymentCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginVerifyPayPalPaymentDelegate;
-        
-        private EndOperationDelegate onEndVerifyPayPalPaymentDelegate;
-        
-        private System.Threading.SendOrPostCallback onVerifyPayPalPaymentCompletedDelegate;
         
         public BuyerServiceSoapClient() {
         }
@@ -3451,30 +3184,6 @@ namespace TraderaWebService.BuyerService {
                 base(binding, remoteAddress) {
         }
         
-        public event System.EventHandler<BidCompletedEventArgs> BidCompleted;
-        
-        public event System.EventHandler<BuyCompletedEventArgs> BuyCompleted;
-        
-        public event System.EventHandler<GetMemorylistItemsCompletedEventArgs> GetMemorylistItemsCompleted;
-        
-        public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> AddToMemorylistCompleted;
-        
-        public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> RemoveFromMemorylistCompleted;
-        
-        public event System.EventHandler<GetBuyerTransactionsCompletedEventArgs> GetBuyerTransactionsCompleted;
-        
-        public event System.EventHandler<GetBiddingInfoCompletedEventArgs> GetBiddingInfoCompleted;
-        
-        public event System.EventHandler<GetSellerInfoCompletedEventArgs> GetSellerInfoCompleted;
-        
-        public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> MarkTransactionsPaidCompleted;
-        
-        public event System.EventHandler<SendQuestionToSellerCompletedEventArgs> SendQuestionToSellerCompleted;
-        
-        public event System.EventHandler<InitPayPalPaymentCompletedEventArgs> InitPayPalPaymentCompleted;
-        
-        public event System.EventHandler<VerifyPayPalPaymentCompletedEventArgs> VerifyPayPalPaymentCompleted;
-        
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         TraderaWebService.BuyerService.BidResponse TraderaWebService.BuyerService.BuyerServiceSoap.Bid(TraderaWebService.BuyerService.BidRequest request) {
             return base.Channel.Bid(request);
@@ -3492,74 +3201,18 @@ namespace TraderaWebService.BuyerService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.BuyerService.BuyerServiceSoap.BeginBid(TraderaWebService.BuyerService.BidRequest request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginBid(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.BuyerService.BidResponse> TraderaWebService.BuyerService.BuyerServiceSoap.BidAsync(TraderaWebService.BuyerService.BidRequest request) {
+            return base.Channel.BidAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginBid(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, int itemId, int bidAmount, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.BuyerService.BidResponse> BidAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, int itemId, int bidAmount) {
             TraderaWebService.BuyerService.BidRequest inValue = new TraderaWebService.BuyerService.BidRequest();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.AuthorizationHeader = AuthorizationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
             inValue.itemId = itemId;
             inValue.bidAmount = bidAmount;
-            return ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).BeginBid(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.BuyerService.BidResponse TraderaWebService.BuyerService.BuyerServiceSoap.EndBid(System.IAsyncResult result) {
-            return base.Channel.EndBid(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public TraderaWebService.BuyerService.BidResult EndBid(System.IAsyncResult result) {
-            TraderaWebService.BuyerService.BidResponse retVal = ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).EndBid(result);
-            return retVal.BidResult;
-        }
-        
-        private System.IAsyncResult OnBeginBid(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.BuyerService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader = ((TraderaWebService.BuyerService.AuthorizationHeader)(inValues[1]));
-            TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.BuyerService.ConfigurationHeader)(inValues[2]));
-            int itemId = ((int)(inValues[3]));
-            int bidAmount = ((int)(inValues[4]));
-            return this.BeginBid(AuthenticationHeader, AuthorizationHeader, ConfigurationHeader, itemId, bidAmount, callback, asyncState);
-        }
-        
-        private object[] OnEndBid(System.IAsyncResult result) {
-            TraderaWebService.BuyerService.BidResult retVal = this.EndBid(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnBidCompleted(object state) {
-            if ((this.BidCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.BidCompleted(this, new BidCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void BidAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, int itemId, int bidAmount) {
-            this.BidAsync(AuthenticationHeader, AuthorizationHeader, ConfigurationHeader, itemId, bidAmount, null);
-        }
-        
-        public void BidAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, int itemId, int bidAmount, object userState) {
-            if ((this.onBeginBidDelegate == null)) {
-                this.onBeginBidDelegate = new BeginOperationDelegate(this.OnBeginBid);
-            }
-            if ((this.onEndBidDelegate == null)) {
-                this.onEndBidDelegate = new EndOperationDelegate(this.OnEndBid);
-            }
-            if ((this.onBidCompletedDelegate == null)) {
-                this.onBidCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnBidCompleted);
-            }
-            base.InvokeAsync(this.onBeginBidDelegate, new object[] {
-                        AuthenticationHeader,
-                        AuthorizationHeader,
-                        ConfigurationHeader,
-                        itemId,
-                        bidAmount}, this.onEndBidDelegate, this.onBidCompletedDelegate, userState);
+            return ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).BidAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3579,74 +3232,18 @@ namespace TraderaWebService.BuyerService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.BuyerService.BuyerServiceSoap.BeginBuy(TraderaWebService.BuyerService.BuyRequest request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginBuy(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.BuyerService.BuyResponse> TraderaWebService.BuyerService.BuyerServiceSoap.BuyAsync(TraderaWebService.BuyerService.BuyRequest request) {
+            return base.Channel.BuyAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginBuy(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, int itemId, int buyAmount, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.BuyerService.BuyResponse> BuyAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, int itemId, int buyAmount) {
             TraderaWebService.BuyerService.BuyRequest inValue = new TraderaWebService.BuyerService.BuyRequest();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.AuthorizationHeader = AuthorizationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
             inValue.itemId = itemId;
             inValue.buyAmount = buyAmount;
-            return ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).BeginBuy(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.BuyerService.BuyResponse TraderaWebService.BuyerService.BuyerServiceSoap.EndBuy(System.IAsyncResult result) {
-            return base.Channel.EndBuy(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public TraderaWebService.BuyerService.BuyResult EndBuy(System.IAsyncResult result) {
-            TraderaWebService.BuyerService.BuyResponse retVal = ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).EndBuy(result);
-            return retVal.BuyResult;
-        }
-        
-        private System.IAsyncResult OnBeginBuy(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.BuyerService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader = ((TraderaWebService.BuyerService.AuthorizationHeader)(inValues[1]));
-            TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.BuyerService.ConfigurationHeader)(inValues[2]));
-            int itemId = ((int)(inValues[3]));
-            int buyAmount = ((int)(inValues[4]));
-            return this.BeginBuy(AuthenticationHeader, AuthorizationHeader, ConfigurationHeader, itemId, buyAmount, callback, asyncState);
-        }
-        
-        private object[] OnEndBuy(System.IAsyncResult result) {
-            TraderaWebService.BuyerService.BuyResult retVal = this.EndBuy(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnBuyCompleted(object state) {
-            if ((this.BuyCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.BuyCompleted(this, new BuyCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void BuyAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, int itemId, int buyAmount) {
-            this.BuyAsync(AuthenticationHeader, AuthorizationHeader, ConfigurationHeader, itemId, buyAmount, null);
-        }
-        
-        public void BuyAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, int itemId, int buyAmount, object userState) {
-            if ((this.onBeginBuyDelegate == null)) {
-                this.onBeginBuyDelegate = new BeginOperationDelegate(this.OnBeginBuy);
-            }
-            if ((this.onEndBuyDelegate == null)) {
-                this.onEndBuyDelegate = new EndOperationDelegate(this.OnEndBuy);
-            }
-            if ((this.onBuyCompletedDelegate == null)) {
-                this.onBuyCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnBuyCompleted);
-            }
-            base.InvokeAsync(this.onBeginBuyDelegate, new object[] {
-                        AuthenticationHeader,
-                        AuthorizationHeader,
-                        ConfigurationHeader,
-                        itemId,
-                        buyAmount}, this.onEndBuyDelegate, this.onBuyCompletedDelegate, userState);
+            return ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).BuyAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3667,12 +3264,11 @@ namespace TraderaWebService.BuyerService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.BuyerService.BuyerServiceSoap.BeginGetMemorylistItems(TraderaWebService.BuyerService.GetMemorylistItemsRequest request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginGetMemorylistItems(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.BuyerService.GetMemorylistItemsResponse> TraderaWebService.BuyerService.BuyerServiceSoap.GetMemorylistItemsAsync(TraderaWebService.BuyerService.GetMemorylistItemsRequest request) {
+            return base.Channel.GetMemorylistItemsAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginGetMemorylistItems(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, TraderaWebService.BuyerService.ActiveFilter filterActive, System.Nullable<System.DateTime> minEndDate, System.Nullable<System.DateTime> maxEndDate, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.BuyerService.GetMemorylistItemsResponse> GetMemorylistItemsAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, TraderaWebService.BuyerService.ActiveFilter filterActive, System.Nullable<System.DateTime> minEndDate, System.Nullable<System.DateTime> maxEndDate) {
             TraderaWebService.BuyerService.GetMemorylistItemsRequest inValue = new TraderaWebService.BuyerService.GetMemorylistItemsRequest();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.AuthorizationHeader = AuthorizationHeader;
@@ -3680,64 +3276,7 @@ namespace TraderaWebService.BuyerService {
             inValue.filterActive = filterActive;
             inValue.minEndDate = minEndDate;
             inValue.maxEndDate = maxEndDate;
-            return ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).BeginGetMemorylistItems(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.BuyerService.GetMemorylistItemsResponse TraderaWebService.BuyerService.BuyerServiceSoap.EndGetMemorylistItems(System.IAsyncResult result) {
-            return base.Channel.EndGetMemorylistItems(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public TraderaWebService.BuyerService.Item[] EndGetMemorylistItems(System.IAsyncResult result) {
-            TraderaWebService.BuyerService.GetMemorylistItemsResponse retVal = ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).EndGetMemorylistItems(result);
-            return retVal.GetMemorylistItemsResult;
-        }
-        
-        private System.IAsyncResult OnBeginGetMemorylistItems(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.BuyerService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader = ((TraderaWebService.BuyerService.AuthorizationHeader)(inValues[1]));
-            TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.BuyerService.ConfigurationHeader)(inValues[2]));
-            TraderaWebService.BuyerService.ActiveFilter filterActive = ((TraderaWebService.BuyerService.ActiveFilter)(inValues[3]));
-            System.Nullable<System.DateTime> minEndDate = ((System.Nullable<System.DateTime>)(inValues[4]));
-            System.Nullable<System.DateTime> maxEndDate = ((System.Nullable<System.DateTime>)(inValues[5]));
-            return this.BeginGetMemorylistItems(AuthenticationHeader, AuthorizationHeader, ConfigurationHeader, filterActive, minEndDate, maxEndDate, callback, asyncState);
-        }
-        
-        private object[] OnEndGetMemorylistItems(System.IAsyncResult result) {
-            TraderaWebService.BuyerService.Item[] retVal = this.EndGetMemorylistItems(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnGetMemorylistItemsCompleted(object state) {
-            if ((this.GetMemorylistItemsCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetMemorylistItemsCompleted(this, new GetMemorylistItemsCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void GetMemorylistItemsAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, TraderaWebService.BuyerService.ActiveFilter filterActive, System.Nullable<System.DateTime> minEndDate, System.Nullable<System.DateTime> maxEndDate) {
-            this.GetMemorylistItemsAsync(AuthenticationHeader, AuthorizationHeader, ConfigurationHeader, filterActive, minEndDate, maxEndDate, null);
-        }
-        
-        public void GetMemorylistItemsAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, TraderaWebService.BuyerService.ActiveFilter filterActive, System.Nullable<System.DateTime> minEndDate, System.Nullable<System.DateTime> maxEndDate, object userState) {
-            if ((this.onBeginGetMemorylistItemsDelegate == null)) {
-                this.onBeginGetMemorylistItemsDelegate = new BeginOperationDelegate(this.OnBeginGetMemorylistItems);
-            }
-            if ((this.onEndGetMemorylistItemsDelegate == null)) {
-                this.onEndGetMemorylistItemsDelegate = new EndOperationDelegate(this.OnEndGetMemorylistItems);
-            }
-            if ((this.onGetMemorylistItemsCompletedDelegate == null)) {
-                this.onGetMemorylistItemsCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetMemorylistItemsCompleted);
-            }
-            base.InvokeAsync(this.onBeginGetMemorylistItemsDelegate, new object[] {
-                        AuthenticationHeader,
-                        AuthorizationHeader,
-                        ConfigurationHeader,
-                        filterActive,
-                        minEndDate,
-                        maxEndDate}, this.onEndGetMemorylistItemsDelegate, this.onGetMemorylistItemsCompletedDelegate, userState);
+            return ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).GetMemorylistItemsAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3755,69 +3294,17 @@ namespace TraderaWebService.BuyerService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.BuyerService.BuyerServiceSoap.BeginAddToMemorylist(TraderaWebService.BuyerService.AddToMemorylistRequest request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginAddToMemorylist(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.BuyerService.AddToMemorylistResponse> TraderaWebService.BuyerService.BuyerServiceSoap.AddToMemorylistAsync(TraderaWebService.BuyerService.AddToMemorylistRequest request) {
+            return base.Channel.AddToMemorylistAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginAddToMemorylist(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, int[] itemIds, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.BuyerService.AddToMemorylistResponse> AddToMemorylistAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, int[] itemIds) {
             TraderaWebService.BuyerService.AddToMemorylistRequest inValue = new TraderaWebService.BuyerService.AddToMemorylistRequest();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.AuthorizationHeader = AuthorizationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
             inValue.itemIds = itemIds;
-            return ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).BeginAddToMemorylist(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.BuyerService.AddToMemorylistResponse TraderaWebService.BuyerService.BuyerServiceSoap.EndAddToMemorylist(System.IAsyncResult result) {
-            return base.Channel.EndAddToMemorylist(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public void EndAddToMemorylist(System.IAsyncResult result) {
-            TraderaWebService.BuyerService.AddToMemorylistResponse retVal = ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).EndAddToMemorylist(result);
-        }
-        
-        private System.IAsyncResult OnBeginAddToMemorylist(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.BuyerService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader = ((TraderaWebService.BuyerService.AuthorizationHeader)(inValues[1]));
-            TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.BuyerService.ConfigurationHeader)(inValues[2]));
-            int[] itemIds = ((int[])(inValues[3]));
-            return this.BeginAddToMemorylist(AuthenticationHeader, AuthorizationHeader, ConfigurationHeader, itemIds, callback, asyncState);
-        }
-        
-        private object[] OnEndAddToMemorylist(System.IAsyncResult result) {
-            this.EndAddToMemorylist(result);
-            return null;
-        }
-        
-        private void OnAddToMemorylistCompleted(object state) {
-            if ((this.AddToMemorylistCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.AddToMemorylistCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void AddToMemorylistAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, int[] itemIds) {
-            this.AddToMemorylistAsync(AuthenticationHeader, AuthorizationHeader, ConfigurationHeader, itemIds, null);
-        }
-        
-        public void AddToMemorylistAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, int[] itemIds, object userState) {
-            if ((this.onBeginAddToMemorylistDelegate == null)) {
-                this.onBeginAddToMemorylistDelegate = new BeginOperationDelegate(this.OnBeginAddToMemorylist);
-            }
-            if ((this.onEndAddToMemorylistDelegate == null)) {
-                this.onEndAddToMemorylistDelegate = new EndOperationDelegate(this.OnEndAddToMemorylist);
-            }
-            if ((this.onAddToMemorylistCompletedDelegate == null)) {
-                this.onAddToMemorylistCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnAddToMemorylistCompleted);
-            }
-            base.InvokeAsync(this.onBeginAddToMemorylistDelegate, new object[] {
-                        AuthenticationHeader,
-                        AuthorizationHeader,
-                        ConfigurationHeader,
-                        itemIds}, this.onEndAddToMemorylistDelegate, this.onAddToMemorylistCompletedDelegate, userState);
+            return ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).AddToMemorylistAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3835,69 +3322,17 @@ namespace TraderaWebService.BuyerService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.BuyerService.BuyerServiceSoap.BeginRemoveFromMemorylist(TraderaWebService.BuyerService.RemoveFromMemorylistRequest request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginRemoveFromMemorylist(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.BuyerService.RemoveFromMemorylistResponse> TraderaWebService.BuyerService.BuyerServiceSoap.RemoveFromMemorylistAsync(TraderaWebService.BuyerService.RemoveFromMemorylistRequest request) {
+            return base.Channel.RemoveFromMemorylistAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginRemoveFromMemorylist(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, int[] itemIds, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.BuyerService.RemoveFromMemorylistResponse> RemoveFromMemorylistAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, int[] itemIds) {
             TraderaWebService.BuyerService.RemoveFromMemorylistRequest inValue = new TraderaWebService.BuyerService.RemoveFromMemorylistRequest();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.AuthorizationHeader = AuthorizationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
             inValue.itemIds = itemIds;
-            return ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).BeginRemoveFromMemorylist(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.BuyerService.RemoveFromMemorylistResponse TraderaWebService.BuyerService.BuyerServiceSoap.EndRemoveFromMemorylist(System.IAsyncResult result) {
-            return base.Channel.EndRemoveFromMemorylist(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public void EndRemoveFromMemorylist(System.IAsyncResult result) {
-            TraderaWebService.BuyerService.RemoveFromMemorylistResponse retVal = ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).EndRemoveFromMemorylist(result);
-        }
-        
-        private System.IAsyncResult OnBeginRemoveFromMemorylist(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.BuyerService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader = ((TraderaWebService.BuyerService.AuthorizationHeader)(inValues[1]));
-            TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.BuyerService.ConfigurationHeader)(inValues[2]));
-            int[] itemIds = ((int[])(inValues[3]));
-            return this.BeginRemoveFromMemorylist(AuthenticationHeader, AuthorizationHeader, ConfigurationHeader, itemIds, callback, asyncState);
-        }
-        
-        private object[] OnEndRemoveFromMemorylist(System.IAsyncResult result) {
-            this.EndRemoveFromMemorylist(result);
-            return null;
-        }
-        
-        private void OnRemoveFromMemorylistCompleted(object state) {
-            if ((this.RemoveFromMemorylistCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.RemoveFromMemorylistCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void RemoveFromMemorylistAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, int[] itemIds) {
-            this.RemoveFromMemorylistAsync(AuthenticationHeader, AuthorizationHeader, ConfigurationHeader, itemIds, null);
-        }
-        
-        public void RemoveFromMemorylistAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, int[] itemIds, object userState) {
-            if ((this.onBeginRemoveFromMemorylistDelegate == null)) {
-                this.onBeginRemoveFromMemorylistDelegate = new BeginOperationDelegate(this.OnBeginRemoveFromMemorylist);
-            }
-            if ((this.onEndRemoveFromMemorylistDelegate == null)) {
-                this.onEndRemoveFromMemorylistDelegate = new EndOperationDelegate(this.OnEndRemoveFromMemorylist);
-            }
-            if ((this.onRemoveFromMemorylistCompletedDelegate == null)) {
-                this.onRemoveFromMemorylistCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnRemoveFromMemorylistCompleted);
-            }
-            base.InvokeAsync(this.onBeginRemoveFromMemorylistDelegate, new object[] {
-                        AuthenticationHeader,
-                        AuthorizationHeader,
-                        ConfigurationHeader,
-                        itemIds}, this.onEndRemoveFromMemorylistDelegate, this.onRemoveFromMemorylistCompletedDelegate, userState);
+            return ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).RemoveFromMemorylistAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3916,71 +3351,17 @@ namespace TraderaWebService.BuyerService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.BuyerService.BuyerServiceSoap.BeginGetBuyerTransactions(TraderaWebService.BuyerService.GetBuyerTransactionsRequest1 request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginGetBuyerTransactions(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.BuyerService.GetBuyerTransactionsResponse> TraderaWebService.BuyerService.BuyerServiceSoap.GetBuyerTransactionsAsync(TraderaWebService.BuyerService.GetBuyerTransactionsRequest1 request) {
+            return base.Channel.GetBuyerTransactionsAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginGetBuyerTransactions(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, TraderaWebService.BuyerService.GetBuyerTransactionsRequest request, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.BuyerService.GetBuyerTransactionsResponse> GetBuyerTransactionsAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, TraderaWebService.BuyerService.GetBuyerTransactionsRequest request) {
             TraderaWebService.BuyerService.GetBuyerTransactionsRequest1 inValue = new TraderaWebService.BuyerService.GetBuyerTransactionsRequest1();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.AuthorizationHeader = AuthorizationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
             inValue.request = request;
-            return ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).BeginGetBuyerTransactions(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.BuyerService.GetBuyerTransactionsResponse TraderaWebService.BuyerService.BuyerServiceSoap.EndGetBuyerTransactions(System.IAsyncResult result) {
-            return base.Channel.EndGetBuyerTransactions(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public TraderaWebService.BuyerService.Transaction[] EndGetBuyerTransactions(System.IAsyncResult result) {
-            TraderaWebService.BuyerService.GetBuyerTransactionsResponse retVal = ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).EndGetBuyerTransactions(result);
-            return retVal.GetBuyerTransactionsResult;
-        }
-        
-        private System.IAsyncResult OnBeginGetBuyerTransactions(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.BuyerService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader = ((TraderaWebService.BuyerService.AuthorizationHeader)(inValues[1]));
-            TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.BuyerService.ConfigurationHeader)(inValues[2]));
-            TraderaWebService.BuyerService.GetBuyerTransactionsRequest request = ((TraderaWebService.BuyerService.GetBuyerTransactionsRequest)(inValues[3]));
-            return this.BeginGetBuyerTransactions(AuthenticationHeader, AuthorizationHeader, ConfigurationHeader, request, callback, asyncState);
-        }
-        
-        private object[] OnEndGetBuyerTransactions(System.IAsyncResult result) {
-            TraderaWebService.BuyerService.Transaction[] retVal = this.EndGetBuyerTransactions(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnGetBuyerTransactionsCompleted(object state) {
-            if ((this.GetBuyerTransactionsCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetBuyerTransactionsCompleted(this, new GetBuyerTransactionsCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void GetBuyerTransactionsAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, TraderaWebService.BuyerService.GetBuyerTransactionsRequest request) {
-            this.GetBuyerTransactionsAsync(AuthenticationHeader, AuthorizationHeader, ConfigurationHeader, request, null);
-        }
-        
-        public void GetBuyerTransactionsAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, TraderaWebService.BuyerService.GetBuyerTransactionsRequest request, object userState) {
-            if ((this.onBeginGetBuyerTransactionsDelegate == null)) {
-                this.onBeginGetBuyerTransactionsDelegate = new BeginOperationDelegate(this.OnBeginGetBuyerTransactions);
-            }
-            if ((this.onEndGetBuyerTransactionsDelegate == null)) {
-                this.onEndGetBuyerTransactionsDelegate = new EndOperationDelegate(this.OnEndGetBuyerTransactions);
-            }
-            if ((this.onGetBuyerTransactionsCompletedDelegate == null)) {
-                this.onGetBuyerTransactionsCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetBuyerTransactionsCompleted);
-            }
-            base.InvokeAsync(this.onBeginGetBuyerTransactionsDelegate, new object[] {
-                        AuthenticationHeader,
-                        AuthorizationHeader,
-                        ConfigurationHeader,
-                        request}, this.onEndGetBuyerTransactionsDelegate, this.onGetBuyerTransactionsCompletedDelegate, userState);
+            return ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).GetBuyerTransactionsAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3999,71 +3380,17 @@ namespace TraderaWebService.BuyerService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.BuyerService.BuyerServiceSoap.BeginGetBiddingInfo(TraderaWebService.BuyerService.GetBiddingInfoRequest1 request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginGetBiddingInfo(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.BuyerService.GetBiddingInfoResponse> TraderaWebService.BuyerService.BuyerServiceSoap.GetBiddingInfoAsync(TraderaWebService.BuyerService.GetBiddingInfoRequest1 request) {
+            return base.Channel.GetBiddingInfoAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginGetBiddingInfo(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, TraderaWebService.BuyerService.GetBiddingInfoRequest request, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.BuyerService.GetBiddingInfoResponse> GetBiddingInfoAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, TraderaWebService.BuyerService.GetBiddingInfoRequest request) {
             TraderaWebService.BuyerService.GetBiddingInfoRequest1 inValue = new TraderaWebService.BuyerService.GetBiddingInfoRequest1();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.AuthorizationHeader = AuthorizationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
             inValue.request = request;
-            return ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).BeginGetBiddingInfo(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.BuyerService.GetBiddingInfoResponse TraderaWebService.BuyerService.BuyerServiceSoap.EndGetBiddingInfo(System.IAsyncResult result) {
-            return base.Channel.EndGetBiddingInfo(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public TraderaWebService.BuyerService.AuctionBiddingInfo[] EndGetBiddingInfo(System.IAsyncResult result) {
-            TraderaWebService.BuyerService.GetBiddingInfoResponse retVal = ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).EndGetBiddingInfo(result);
-            return retVal.GetBiddingInfoResult;
-        }
-        
-        private System.IAsyncResult OnBeginGetBiddingInfo(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.BuyerService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader = ((TraderaWebService.BuyerService.AuthorizationHeader)(inValues[1]));
-            TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.BuyerService.ConfigurationHeader)(inValues[2]));
-            TraderaWebService.BuyerService.GetBiddingInfoRequest request = ((TraderaWebService.BuyerService.GetBiddingInfoRequest)(inValues[3]));
-            return this.BeginGetBiddingInfo(AuthenticationHeader, AuthorizationHeader, ConfigurationHeader, request, callback, asyncState);
-        }
-        
-        private object[] OnEndGetBiddingInfo(System.IAsyncResult result) {
-            TraderaWebService.BuyerService.AuctionBiddingInfo[] retVal = this.EndGetBiddingInfo(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnGetBiddingInfoCompleted(object state) {
-            if ((this.GetBiddingInfoCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetBiddingInfoCompleted(this, new GetBiddingInfoCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void GetBiddingInfoAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, TraderaWebService.BuyerService.GetBiddingInfoRequest request) {
-            this.GetBiddingInfoAsync(AuthenticationHeader, AuthorizationHeader, ConfigurationHeader, request, null);
-        }
-        
-        public void GetBiddingInfoAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, TraderaWebService.BuyerService.GetBiddingInfoRequest request, object userState) {
-            if ((this.onBeginGetBiddingInfoDelegate == null)) {
-                this.onBeginGetBiddingInfoDelegate = new BeginOperationDelegate(this.OnBeginGetBiddingInfo);
-            }
-            if ((this.onEndGetBiddingInfoDelegate == null)) {
-                this.onEndGetBiddingInfoDelegate = new EndOperationDelegate(this.OnEndGetBiddingInfo);
-            }
-            if ((this.onGetBiddingInfoCompletedDelegate == null)) {
-                this.onGetBiddingInfoCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetBiddingInfoCompleted);
-            }
-            base.InvokeAsync(this.onBeginGetBiddingInfoDelegate, new object[] {
-                        AuthenticationHeader,
-                        AuthorizationHeader,
-                        ConfigurationHeader,
-                        request}, this.onEndGetBiddingInfoDelegate, this.onGetBiddingInfoCompletedDelegate, userState);
+            return ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).GetBiddingInfoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4081,68 +3408,16 @@ namespace TraderaWebService.BuyerService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.BuyerService.BuyerServiceSoap.BeginGetSellerInfo(TraderaWebService.BuyerService.GetSellerInfoRequest request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginGetSellerInfo(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.BuyerService.GetSellerInfoResponse> TraderaWebService.BuyerService.BuyerServiceSoap.GetSellerInfoAsync(TraderaWebService.BuyerService.GetSellerInfoRequest request) {
+            return base.Channel.GetSellerInfoAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginGetSellerInfo(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, int userId, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.BuyerService.GetSellerInfoResponse> GetSellerInfoAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, int userId) {
             TraderaWebService.BuyerService.GetSellerInfoRequest inValue = new TraderaWebService.BuyerService.GetSellerInfoRequest();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
             inValue.userId = userId;
-            return ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).BeginGetSellerInfo(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.BuyerService.GetSellerInfoResponse TraderaWebService.BuyerService.BuyerServiceSoap.EndGetSellerInfo(System.IAsyncResult result) {
-            return base.Channel.EndGetSellerInfo(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public TraderaWebService.BuyerService.SellerInfo EndGetSellerInfo(System.IAsyncResult result) {
-            TraderaWebService.BuyerService.GetSellerInfoResponse retVal = ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).EndGetSellerInfo(result);
-            return retVal.GetSellerInfoResult;
-        }
-        
-        private System.IAsyncResult OnBeginGetSellerInfo(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.BuyerService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.BuyerService.ConfigurationHeader)(inValues[1]));
-            int userId = ((int)(inValues[2]));
-            return this.BeginGetSellerInfo(AuthenticationHeader, ConfigurationHeader, userId, callback, asyncState);
-        }
-        
-        private object[] OnEndGetSellerInfo(System.IAsyncResult result) {
-            TraderaWebService.BuyerService.SellerInfo retVal = this.EndGetSellerInfo(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnGetSellerInfoCompleted(object state) {
-            if ((this.GetSellerInfoCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetSellerInfoCompleted(this, new GetSellerInfoCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void GetSellerInfoAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, int userId) {
-            this.GetSellerInfoAsync(AuthenticationHeader, ConfigurationHeader, userId, null);
-        }
-        
-        public void GetSellerInfoAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, int userId, object userState) {
-            if ((this.onBeginGetSellerInfoDelegate == null)) {
-                this.onBeginGetSellerInfoDelegate = new BeginOperationDelegate(this.OnBeginGetSellerInfo);
-            }
-            if ((this.onEndGetSellerInfoDelegate == null)) {
-                this.onEndGetSellerInfoDelegate = new EndOperationDelegate(this.OnEndGetSellerInfo);
-            }
-            if ((this.onGetSellerInfoCompletedDelegate == null)) {
-                this.onGetSellerInfoCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetSellerInfoCompleted);
-            }
-            base.InvokeAsync(this.onBeginGetSellerInfoDelegate, new object[] {
-                        AuthenticationHeader,
-                        ConfigurationHeader,
-                        userId}, this.onEndGetSellerInfoDelegate, this.onGetSellerInfoCompletedDelegate, userState);
+            return ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).GetSellerInfoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4160,69 +3435,17 @@ namespace TraderaWebService.BuyerService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.BuyerService.BuyerServiceSoap.BeginMarkTransactionsPaid(TraderaWebService.BuyerService.MarkTransactionsPaidRequest1 request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginMarkTransactionsPaid(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.BuyerService.MarkTransactionsPaidResponse> TraderaWebService.BuyerService.BuyerServiceSoap.MarkTransactionsPaidAsync(TraderaWebService.BuyerService.MarkTransactionsPaidRequest1 request) {
+            return base.Channel.MarkTransactionsPaidAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginMarkTransactionsPaid(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, TraderaWebService.BuyerService.MarkTransactionsPaidRequest[] request, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.BuyerService.MarkTransactionsPaidResponse> MarkTransactionsPaidAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, TraderaWebService.BuyerService.MarkTransactionsPaidRequest[] request) {
             TraderaWebService.BuyerService.MarkTransactionsPaidRequest1 inValue = new TraderaWebService.BuyerService.MarkTransactionsPaidRequest1();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.AuthorizationHeader = AuthorizationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
             inValue.request = request;
-            return ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).BeginMarkTransactionsPaid(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.BuyerService.MarkTransactionsPaidResponse TraderaWebService.BuyerService.BuyerServiceSoap.EndMarkTransactionsPaid(System.IAsyncResult result) {
-            return base.Channel.EndMarkTransactionsPaid(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public void EndMarkTransactionsPaid(System.IAsyncResult result) {
-            TraderaWebService.BuyerService.MarkTransactionsPaidResponse retVal = ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).EndMarkTransactionsPaid(result);
-        }
-        
-        private System.IAsyncResult OnBeginMarkTransactionsPaid(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.BuyerService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader = ((TraderaWebService.BuyerService.AuthorizationHeader)(inValues[1]));
-            TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.BuyerService.ConfigurationHeader)(inValues[2]));
-            TraderaWebService.BuyerService.MarkTransactionsPaidRequest[] request = ((TraderaWebService.BuyerService.MarkTransactionsPaidRequest[])(inValues[3]));
-            return this.BeginMarkTransactionsPaid(AuthenticationHeader, AuthorizationHeader, ConfigurationHeader, request, callback, asyncState);
-        }
-        
-        private object[] OnEndMarkTransactionsPaid(System.IAsyncResult result) {
-            this.EndMarkTransactionsPaid(result);
-            return null;
-        }
-        
-        private void OnMarkTransactionsPaidCompleted(object state) {
-            if ((this.MarkTransactionsPaidCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.MarkTransactionsPaidCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void MarkTransactionsPaidAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, TraderaWebService.BuyerService.MarkTransactionsPaidRequest[] request) {
-            this.MarkTransactionsPaidAsync(AuthenticationHeader, AuthorizationHeader, ConfigurationHeader, request, null);
-        }
-        
-        public void MarkTransactionsPaidAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, TraderaWebService.BuyerService.MarkTransactionsPaidRequest[] request, object userState) {
-            if ((this.onBeginMarkTransactionsPaidDelegate == null)) {
-                this.onBeginMarkTransactionsPaidDelegate = new BeginOperationDelegate(this.OnBeginMarkTransactionsPaid);
-            }
-            if ((this.onEndMarkTransactionsPaidDelegate == null)) {
-                this.onEndMarkTransactionsPaidDelegate = new EndOperationDelegate(this.OnEndMarkTransactionsPaid);
-            }
-            if ((this.onMarkTransactionsPaidCompletedDelegate == null)) {
-                this.onMarkTransactionsPaidCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnMarkTransactionsPaidCompleted);
-            }
-            base.InvokeAsync(this.onBeginMarkTransactionsPaidDelegate, new object[] {
-                        AuthenticationHeader,
-                        AuthorizationHeader,
-                        ConfigurationHeader,
-                        request}, this.onEndMarkTransactionsPaidDelegate, this.onMarkTransactionsPaidCompletedDelegate, userState);
+            return ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).MarkTransactionsPaidAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4243,12 +3466,11 @@ namespace TraderaWebService.BuyerService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.BuyerService.BuyerServiceSoap.BeginSendQuestionToSeller(TraderaWebService.BuyerService.SendQuestionToSellerRequest request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginSendQuestionToSeller(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.BuyerService.SendQuestionToSellerResponse> TraderaWebService.BuyerService.BuyerServiceSoap.SendQuestionToSellerAsync(TraderaWebService.BuyerService.SendQuestionToSellerRequest request) {
+            return base.Channel.SendQuestionToSellerAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginSendQuestionToSeller(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, int itemId, string question, bool sendCopyToSender, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.BuyerService.SendQuestionToSellerResponse> SendQuestionToSellerAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, int itemId, string question, bool sendCopyToSender) {
             TraderaWebService.BuyerService.SendQuestionToSellerRequest inValue = new TraderaWebService.BuyerService.SendQuestionToSellerRequest();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.AuthorizationHeader = AuthorizationHeader;
@@ -4256,64 +3478,7 @@ namespace TraderaWebService.BuyerService {
             inValue.itemId = itemId;
             inValue.question = question;
             inValue.sendCopyToSender = sendCopyToSender;
-            return ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).BeginSendQuestionToSeller(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.BuyerService.SendQuestionToSellerResponse TraderaWebService.BuyerService.BuyerServiceSoap.EndSendQuestionToSeller(System.IAsyncResult result) {
-            return base.Channel.EndSendQuestionToSeller(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public TraderaWebService.BuyerService.ContactSellerResult EndSendQuestionToSeller(System.IAsyncResult result) {
-            TraderaWebService.BuyerService.SendQuestionToSellerResponse retVal = ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).EndSendQuestionToSeller(result);
-            return retVal.SendQuestionToSellerResult;
-        }
-        
-        private System.IAsyncResult OnBeginSendQuestionToSeller(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.BuyerService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader = ((TraderaWebService.BuyerService.AuthorizationHeader)(inValues[1]));
-            TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.BuyerService.ConfigurationHeader)(inValues[2]));
-            int itemId = ((int)(inValues[3]));
-            string question = ((string)(inValues[4]));
-            bool sendCopyToSender = ((bool)(inValues[5]));
-            return this.BeginSendQuestionToSeller(AuthenticationHeader, AuthorizationHeader, ConfigurationHeader, itemId, question, sendCopyToSender, callback, asyncState);
-        }
-        
-        private object[] OnEndSendQuestionToSeller(System.IAsyncResult result) {
-            TraderaWebService.BuyerService.ContactSellerResult retVal = this.EndSendQuestionToSeller(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnSendQuestionToSellerCompleted(object state) {
-            if ((this.SendQuestionToSellerCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.SendQuestionToSellerCompleted(this, new SendQuestionToSellerCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void SendQuestionToSellerAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, int itemId, string question, bool sendCopyToSender) {
-            this.SendQuestionToSellerAsync(AuthenticationHeader, AuthorizationHeader, ConfigurationHeader, itemId, question, sendCopyToSender, null);
-        }
-        
-        public void SendQuestionToSellerAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, int itemId, string question, bool sendCopyToSender, object userState) {
-            if ((this.onBeginSendQuestionToSellerDelegate == null)) {
-                this.onBeginSendQuestionToSellerDelegate = new BeginOperationDelegate(this.OnBeginSendQuestionToSeller);
-            }
-            if ((this.onEndSendQuestionToSellerDelegate == null)) {
-                this.onEndSendQuestionToSellerDelegate = new EndOperationDelegate(this.OnEndSendQuestionToSeller);
-            }
-            if ((this.onSendQuestionToSellerCompletedDelegate == null)) {
-                this.onSendQuestionToSellerCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnSendQuestionToSellerCompleted);
-            }
-            base.InvokeAsync(this.onBeginSendQuestionToSellerDelegate, new object[] {
-                        AuthenticationHeader,
-                        AuthorizationHeader,
-                        ConfigurationHeader,
-                        itemId,
-                        question,
-                        sendCopyToSender}, this.onEndSendQuestionToSellerDelegate, this.onSendQuestionToSellerCompletedDelegate, userState);
+            return ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).SendQuestionToSellerAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4332,71 +3497,17 @@ namespace TraderaWebService.BuyerService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.BuyerService.BuyerServiceSoap.BeginInitPayPalPayment(TraderaWebService.BuyerService.InitPayPalPaymentRequest request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginInitPayPalPayment(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.BuyerService.InitPayPalPaymentResponse> TraderaWebService.BuyerService.BuyerServiceSoap.InitPayPalPaymentAsync(TraderaWebService.BuyerService.InitPayPalPaymentRequest request) {
+            return base.Channel.InitPayPalPaymentAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginInitPayPalPayment(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, int transactionId, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.BuyerService.InitPayPalPaymentResponse> InitPayPalPaymentAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, int transactionId) {
             TraderaWebService.BuyerService.InitPayPalPaymentRequest inValue = new TraderaWebService.BuyerService.InitPayPalPaymentRequest();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.AuthorizationHeader = AuthorizationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
             inValue.transactionId = transactionId;
-            return ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).BeginInitPayPalPayment(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.BuyerService.InitPayPalPaymentResponse TraderaWebService.BuyerService.BuyerServiceSoap.EndInitPayPalPayment(System.IAsyncResult result) {
-            return base.Channel.EndInitPayPalPayment(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public TraderaWebService.BuyerService.InitPayPalPaymentResult EndInitPayPalPayment(System.IAsyncResult result) {
-            TraderaWebService.BuyerService.InitPayPalPaymentResponse retVal = ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).EndInitPayPalPayment(result);
-            return retVal.InitPayPalPaymentResult;
-        }
-        
-        private System.IAsyncResult OnBeginInitPayPalPayment(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.BuyerService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader = ((TraderaWebService.BuyerService.AuthorizationHeader)(inValues[1]));
-            TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.BuyerService.ConfigurationHeader)(inValues[2]));
-            int transactionId = ((int)(inValues[3]));
-            return this.BeginInitPayPalPayment(AuthenticationHeader, AuthorizationHeader, ConfigurationHeader, transactionId, callback, asyncState);
-        }
-        
-        private object[] OnEndInitPayPalPayment(System.IAsyncResult result) {
-            TraderaWebService.BuyerService.InitPayPalPaymentResult retVal = this.EndInitPayPalPayment(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnInitPayPalPaymentCompleted(object state) {
-            if ((this.InitPayPalPaymentCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.InitPayPalPaymentCompleted(this, new InitPayPalPaymentCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void InitPayPalPaymentAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, int transactionId) {
-            this.InitPayPalPaymentAsync(AuthenticationHeader, AuthorizationHeader, ConfigurationHeader, transactionId, null);
-        }
-        
-        public void InitPayPalPaymentAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, int transactionId, object userState) {
-            if ((this.onBeginInitPayPalPaymentDelegate == null)) {
-                this.onBeginInitPayPalPaymentDelegate = new BeginOperationDelegate(this.OnBeginInitPayPalPayment);
-            }
-            if ((this.onEndInitPayPalPaymentDelegate == null)) {
-                this.onEndInitPayPalPaymentDelegate = new EndOperationDelegate(this.OnEndInitPayPalPayment);
-            }
-            if ((this.onInitPayPalPaymentCompletedDelegate == null)) {
-                this.onInitPayPalPaymentCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnInitPayPalPaymentCompleted);
-            }
-            base.InvokeAsync(this.onBeginInitPayPalPaymentDelegate, new object[] {
-                        AuthenticationHeader,
-                        AuthorizationHeader,
-                        ConfigurationHeader,
-                        transactionId}, this.onEndInitPayPalPaymentDelegate, this.onInitPayPalPaymentCompletedDelegate, userState);
+            return ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).InitPayPalPaymentAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4415,71 +3526,17 @@ namespace TraderaWebService.BuyerService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult TraderaWebService.BuyerService.BuyerServiceSoap.BeginVerifyPayPalPayment(TraderaWebService.BuyerService.VerifyPayPalPaymentRequest request, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginVerifyPayPalPayment(request, callback, asyncState);
+        System.Threading.Tasks.Task<TraderaWebService.BuyerService.VerifyPayPalPaymentResponse> TraderaWebService.BuyerService.BuyerServiceSoap.VerifyPayPalPaymentAsync(TraderaWebService.BuyerService.VerifyPayPalPaymentRequest request) {
+            return base.Channel.VerifyPayPalPaymentAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginVerifyPayPalPayment(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, int transactionId, System.AsyncCallback callback, object asyncState) {
+        public System.Threading.Tasks.Task<TraderaWebService.BuyerService.VerifyPayPalPaymentResponse> VerifyPayPalPaymentAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, int transactionId) {
             TraderaWebService.BuyerService.VerifyPayPalPaymentRequest inValue = new TraderaWebService.BuyerService.VerifyPayPalPaymentRequest();
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.AuthorizationHeader = AuthorizationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
             inValue.transactionId = transactionId;
-            return ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).BeginVerifyPayPalPayment(inValue, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.BuyerService.VerifyPayPalPaymentResponse TraderaWebService.BuyerService.BuyerServiceSoap.EndVerifyPayPalPayment(System.IAsyncResult result) {
-            return base.Channel.EndVerifyPayPalPayment(result);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public TraderaWebService.BuyerService.VerifyPayPalPaymentResult EndVerifyPayPalPayment(System.IAsyncResult result) {
-            TraderaWebService.BuyerService.VerifyPayPalPaymentResponse retVal = ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).EndVerifyPayPalPayment(result);
-            return retVal.VerifyPayPalPaymentResult;
-        }
-        
-        private System.IAsyncResult OnBeginVerifyPayPalPayment(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader = ((TraderaWebService.BuyerService.AuthenticationHeader)(inValues[0]));
-            TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader = ((TraderaWebService.BuyerService.AuthorizationHeader)(inValues[1]));
-            TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader = ((TraderaWebService.BuyerService.ConfigurationHeader)(inValues[2]));
-            int transactionId = ((int)(inValues[3]));
-            return this.BeginVerifyPayPalPayment(AuthenticationHeader, AuthorizationHeader, ConfigurationHeader, transactionId, callback, asyncState);
-        }
-        
-        private object[] OnEndVerifyPayPalPayment(System.IAsyncResult result) {
-            TraderaWebService.BuyerService.VerifyPayPalPaymentResult retVal = this.EndVerifyPayPalPayment(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnVerifyPayPalPaymentCompleted(object state) {
-            if ((this.VerifyPayPalPaymentCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.VerifyPayPalPaymentCompleted(this, new VerifyPayPalPaymentCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void VerifyPayPalPaymentAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, int transactionId) {
-            this.VerifyPayPalPaymentAsync(AuthenticationHeader, AuthorizationHeader, ConfigurationHeader, transactionId, null);
-        }
-        
-        public void VerifyPayPalPaymentAsync(TraderaWebService.BuyerService.AuthenticationHeader AuthenticationHeader, TraderaWebService.BuyerService.AuthorizationHeader AuthorizationHeader, TraderaWebService.BuyerService.ConfigurationHeader ConfigurationHeader, int transactionId, object userState) {
-            if ((this.onBeginVerifyPayPalPaymentDelegate == null)) {
-                this.onBeginVerifyPayPalPaymentDelegate = new BeginOperationDelegate(this.OnBeginVerifyPayPalPayment);
-            }
-            if ((this.onEndVerifyPayPalPaymentDelegate == null)) {
-                this.onEndVerifyPayPalPaymentDelegate = new EndOperationDelegate(this.OnEndVerifyPayPalPayment);
-            }
-            if ((this.onVerifyPayPalPaymentCompletedDelegate == null)) {
-                this.onVerifyPayPalPaymentCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnVerifyPayPalPaymentCompleted);
-            }
-            base.InvokeAsync(this.onBeginVerifyPayPalPaymentDelegate, new object[] {
-                        AuthenticationHeader,
-                        AuthorizationHeader,
-                        ConfigurationHeader,
-                        transactionId}, this.onEndVerifyPayPalPaymentDelegate, this.onVerifyPayPalPaymentCompletedDelegate, userState);
+            return ((TraderaWebService.BuyerService.BuyerServiceSoap)(this)).VerifyPayPalPaymentAsync(inValue);
         }
     }
 }
