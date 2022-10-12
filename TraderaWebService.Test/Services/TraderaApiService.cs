@@ -107,9 +107,11 @@ namespace TraderaWebService.Test.Services
         /// Returns the official Tradera.com local time (for use with auction endings).
         /// </summary>
         /// <returns></returns>
-        public DateTime GetOfficialTime()
+        public async Task<DateTime> GetOfficialTime()
         {
-            return PublicServiceSoapClient.GetOfficalTime(PublicAuthenticationHeader, null);
+            var response = await PublicServiceSoapClient.GetOfficalTimeAsync(PublicAuthenticationHeader, PublicConfigurationHeader);
+
+            return response.GetOfficalTimeResult;
         }
 
         /// <summary>

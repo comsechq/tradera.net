@@ -10,13 +10,13 @@ namespace TraderaWebService.Test.Services
     public interface ITraderaApiService
     {
         /// <summary>
-        /// Returns the offical Tradera.com local time (for use with auction endings).
+        /// Returns the official Tradera.com local time (for use with auction endings).
         /// </summary>
         /// <returns></returns>
-        DateTime GetOfficialTime();
+        Task<DateTime> GetOfficialTime();
 
         /// <summary>
-        /// Return a hieradchy of Category objects
+        /// Return a hierarchy of Category objects
         /// </summary>
         /// <returns></returns>
         Task<GetCategoriesResponse> GetCategoriesAsync();

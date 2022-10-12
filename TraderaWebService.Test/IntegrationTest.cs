@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using TraderaWebService.Test.Services;
@@ -8,14 +9,29 @@ namespace TraderaWebService.Test
     [TestFixture]
     public class IntegrationTest
     {
+        private TraderaApiService Setup()
+        {
+            // NEVER push real appId and service key values!
+            var appId = 1234;
+            var appServiceKey = "no-no-no";
+
+            return new TraderaApiService(appId, appServiceKey);
+        }
+
+        [Test]
+        public async Task GetOfficialTime()
+        {
+            var traderaApiService = Setup();
+
+            var now = await traderaApiService.GetOfficialTime();
+
+            Assert.Less(DateTime.MinValue, now);
+        }
+
         [Test]
         public async Task SearchAndGetItemDetails()
         {
-            // NEVER push real appId and service key values!
-            var appId = 123;
-            var appServiceKey = "no-no-no";
-
-            var traderaApiService = new TraderaApiService(appId, appServiceKey);
+            var traderaApiService = Setup();
 
             var response = await traderaApiService.SearchAsync("batman", 33, 0);
 
