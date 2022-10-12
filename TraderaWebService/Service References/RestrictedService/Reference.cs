@@ -95,14 +95,6 @@ namespace TraderaWebService.RestrictedService {
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/LeaveFeedback", ReplyAction="*")]
         System.Threading.Tasks.Task<TraderaWebService.RestrictedService.LeaveFeedbackResponse> LeaveFeedbackAsync(TraderaWebService.RestrictedService.LeaveFeedbackRequest request);
         
-        // CODEGEN: Generating message contract since message GetItemFeesRequest has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetItemFees", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        TraderaWebService.RestrictedService.GetItemFeesResponse GetItemFees(TraderaWebService.RestrictedService.GetItemFeesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetItemFees", ReplyAction="*")]
-        System.Threading.Tasks.Task<TraderaWebService.RestrictedService.GetItemFeesResponse> GetItemFeesAsync(TraderaWebService.RestrictedService.GetItemFeesRequest request);
-        
         // CODEGEN: Generating message contract since message EndItemRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/EndItem", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -183,62 +175,6 @@ namespace TraderaWebService.RestrictedService {
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/UpdateTransactionStatus", ReplyAction="*")]
         System.Threading.Tasks.Task<TraderaWebService.RestrictedService.UpdateTransactionStatusResponse> UpdateTransactionStatusAsync(TraderaWebService.RestrictedService.UpdateTransactionStatusRequest request);
         
-        // CODEGEN: Generating message contract since message AddCampaignRequest has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/AddCampaign", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        TraderaWebService.RestrictedService.AddCampaignResponse AddCampaign(TraderaWebService.RestrictedService.AddCampaignRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/AddCampaign", ReplyAction="*")]
-        System.Threading.Tasks.Task<TraderaWebService.RestrictedService.AddCampaignResponse> AddCampaignAsync(TraderaWebService.RestrictedService.AddCampaignRequest request);
-        
-        // CODEGEN: Generating message contract since message UpdateCampaignRequest has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/UpdateCampaign", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        TraderaWebService.RestrictedService.UpdateCampaignResponse UpdateCampaign(TraderaWebService.RestrictedService.UpdateCampaignRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/UpdateCampaign", ReplyAction="*")]
-        System.Threading.Tasks.Task<TraderaWebService.RestrictedService.UpdateCampaignResponse> UpdateCampaignAsync(TraderaWebService.RestrictedService.UpdateCampaignRequest request);
-        
-        // CODEGEN: Generating message contract since message GetCampaignRequest has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetCampaign", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        TraderaWebService.RestrictedService.GetCampaignResponse GetCampaign(TraderaWebService.RestrictedService.GetCampaignRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetCampaign", ReplyAction="*")]
-        System.Threading.Tasks.Task<TraderaWebService.RestrictedService.GetCampaignResponse> GetCampaignAsync(TraderaWebService.RestrictedService.GetCampaignRequest request);
-        
-        // CODEGEN: Generating message contract since message GetCampaignsListRequest has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetCampaignsList", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        TraderaWebService.RestrictedService.GetCampaignsListResponse GetCampaignsList(TraderaWebService.RestrictedService.GetCampaignsListRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetCampaignsList", ReplyAction="*")]
-        System.Threading.Tasks.Task<TraderaWebService.RestrictedService.GetCampaignsListResponse> GetCampaignsListAsync(TraderaWebService.RestrictedService.GetCampaignsListRequest request);
-        
-        // CODEGEN: Generating message contract since message RemoveCampaignRequest has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/RemoveCampaign", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        TraderaWebService.RestrictedService.RemoveCampaignResponse RemoveCampaign(TraderaWebService.RestrictedService.RemoveCampaignRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/RemoveCampaign", ReplyAction="*")]
-        System.Threading.Tasks.Task<TraderaWebService.RestrictedService.RemoveCampaignResponse> RemoveCampaignAsync(TraderaWebService.RestrictedService.RemoveCampaignRequest request);
-        
-        // CODEGEN: Generating message contract since message GetItemCampaignsRequest has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetItemCampaigns", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        TraderaWebService.RestrictedService.GetItemCampaignsResponse1 GetItemCampaigns(TraderaWebService.RestrictedService.GetItemCampaignsRequest1 request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetItemCampaigns", ReplyAction="*")]
-        System.Threading.Tasks.Task<TraderaWebService.RestrictedService.GetItemCampaignsResponse1> GetItemCampaignsAsync(TraderaWebService.RestrictedService.GetItemCampaignsRequest1 request);
-        
-        // CODEGEN: Generating message contract since message UpdateItemCampaignsRequest has headers
-        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/UpdateItemCampaigns", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        TraderaWebService.RestrictedService.UpdateItemCampaignsResponse UpdateItemCampaigns(TraderaWebService.RestrictedService.UpdateItemCampaignsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/UpdateItemCampaigns", ReplyAction="*")]
-        System.Threading.Tasks.Task<TraderaWebService.RestrictedService.UpdateItemCampaignsResponse> UpdateItemCampaignsAsync(TraderaWebService.RestrictedService.UpdateItemCampaignsRequest request);
-        
         // CODEGEN: Generating message contract since message GetUpdatedSellerItemsRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetUpdatedSellerItems", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -263,6 +199,14 @@ namespace TraderaWebService.RestrictedService {
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/SetPriceOnShopItems", ReplyAction="*")]
         System.Threading.Tasks.Task<TraderaWebService.RestrictedService.SetPriceOnShopItemsResponse> SetPriceOnShopItemsAsync(TraderaWebService.RestrictedService.SetPriceOnShopItemsRequest1 request);
         
+        // CODEGEN: Generating message contract since message SetPricesOnNonShopItemsRequest has headers
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/SetPricesOnNonShopItems", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        TraderaWebService.RestrictedService.SetPricesOnNonShopItemsResponse SetPricesOnNonShopItems(TraderaWebService.RestrictedService.SetPricesOnNonShopItemsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/SetPricesOnNonShopItems", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.RestrictedService.SetPricesOnNonShopItemsResponse> SetPricesOnNonShopItemsAsync(TraderaWebService.RestrictedService.SetPricesOnNonShopItemsRequest request);
+        
         // CODEGEN: Generating message contract since message SetActivateDateOnShopItemsRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/SetActivateDateOnShopItems", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -286,10 +230,42 @@ namespace TraderaWebService.RestrictedService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/LeaveOrderFeedbackToBuyer", ReplyAction="*")]
         System.Threading.Tasks.Task<TraderaWebService.RestrictedService.LeaveOrderFeedbackToBuyerResponse> LeaveOrderFeedbackToBuyerAsync(TraderaWebService.RestrictedService.LeaveOrderFeedbackToBuyerRequest request);
+        
+        // CODEGEN: Generating message contract since message GetMemberPaymentOptionsRequest has headers
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetMemberPaymentOptions", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        TraderaWebService.RestrictedService.GetMemberPaymentOptionsResponse GetMemberPaymentOptions(TraderaWebService.RestrictedService.GetMemberPaymentOptionsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetMemberPaymentOptions", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.RestrictedService.GetMemberPaymentOptionsResponse> GetMemberPaymentOptionsAsync(TraderaWebService.RestrictedService.GetMemberPaymentOptionsRequest request);
+        
+        // CODEGEN: Generating message contract since message BeginBankIdVerificationRequest has headers
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/BeginBankIdVerification", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        TraderaWebService.RestrictedService.BeginBankIdVerificationResponse BeginBankIdVerification(TraderaWebService.RestrictedService.BeginBankIdVerificationRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/BeginBankIdVerification", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.RestrictedService.BeginBankIdVerificationResponse> BeginBankIdVerificationAsync(TraderaWebService.RestrictedService.BeginBankIdVerificationRequest request);
+        
+        // CODEGEN: Generating message contract since message GetBankIdVerificationProgressRequest has headers
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetBankIdVerificationProgress", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        TraderaWebService.RestrictedService.GetBankIdVerificationProgressResponse GetBankIdVerificationProgress(TraderaWebService.RestrictedService.GetBankIdVerificationProgressRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetBankIdVerificationProgress", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.RestrictedService.GetBankIdVerificationProgressResponse> GetBankIdVerificationProgressAsync(TraderaWebService.RestrictedService.GetBankIdVerificationProgressRequest request);
+        
+        // CODEGEN: Generating message contract since message CancelBankIdVerificationRequest has headers
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/CancelBankIdVerification", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        TraderaWebService.RestrictedService.CancelBankIdVerificationResponse CancelBankIdVerification(TraderaWebService.RestrictedService.CancelBankIdVerificationRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/CancelBankIdVerification", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.RestrictedService.CancelBankIdVerificationResponse> CancelBankIdVerificationAsync(TraderaWebService.RestrictedService.CancelBankIdVerificationRequest request);
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -349,7 +325,269 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
+    public partial class CancelBankIdVerification : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string bankIdOrderRefField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string BankIdOrderRef {
+            get {
+                return this.bankIdOrderRefField;
+            }
+            set {
+                this.bankIdOrderRefField = value;
+                this.RaisePropertyChanged("BankIdOrderRef");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
+    public partial class GetBankIdVerificationProgressResult : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private bool isCompletedField;
+        
+        private string progressField;
+        
+        private string errorField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public bool IsCompleted {
+            get {
+                return this.isCompletedField;
+            }
+            set {
+                this.isCompletedField = value;
+                this.RaisePropertyChanged("IsCompleted");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Progress {
+            get {
+                return this.progressField;
+            }
+            set {
+                this.progressField = value;
+                this.RaisePropertyChanged("Progress");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string Error {
+            get {
+                return this.errorField;
+            }
+            set {
+                this.errorField = value;
+                this.RaisePropertyChanged("Error");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
+    public partial class GetBankIdVerificationProgress : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string bankIdOrderRefField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string BankIdOrderRef {
+            get {
+                return this.bankIdOrderRefField;
+            }
+            set {
+                this.bankIdOrderRefField = value;
+                this.RaisePropertyChanged("BankIdOrderRef");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
+    public partial class BeginBankIdVerificationResult : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string bankIdOrderRefField;
+        
+        private string errorField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string BankIdOrderRef {
+            get {
+                return this.bankIdOrderRefField;
+            }
+            set {
+                this.bankIdOrderRefField = value;
+                this.RaisePropertyChanged("BankIdOrderRef");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Error {
+            get {
+                return this.errorField;
+            }
+            set {
+                this.errorField = value;
+                this.RaisePropertyChanged("Error");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
+    public partial class MemberPaymentOption : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string nameField;
+        
+        private string descriptionField;
+        
+        private string displayNameField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("Name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+                this.RaisePropertyChanged("Description");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string DisplayName {
+            get {
+                return this.displayNameField;
+            }
+            set {
+                this.displayNameField = value;
+                this.RaisePropertyChanged("DisplayName");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
+    public partial class GetMemberPaymentOptionsResult : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private MemberPaymentOption[] paymentOptionsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public MemberPaymentOption[] PaymentOptions {
+            get {
+                return this.paymentOptionsField;
+            }
+            set {
+                this.paymentOptionsField = value;
+                this.RaisePropertyChanged("PaymentOptions");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -395,7 +633,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -441,7 +679,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -487,7 +725,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -519,7 +757,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -565,7 +803,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -611,7 +849,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -657,7 +895,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -703,7 +941,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -735,7 +973,269 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
+    public partial class SetPricesOnNonShopItemsError : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private SetPricesNonShopItem itemField;
+        
+        private string errorMessageField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public SetPricesNonShopItem Item {
+            get {
+                return this.itemField;
+            }
+            set {
+                this.itemField = value;
+                this.RaisePropertyChanged("Item");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string ErrorMessage {
+            get {
+                return this.errorMessageField;
+            }
+            set {
+                this.errorMessageField = value;
+                this.RaisePropertyChanged("ErrorMessage");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
+    public partial class SetPricesNonShopItem : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int idField;
+        
+        private int openingPriceField;
+        
+        private ReservedPrice reservedPriceField;
+        
+        private BinPrice binPriceField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int Id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("Id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public int OpeningPrice {
+            get {
+                return this.openingPriceField;
+            }
+            set {
+                this.openingPriceField = value;
+                this.RaisePropertyChanged("OpeningPrice");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public ReservedPrice ReservedPrice {
+            get {
+                return this.reservedPriceField;
+            }
+            set {
+                this.reservedPriceField = value;
+                this.RaisePropertyChanged("ReservedPrice");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public BinPrice BinPrice {
+            get {
+                return this.binPriceField;
+            }
+            set {
+                this.binPriceField = value;
+                this.RaisePropertyChanged("BinPrice");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
+    public partial class ReservedPrice : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int priceField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int Price {
+            get {
+                return this.priceField;
+            }
+            set {
+                this.priceField = value;
+                this.RaisePropertyChanged("Price");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
+    public partial class BinPrice : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int priceField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int Price {
+            get {
+                return this.priceField;
+            }
+            set {
+                this.priceField = value;
+                this.RaisePropertyChanged("Price");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
+    public partial class SetPricesOnNonShopItemsResult : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private bool isSuccessfulField;
+        
+        private SetPricesOnNonShopItemsError[] validationErrorsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public bool IsSuccessful {
+            get {
+                return this.isSuccessfulField;
+            }
+            set {
+                this.isSuccessfulField = value;
+                this.RaisePropertyChanged("IsSuccessful");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=1)]
+        public SetPricesOnNonShopItemsError[] ValidationErrors {
+            get {
+                return this.validationErrorsField;
+            }
+            set {
+                this.validationErrorsField = value;
+                this.RaisePropertyChanged("ValidationErrors");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
+    public partial class SetPricesOnNonShopItemRequest : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private SetPricesNonShopItem nonShopItemField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public SetPricesNonShopItem NonShopItem {
+            get {
+                return this.nonShopItemField;
+            }
+            set {
+                this.nonShopItemField = value;
+                this.RaisePropertyChanged("NonShopItem");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -781,7 +1281,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -827,7 +1327,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -873,7 +1373,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -905,7 +1405,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -965,7 +1465,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
     public enum ItemType {
@@ -981,7 +1481,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1013,7 +1513,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1045,368 +1545,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
-    public partial class ItemCampaignsData : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int auctionIdField;
-        
-        private int[] campaignIdsField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public int AuctionId {
-            get {
-                return this.auctionIdField;
-            }
-            set {
-                this.auctionIdField = value;
-                this.RaisePropertyChanged("AuctionId");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("CampaignIds", Order=1)]
-        public int[] CampaignIds {
-            get {
-                return this.campaignIdsField;
-            }
-            set {
-                this.campaignIdsField = value;
-                this.RaisePropertyChanged("CampaignIds");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
-    public partial class GetItemCampaignsResponse : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int[] campaignIdsField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
-        public int[] CampaignIds {
-            get {
-                return this.campaignIdsField;
-            }
-            set {
-                this.campaignIdsField = value;
-                this.RaisePropertyChanged("CampaignIds");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
-    public partial class GetItemCampaignsRequest : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int itemIdField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public int ItemId {
-            get {
-                return this.itemIdField;
-            }
-            set {
-                this.itemIdField = value;
-                this.RaisePropertyChanged("ItemId");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
-    public partial class GetCampaignListResponse : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private CampaignData[] campaignsField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
-        public CampaignData[] Campaigns {
-            get {
-                return this.campaignsField;
-            }
-            set {
-                this.campaignsField = value;
-                this.RaisePropertyChanged("Campaigns");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
-    public partial class CampaignData : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private System.Nullable<int> idField;
-        
-        private string nameField;
-        
-        private string urlNameField;
-        
-        private System.Nullable<CampaignType> typeField;
-        
-        private System.Nullable<System.DateTime> startDateField;
-        
-        private System.Nullable<System.DateTime> endDateField;
-        
-        private int[] auctionIDsField;
-        
-        private CampaignImageData campaignImageField;
-        
-        private string imageUrlField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public System.Nullable<int> Id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("Id");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string Name {
-            get {
-                return this.nameField;
-            }
-            set {
-                this.nameField = value;
-                this.RaisePropertyChanged("Name");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public string UrlName {
-            get {
-                return this.urlNameField;
-            }
-            set {
-                this.urlNameField = value;
-                this.RaisePropertyChanged("UrlName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
-        public System.Nullable<CampaignType> Type {
-            get {
-                return this.typeField;
-            }
-            set {
-                this.typeField = value;
-                this.RaisePropertyChanged("Type");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
-        public System.Nullable<System.DateTime> StartDate {
-            get {
-                return this.startDateField;
-            }
-            set {
-                this.startDateField = value;
-                this.RaisePropertyChanged("StartDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
-        public System.Nullable<System.DateTime> EndDate {
-            get {
-                return this.endDateField;
-            }
-            set {
-                this.endDateField = value;
-                this.RaisePropertyChanged("EndDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("AuctionIDs", Order=6)]
-        public int[] AuctionIDs {
-            get {
-                return this.auctionIDsField;
-            }
-            set {
-                this.auctionIDsField = value;
-                this.RaisePropertyChanged("AuctionIDs");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
-        public CampaignImageData CampaignImage {
-            get {
-                return this.campaignImageField;
-            }
-            set {
-                this.campaignImageField = value;
-                this.RaisePropertyChanged("CampaignImage");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
-        public string ImageUrl {
-            get {
-                return this.imageUrlField;
-            }
-            set {
-                this.imageUrlField = value;
-                this.RaisePropertyChanged("ImageUrl");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
-    public enum CampaignType {
-        
-        /// <remarks/>
-        Product,
-        
-        /// <remarks/>
-        Graphical,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
-    public partial class CampaignImageData : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private ImageFormat formatField;
-        
-        private byte[] dataField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public ImageFormat Format {
-            get {
-                return this.formatField;
-            }
-            set {
-                this.formatField = value;
-                this.RaisePropertyChanged("Format");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary", Order=1)]
-        public byte[] Data {
-            get {
-                return this.dataField;
-            }
-            set {
-                this.dataField = value;
-                this.RaisePropertyChanged("Data");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
-    public enum ImageFormat {
-        
-        /// <remarks/>
-        Gif,
-        
-        /// <remarks/>
-        Jpeg,
-        
-        /// <remarks/>
-        Png,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1480,7 +1619,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1540,7 +1679,23 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
+    public enum ImageFormat {
+        
+        /// <remarks/>
+        Gif,
+        
+        /// <remarks/>
+        Jpeg,
+        
+        /// <remarks/>
+        Png,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1726,7 +1881,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1787,7 +1942,7 @@ namespace TraderaWebService.RestrictedService {
     
     /// <remarks/>
     [System.FlagsAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
     public enum ResultCode {
@@ -1821,7 +1976,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1867,72 +2022,76 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
     public partial class ShopItemVariantData : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private System.Nullable<System.DateTime> activateDateField;
-        
-        private System.Nullable<int> acceptedBuyerIdField;
-        
-        private System.Nullable<int> categoryIdField;
-        
-        private System.Nullable<System.DateTime> deactivateDateField;
-        
-        private int[] itemAttributesField;
+        private string titleField;
         
         private string descriptionField;
         
-        private string paymentConditionField;
+        private System.Nullable<int> categoryIdField;
         
-        private System.Nullable<int> priceField;
-        
-        private System.Nullable<int> quantityField;
-        
-        private string shippingConditionField;
-        
-        private string titleField;
-        
-        private System.Nullable<int> vATField;
-        
-        private string sellerPartNoField;
+        private System.Nullable<int> acceptedBuyerIdField;
         
         private ItemShipping[] shippingOptionsField;
         
         private int[] paymentOptionIdsField;
         
+        private int[] itemAttributesField;
+        
+        private string shippingConditionField;
+        
+        private string paymentConditionField;
+        
         private string[] ownReferencesField;
+        
+        private System.Nullable<int> vATField;
         
         private ItemImageData[] itemImagesField;
         
+        private System.Nullable<System.DateTime> activateDateField;
+        
+        private System.Nullable<System.DateTime> deactivateDateField;
+        
+        private System.Nullable<int> quantityField;
+        
+        private System.Nullable<int> absoluteQuantityField;
+        
         private System.Nullable<int> externalIdField;
+        
+        private System.Nullable<int> priceField;
+        
+        private string sellerPartNoField;
         
         private VariantData variantDataField;
         
+        private ItemAttributeValues attributeValuesField;
+        
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
-        public System.Nullable<System.DateTime> ActivateDate {
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string Title {
             get {
-                return this.activateDateField;
+                return this.titleField;
             }
             set {
-                this.activateDateField = value;
-                this.RaisePropertyChanged("ActivateDate");
+                this.titleField = value;
+                this.RaisePropertyChanged("Title");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public System.Nullable<int> AcceptedBuyerId {
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Description {
             get {
-                return this.acceptedBuyerIdField;
+                return this.descriptionField;
             }
             set {
-                this.acceptedBuyerIdField = value;
-                this.RaisePropertyChanged("AcceptedBuyerId");
+                this.descriptionField = value;
+                this.RaisePropertyChanged("Description");
             }
         }
         
@@ -1950,126 +2109,18 @@ namespace TraderaWebService.RestrictedService {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
-        public System.Nullable<System.DateTime> DeactivateDate {
+        public System.Nullable<int> AcceptedBuyerId {
             get {
-                return this.deactivateDateField;
+                return this.acceptedBuyerIdField;
             }
             set {
-                this.deactivateDateField = value;
-                this.RaisePropertyChanged("DeactivateDate");
+                this.acceptedBuyerIdField = value;
+                this.RaisePropertyChanged("AcceptedBuyerId");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=4)]
-        public int[] ItemAttributes {
-            get {
-                return this.itemAttributesField;
-            }
-            set {
-                this.itemAttributesField = value;
-                this.RaisePropertyChanged("ItemAttributes");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
-        public string Description {
-            get {
-                return this.descriptionField;
-            }
-            set {
-                this.descriptionField = value;
-                this.RaisePropertyChanged("Description");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
-        public string PaymentCondition {
-            get {
-                return this.paymentConditionField;
-            }
-            set {
-                this.paymentConditionField = value;
-                this.RaisePropertyChanged("PaymentCondition");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
-        public System.Nullable<int> Price {
-            get {
-                return this.priceField;
-            }
-            set {
-                this.priceField = value;
-                this.RaisePropertyChanged("Price");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=8)]
-        public System.Nullable<int> Quantity {
-            get {
-                return this.quantityField;
-            }
-            set {
-                this.quantityField = value;
-                this.RaisePropertyChanged("Quantity");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
-        public string ShippingCondition {
-            get {
-                return this.shippingConditionField;
-            }
-            set {
-                this.shippingConditionField = value;
-                this.RaisePropertyChanged("ShippingCondition");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
-        public string Title {
-            get {
-                return this.titleField;
-            }
-            set {
-                this.titleField = value;
-                this.RaisePropertyChanged("Title");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=11)]
-        public System.Nullable<int> VAT {
-            get {
-                return this.vATField;
-            }
-            set {
-                this.vATField = value;
-                this.RaisePropertyChanged("VAT");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
-        public string SellerPartNo {
-            get {
-                return this.sellerPartNoField;
-            }
-            set {
-                this.sellerPartNoField = value;
-                this.RaisePropertyChanged("SellerPartNo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=13)]
         public ItemShipping[] ShippingOptions {
             get {
                 return this.shippingOptionsField;
@@ -2081,7 +2132,7 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=14)]
+        [System.Xml.Serialization.XmlArrayAttribute(Order=5)]
         public int[] PaymentOptionIds {
             get {
                 return this.paymentOptionIdsField;
@@ -2093,7 +2144,43 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=15)]
+        [System.Xml.Serialization.XmlArrayAttribute(Order=6)]
+        public int[] ItemAttributes {
+            get {
+                return this.itemAttributesField;
+            }
+            set {
+                this.itemAttributesField = value;
+                this.RaisePropertyChanged("ItemAttributes");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public string ShippingCondition {
+            get {
+                return this.shippingConditionField;
+            }
+            set {
+                this.shippingConditionField = value;
+                this.RaisePropertyChanged("ShippingCondition");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public string PaymentCondition {
+            get {
+                return this.paymentConditionField;
+            }
+            set {
+                this.paymentConditionField = value;
+                this.RaisePropertyChanged("PaymentCondition");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=9)]
         public string[] OwnReferences {
             get {
                 return this.ownReferencesField;
@@ -2105,7 +2192,19 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=16)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=10)]
+        public System.Nullable<int> VAT {
+            get {
+                return this.vATField;
+            }
+            set {
+                this.vATField = value;
+                this.RaisePropertyChanged("VAT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=11)]
         public ItemImageData[] ItemImages {
             get {
                 return this.itemImagesField;
@@ -2117,7 +2216,55 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=17)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=12)]
+        public System.Nullable<System.DateTime> ActivateDate {
+            get {
+                return this.activateDateField;
+            }
+            set {
+                this.activateDateField = value;
+                this.RaisePropertyChanged("ActivateDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=13)]
+        public System.Nullable<System.DateTime> DeactivateDate {
+            get {
+                return this.deactivateDateField;
+            }
+            set {
+                this.deactivateDateField = value;
+                this.RaisePropertyChanged("DeactivateDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=14)]
+        public System.Nullable<int> Quantity {
+            get {
+                return this.quantityField;
+            }
+            set {
+                this.quantityField = value;
+                this.RaisePropertyChanged("Quantity");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=15)]
+        public System.Nullable<int> AbsoluteQuantity {
+            get {
+                return this.absoluteQuantityField;
+            }
+            set {
+                this.absoluteQuantityField = value;
+                this.RaisePropertyChanged("AbsoluteQuantity");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=16)]
         public System.Nullable<int> ExternalId {
             get {
                 return this.externalIdField;
@@ -2129,7 +2276,31 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=17)]
+        public System.Nullable<int> Price {
+            get {
+                return this.priceField;
+            }
+            set {
+                this.priceField = value;
+                this.RaisePropertyChanged("Price");
+            }
+        }
+        
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=18)]
+        public string SellerPartNo {
+            get {
+                return this.sellerPartNoField;
+            }
+            set {
+                this.sellerPartNoField = value;
+                this.RaisePropertyChanged("SellerPartNo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=19)]
         public VariantData VariantData {
             get {
                 return this.variantDataField;
@@ -2137,6 +2308,18 @@ namespace TraderaWebService.RestrictedService {
             set {
                 this.variantDataField = value;
                 this.RaisePropertyChanged("VariantData");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=20)]
+        public ItemAttributeValues AttributeValues {
+            get {
+                return this.attributeValuesField;
+            }
+            set {
+                this.attributeValuesField = value;
+                this.RaisePropertyChanged("AttributeValues");
             }
         }
         
@@ -2151,7 +2334,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2161,6 +2344,14 @@ namespace TraderaWebService.RestrictedService {
         private int shippingOptionIdField;
         
         private int costField;
+        
+        private System.Nullable<decimal> shippingWeightField;
+        
+        private bool shippingWeightFieldSpecified;
+        
+        private System.Nullable<int> shippingProductIdField;
+        
+        private bool shippingProductIdFieldSpecified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -2186,6 +2377,54 @@ namespace TraderaWebService.RestrictedService {
             }
         }
         
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        public System.Nullable<decimal> ShippingWeight {
+            get {
+                return this.shippingWeightField;
+            }
+            set {
+                this.shippingWeightField = value;
+                this.RaisePropertyChanged("ShippingWeight");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ShippingWeightSpecified {
+            get {
+                return this.shippingWeightFieldSpecified;
+            }
+            set {
+                this.shippingWeightFieldSpecified = value;
+                this.RaisePropertyChanged("ShippingWeightSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
+        public System.Nullable<int> ShippingProductId {
+            get {
+                return this.shippingProductIdField;
+            }
+            set {
+                this.shippingProductIdField = value;
+                this.RaisePropertyChanged("ShippingProductId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ShippingProductIdSpecified {
+            get {
+                return this.shippingProductIdFieldSpecified;
+            }
+            set {
+                this.shippingProductIdFieldSpecified = value;
+                this.RaisePropertyChanged("ShippingProductIdSpecified");
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -2197,7 +2436,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2271,7 +2510,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2317,7 +2556,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2363,7 +2602,145 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
+    public partial class ItemAttributeValues : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private TermValues[] termsField;
+        
+        private NumberValues[] numbersField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public TermValues[] Terms {
+            get {
+                return this.termsField;
+            }
+            set {
+                this.termsField = value;
+                this.RaisePropertyChanged("Terms");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=1)]
+        public NumberValues[] Numbers {
+            get {
+                return this.numbersField;
+            }
+            set {
+                this.numbersField = value;
+                this.RaisePropertyChanged("Numbers");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
+    public partial class TermValues : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int idField;
+        
+        private string[] valuesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int Id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("Id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=1)]
+        public string[] Values {
+            get {
+                return this.valuesField;
+            }
+            set {
+                this.valuesField = value;
+                this.RaisePropertyChanged("Values");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
+    public partial class NumberValues : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int idField;
+        
+        private decimal[] valuesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int Id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("Id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=1)]
+        public decimal[] Values {
+            get {
+                return this.valuesField;
+            }
+            set {
+                this.valuesField = value;
+                this.RaisePropertyChanged("Values");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2409,7 +2786,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2434,6 +2811,8 @@ namespace TraderaWebService.RestrictedService {
         
         private System.Nullable<int> quantityField;
         
+        private System.Nullable<int> absoluteQuantityField;
+        
         private string shippingConditionField;
         
         private string titleField;
@@ -2449,6 +2828,8 @@ namespace TraderaWebService.RestrictedService {
         private ItemImageData[] itemImagesField;
         
         private System.Nullable<int> externalIdField;
+        
+        private ItemAttributeValues attributeValuesField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
@@ -2559,7 +2940,19 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=9)]
+        public System.Nullable<int> AbsoluteQuantity {
+            get {
+                return this.absoluteQuantityField;
+            }
+            set {
+                this.absoluteQuantityField = value;
+                this.RaisePropertyChanged("AbsoluteQuantity");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
         public string ShippingCondition {
             get {
                 return this.shippingConditionField;
@@ -2571,7 +2964,7 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
         public string Title {
             get {
                 return this.titleField;
@@ -2583,7 +2976,7 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=11)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=12)]
         public System.Nullable<int> VAT {
             get {
                 return this.vATField;
@@ -2595,7 +2988,7 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=12)]
+        [System.Xml.Serialization.XmlArrayAttribute(Order=13)]
         public ItemShipping[] ShippingOptions {
             get {
                 return this.shippingOptionsField;
@@ -2607,7 +3000,7 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=13)]
+        [System.Xml.Serialization.XmlArrayAttribute(Order=14)]
         public int[] PaymentOptionIds {
             get {
                 return this.paymentOptionIdsField;
@@ -2619,7 +3012,7 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=14)]
+        [System.Xml.Serialization.XmlArrayAttribute(Order=15)]
         public string[] OwnReferences {
             get {
                 return this.ownReferencesField;
@@ -2631,7 +3024,7 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=15)]
+        [System.Xml.Serialization.XmlArrayAttribute(Order=16)]
         public ItemImageData[] ItemImages {
             get {
                 return this.itemImagesField;
@@ -2643,7 +3036,7 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=16)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=17)]
         public System.Nullable<int> ExternalId {
             get {
                 return this.externalIdField;
@@ -2654,105 +3047,15 @@ namespace TraderaWebService.RestrictedService {
             }
         }
         
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
-    public partial class Fee : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int typeIdField;
-        
-        private string typeDescriptionField;
-        
-        private decimal valueField;
-        
-        private System.DateTime createdDateField;
-        
-        private int invoiceIdField;
-        
-        private bool invoiceIdFieldSpecified;
-        
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public int TypeId {
+        [System.Xml.Serialization.XmlElementAttribute(Order=18)]
+        public ItemAttributeValues AttributeValues {
             get {
-                return this.typeIdField;
+                return this.attributeValuesField;
             }
             set {
-                this.typeIdField = value;
-                this.RaisePropertyChanged("TypeId");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string TypeDescription {
-            get {
-                return this.typeDescriptionField;
-            }
-            set {
-                this.typeDescriptionField = value;
-                this.RaisePropertyChanged("TypeDescription");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public decimal Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-                this.RaisePropertyChanged("Value");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public System.DateTime CreatedDate {
-            get {
-                return this.createdDateField;
-            }
-            set {
-                this.createdDateField = value;
-                this.RaisePropertyChanged("CreatedDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public int InvoiceId {
-            get {
-                return this.invoiceIdField;
-            }
-            set {
-                this.invoiceIdField = value;
-                this.RaisePropertyChanged("InvoiceId");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool InvoiceIdSpecified {
-            get {
-                return this.invoiceIdFieldSpecified;
-            }
-            set {
-                this.invoiceIdFieldSpecified = value;
-                this.RaisePropertyChanged("InvoiceIdSpecified");
+                this.attributeValuesField = value;
+                this.RaisePropertyChanged("AttributeValues");
             }
         }
         
@@ -2767,7 +3070,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2967,7 +3270,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3013,6 +3316,10 @@ namespace TraderaWebService.RestrictedService {
         private string shippingConditionField;
         
         private string paymentConditionField;
+        
+        private string campaignCodeField;
+        
+        private ItemAttributeValues attributeValuesField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -3254,6 +3561,30 @@ namespace TraderaWebService.RestrictedService {
             }
         }
         
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=20)]
+        public string CampaignCode {
+            get {
+                return this.campaignCodeField;
+            }
+            set {
+                this.campaignCodeField = value;
+                this.RaisePropertyChanged("CampaignCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=21)]
+        public ItemAttributeValues AttributeValues {
+            get {
+                return this.attributeValuesField;
+            }
+            set {
+                this.attributeValuesField = value;
+                this.RaisePropertyChanged("AttributeValues");
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -3265,7 +3596,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3339,7 +3670,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3511,7 +3842,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3543,6 +3874,8 @@ namespace TraderaWebService.RestrictedService {
         private string cityField;
         
         private string countryNameField;
+        
+        private string personalNumberField;
         
         private int transactionIdField;
         
@@ -3706,6 +4039,18 @@ namespace TraderaWebService.RestrictedService {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=12)]
+        public string PersonalNumber {
+            get {
+                return this.personalNumberField;
+            }
+            set {
+                this.personalNumberField = value;
+                this.RaisePropertyChanged("PersonalNumber");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
         public int TransactionId {
             get {
                 return this.transactionIdField;
@@ -3739,7 +4084,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3799,7 +4144,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
     public enum TransactionFilter {
@@ -3812,7 +4157,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3872,7 +4217,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3932,7 +4277,219 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
+    public partial class NumberAttributeValue : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int idField;
+        
+        private string nameField;
+        
+        private decimal[] valuesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int Id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("Id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("Name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=2)]
+        public decimal[] Values {
+            get {
+                return this.valuesField;
+            }
+            set {
+                this.valuesField = value;
+                this.RaisePropertyChanged("Values");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
+    public partial class TermAttributeValue : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int idField;
+        
+        private string nameField;
+        
+        private string[] valuesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int Id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("Id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("Name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=2)]
+        public string[] Values {
+            get {
+                return this.valuesField;
+            }
+            set {
+                this.valuesField = value;
+                this.RaisePropertyChanged("Values");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
+    public partial class AttributeValues : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private TermAttributeValue[] termAttributeValuesField;
+        
+        private NumberAttributeValue[] numberAttributeValuesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public TermAttributeValue[] TermAttributeValues {
+            get {
+                return this.termAttributeValuesField;
+            }
+            set {
+                this.termAttributeValuesField = value;
+                this.RaisePropertyChanged("TermAttributeValues");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=1)]
+        public NumberAttributeValue[] NumberAttributeValues {
+            get {
+                return this.numberAttributeValuesField;
+            }
+            set {
+                this.numberAttributeValuesField = value;
+                this.RaisePropertyChanged("NumberAttributeValues");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
+    public partial class ImageLink : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string urlField;
+        
+        private string formatField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string Url {
+            get {
+                return this.urlField;
+            }
+            set {
+                this.urlField = value;
+                this.RaisePropertyChanged("Url");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Format {
+            get {
+                return this.formatField;
+            }
+            set {
+                this.formatField = value;
+                this.RaisePropertyChanged("Format");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3992,7 +4549,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4015,6 +4572,8 @@ namespace TraderaWebService.RestrictedService {
         
         private ItemType itemTypeField;
         
+        private ImageLink[] detailedImageLinksField;
+        
         private int idField;
         
         private System.Nullable<int> vATField;
@@ -4022,6 +4581,8 @@ namespace TraderaWebService.RestrictedService {
         private string shortDescriptionField;
         
         private string[] ownReferencesField;
+        
+        private AttributeValues attributeValuesField;
         
         private int[] itemAttributesField;
         
@@ -4041,7 +4602,7 @@ namespace TraderaWebService.RestrictedService {
         
         private System.Nullable<bool> reservePriceReachedField;
         
-        private int buyItNowPriceField;
+        private System.Nullable<int> buyItNowPriceField;
         
         private bool buyItNowPriceFieldSpecified;
         
@@ -4074,10 +4635,6 @@ namespace TraderaWebService.RestrictedService {
         private string thumbnailLinkField;
         
         private int acceptedBuyerIdField;
-        
-        private bool paysonField;
-        
-        private bool paysonGuaranteeField;
         
         private bool paypalField;
         
@@ -4184,7 +4741,19 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute("DetailedImageLinks", Order=8)]
+        public ImageLink[] DetailedImageLinks {
+            get {
+                return this.detailedImageLinksField;
+            }
+            set {
+                this.detailedImageLinksField = value;
+                this.RaisePropertyChanged("DetailedImageLinks");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
         public int Id {
             get {
                 return this.idField;
@@ -4196,7 +4765,7 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=10)]
         public System.Nullable<int> VAT {
             get {
                 return this.vATField;
@@ -4208,7 +4777,7 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
         public string ShortDescription {
             get {
                 return this.shortDescriptionField;
@@ -4220,7 +4789,7 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=11)]
+        [System.Xml.Serialization.XmlArrayAttribute(Order=12)]
         public string[] OwnReferences {
             get {
                 return this.ownReferencesField;
@@ -4232,7 +4801,19 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=12)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
+        public AttributeValues AttributeValues {
+            get {
+                return this.attributeValuesField;
+            }
+            set {
+                this.attributeValuesField = value;
+                this.RaisePropertyChanged("AttributeValues");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=14)]
         public int[] ItemAttributes {
             get {
                 return this.itemAttributesField;
@@ -4244,7 +4825,7 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
         public string LongDescription {
             get {
                 return this.longDescriptionField;
@@ -4256,7 +4837,7 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=16)]
         public System.DateTime StartDate {
             get {
                 return this.startDateField;
@@ -4268,7 +4849,7 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=17)]
         public System.DateTime EndDate {
             get {
                 return this.endDateField;
@@ -4280,7 +4861,7 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=16)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=18)]
         public int CategoryId {
             get {
                 return this.categoryIdField;
@@ -4292,7 +4873,7 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=17)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=19)]
         public int OpeningBid {
             get {
                 return this.openingBidField;
@@ -4316,7 +4897,7 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=18)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=20)]
         public System.Nullable<int> ReservePrice {
             get {
                 return this.reservePriceField;
@@ -4328,7 +4909,7 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=19)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=21)]
         public System.Nullable<bool> ReservePriceReached {
             get {
                 return this.reservePriceReachedField;
@@ -4340,8 +4921,8 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=20)]
-        public int BuyItNowPrice {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=22)]
+        public System.Nullable<int> BuyItNowPrice {
             get {
                 return this.buyItNowPriceField;
             }
@@ -4364,7 +4945,7 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=21)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=23)]
         public int NextBid {
             get {
                 return this.nextBidField;
@@ -4388,7 +4969,7 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=22)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=24)]
         public string PaymentCondition {
             get {
                 return this.paymentConditionField;
@@ -4400,7 +4981,7 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=23)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=25)]
         public string ShippingCondition {
             get {
                 return this.shippingConditionField;
@@ -4412,7 +4993,7 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=24)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=26)]
         public bool AcceptsPickup {
             get {
                 return this.acceptsPickupField;
@@ -4424,7 +5005,7 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=25)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=27)]
         public int TotalBids {
             get {
                 return this.totalBidsField;
@@ -4436,7 +5017,7 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=26)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=28)]
         public int MaxBid {
             get {
                 return this.maxBidField;
@@ -4460,7 +5041,7 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=27)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=29)]
         public bool Bold {
             get {
                 return this.boldField;
@@ -4472,7 +5053,7 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=28)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=30)]
         public bool Thumbnail {
             get {
                 return this.thumbnailField;
@@ -4484,7 +5065,7 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=29)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=31)]
         public bool Highlight {
             get {
                 return this.highlightField;
@@ -4496,7 +5077,7 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=30)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=32)]
         public bool FeaturedItem {
             get {
                 return this.featuredItemField;
@@ -4508,7 +5089,7 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=31)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=33)]
         public string ItemLink {
             get {
                 return this.itemLinkField;
@@ -4520,7 +5101,7 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=32)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=34)]
         public string ThumbnailLink {
             get {
                 return this.thumbnailLinkField;
@@ -4532,7 +5113,7 @@ namespace TraderaWebService.RestrictedService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=33)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=35)]
         public int AcceptedBuyerId {
             get {
                 return this.acceptedBuyerIdField;
@@ -4540,30 +5121,6 @@ namespace TraderaWebService.RestrictedService {
             set {
                 this.acceptedBuyerIdField = value;
                 this.RaisePropertyChanged("AcceptedBuyerId");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=34)]
-        public bool Payson {
-            get {
-                return this.paysonField;
-            }
-            set {
-                this.paysonField = value;
-                this.RaisePropertyChanged("Payson");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=35)]
-        public bool PaysonGuarantee {
-            get {
-                return this.paysonGuaranteeField;
-            }
-            set {
-                this.paysonGuaranteeField = value;
-                this.RaisePropertyChanged("PaysonGuarantee");
             }
         }
         
@@ -4672,7 +5229,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
     public enum ActiveFilter {
@@ -4688,7 +5245,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
     public enum ItemTypeFilter {
@@ -5093,7 +5650,7 @@ namespace TraderaWebService.RestrictedService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
     public enum FeedbackType {
@@ -5156,52 +5713,6 @@ namespace TraderaWebService.RestrictedService {
         
         public LeaveFeedbackResponse(bool LeaveFeedbackResult) {
             this.LeaveFeedbackResult = LeaveFeedbackResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetItemFees", WrapperNamespace="http://api.tradera.com", IsWrapped=true)]
-    public partial class GetItemFeesRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
-        public TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader;
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
-        public TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader;
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
-        public TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://api.tradera.com", Order=0)]
-        public int itemId;
-        
-        public GetItemFeesRequest() {
-        }
-        
-        public GetItemFeesRequest(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader, int itemId) {
-            this.AuthenticationHeader = AuthenticationHeader;
-            this.AuthorizationHeader = AuthorizationHeader;
-            this.ConfigurationHeader = ConfigurationHeader;
-            this.itemId = itemId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetItemFeesResponse", WrapperNamespace="http://api.tradera.com", IsWrapped=true)]
-    public partial class GetItemFeesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://api.tradera.com", Order=0)]
-        public TraderaWebService.RestrictedService.Fee[] GetItemFeesResult;
-        
-        public GetItemFeesResponse() {
-        }
-        
-        public GetItemFeesResponse(TraderaWebService.RestrictedService.Fee[] GetItemFeesResult) {
-            this.GetItemFeesResult = GetItemFeesResult;
         }
     }
     
@@ -5657,303 +6168,6 @@ namespace TraderaWebService.RestrictedService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AddCampaign", WrapperNamespace="http://api.tradera.com", IsWrapped=true)]
-    public partial class AddCampaignRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
-        public TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader;
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
-        public TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader;
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
-        public TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://api.tradera.com", Order=0)]
-        public TraderaWebService.RestrictedService.CampaignData campaignData;
-        
-        public AddCampaignRequest() {
-        }
-        
-        public AddCampaignRequest(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader, TraderaWebService.RestrictedService.CampaignData campaignData) {
-            this.AuthenticationHeader = AuthenticationHeader;
-            this.AuthorizationHeader = AuthorizationHeader;
-            this.ConfigurationHeader = ConfigurationHeader;
-            this.campaignData = campaignData;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AddCampaignResponse", WrapperNamespace="http://api.tradera.com", IsWrapped=true)]
-    public partial class AddCampaignResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://api.tradera.com", Order=0)]
-        public int AddCampaignResult;
-        
-        public AddCampaignResponse() {
-        }
-        
-        public AddCampaignResponse(int AddCampaignResult) {
-            this.AddCampaignResult = AddCampaignResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="UpdateCampaign", WrapperNamespace="http://api.tradera.com", IsWrapped=true)]
-    public partial class UpdateCampaignRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
-        public TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader;
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
-        public TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader;
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
-        public TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://api.tradera.com", Order=0)]
-        public TraderaWebService.RestrictedService.CampaignData campaignData;
-        
-        public UpdateCampaignRequest() {
-        }
-        
-        public UpdateCampaignRequest(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader, TraderaWebService.RestrictedService.CampaignData campaignData) {
-            this.AuthenticationHeader = AuthenticationHeader;
-            this.AuthorizationHeader = AuthorizationHeader;
-            this.ConfigurationHeader = ConfigurationHeader;
-            this.campaignData = campaignData;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="UpdateCampaignResponse", WrapperNamespace="http://api.tradera.com", IsWrapped=true)]
-    public partial class UpdateCampaignResponse {
-        
-        public UpdateCampaignResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCampaign", WrapperNamespace="http://api.tradera.com", IsWrapped=true)]
-    public partial class GetCampaignRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
-        public TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader;
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
-        public TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader;
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
-        public TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://api.tradera.com", Order=0)]
-        public int campaignId;
-        
-        public GetCampaignRequest() {
-        }
-        
-        public GetCampaignRequest(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader, int campaignId) {
-            this.AuthenticationHeader = AuthenticationHeader;
-            this.AuthorizationHeader = AuthorizationHeader;
-            this.ConfigurationHeader = ConfigurationHeader;
-            this.campaignId = campaignId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCampaignResponse", WrapperNamespace="http://api.tradera.com", IsWrapped=true)]
-    public partial class GetCampaignResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://api.tradera.com", Order=0)]
-        public TraderaWebService.RestrictedService.CampaignData GetCampaignResult;
-        
-        public GetCampaignResponse() {
-        }
-        
-        public GetCampaignResponse(TraderaWebService.RestrictedService.CampaignData GetCampaignResult) {
-            this.GetCampaignResult = GetCampaignResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCampaignsList", WrapperNamespace="http://api.tradera.com", IsWrapped=true)]
-    public partial class GetCampaignsListRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
-        public TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader;
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
-        public TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader;
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
-        public TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader;
-        
-        public GetCampaignsListRequest() {
-        }
-        
-        public GetCampaignsListRequest(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader) {
-            this.AuthenticationHeader = AuthenticationHeader;
-            this.AuthorizationHeader = AuthorizationHeader;
-            this.ConfigurationHeader = ConfigurationHeader;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCampaignsListResponse", WrapperNamespace="http://api.tradera.com", IsWrapped=true)]
-    public partial class GetCampaignsListResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://api.tradera.com", Order=0)]
-        public TraderaWebService.RestrictedService.GetCampaignListResponse GetCampaignsListResult;
-        
-        public GetCampaignsListResponse() {
-        }
-        
-        public GetCampaignsListResponse(TraderaWebService.RestrictedService.GetCampaignListResponse GetCampaignsListResult) {
-            this.GetCampaignsListResult = GetCampaignsListResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="RemoveCampaign", WrapperNamespace="http://api.tradera.com", IsWrapped=true)]
-    public partial class RemoveCampaignRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
-        public TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader;
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
-        public TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader;
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
-        public TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://api.tradera.com", Order=0)]
-        public int campaignId;
-        
-        public RemoveCampaignRequest() {
-        }
-        
-        public RemoveCampaignRequest(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader, int campaignId) {
-            this.AuthenticationHeader = AuthenticationHeader;
-            this.AuthorizationHeader = AuthorizationHeader;
-            this.ConfigurationHeader = ConfigurationHeader;
-            this.campaignId = campaignId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="RemoveCampaignResponse", WrapperNamespace="http://api.tradera.com", IsWrapped=true)]
-    public partial class RemoveCampaignResponse {
-        
-        public RemoveCampaignResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetItemCampaigns", WrapperNamespace="http://api.tradera.com", IsWrapped=true)]
-    public partial class GetItemCampaignsRequest1 {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
-        public TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader;
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
-        public TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader;
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
-        public TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://api.tradera.com", Order=0)]
-        public TraderaWebService.RestrictedService.GetItemCampaignsRequest request;
-        
-        public GetItemCampaignsRequest1() {
-        }
-        
-        public GetItemCampaignsRequest1(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader, TraderaWebService.RestrictedService.GetItemCampaignsRequest request) {
-            this.AuthenticationHeader = AuthenticationHeader;
-            this.AuthorizationHeader = AuthorizationHeader;
-            this.ConfigurationHeader = ConfigurationHeader;
-            this.request = request;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetItemCampaignsResponse", WrapperNamespace="http://api.tradera.com", IsWrapped=true)]
-    public partial class GetItemCampaignsResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://api.tradera.com", Order=0)]
-        public TraderaWebService.RestrictedService.GetItemCampaignsResponse GetItemCampaignsResult;
-        
-        public GetItemCampaignsResponse1() {
-        }
-        
-        public GetItemCampaignsResponse1(TraderaWebService.RestrictedService.GetItemCampaignsResponse GetItemCampaignsResult) {
-            this.GetItemCampaignsResult = GetItemCampaignsResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="UpdateItemCampaigns", WrapperNamespace="http://api.tradera.com", IsWrapped=true)]
-    public partial class UpdateItemCampaignsRequest {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
-        public TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader;
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
-        public TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader;
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
-        public TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://api.tradera.com", Order=0)]
-        public TraderaWebService.RestrictedService.ItemCampaignsData itemCampaignsData;
-        
-        public UpdateItemCampaignsRequest() {
-        }
-        
-        public UpdateItemCampaignsRequest(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader, TraderaWebService.RestrictedService.ItemCampaignsData itemCampaignsData) {
-            this.AuthenticationHeader = AuthenticationHeader;
-            this.AuthorizationHeader = AuthorizationHeader;
-            this.ConfigurationHeader = ConfigurationHeader;
-            this.itemCampaignsData = itemCampaignsData;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="UpdateItemCampaignsResponse", WrapperNamespace="http://api.tradera.com", IsWrapped=true)]
-    public partial class UpdateItemCampaignsResponse {
-        
-        public UpdateItemCampaignsResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="GetUpdatedSellerItems", WrapperNamespace="http://api.tradera.com", IsWrapped=true)]
     public partial class GetUpdatedSellerItemsRequest1 {
         
@@ -6082,6 +6296,52 @@ namespace TraderaWebService.RestrictedService {
         
         public SetPriceOnShopItemsResponse(TraderaWebService.RestrictedService.SetPriceOnShopItemsResult SetPriceOnShopItemsResult) {
             this.SetPriceOnShopItemsResult = SetPriceOnShopItemsResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetPricesOnNonShopItems", WrapperNamespace="http://api.tradera.com", IsWrapped=true)]
+    public partial class SetPricesOnNonShopItemsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
+        public TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader;
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
+        public TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader;
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
+        public TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://api.tradera.com", Order=0)]
+        public TraderaWebService.RestrictedService.SetPricesOnNonShopItemRequest request;
+        
+        public SetPricesOnNonShopItemsRequest() {
+        }
+        
+        public SetPricesOnNonShopItemsRequest(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader, TraderaWebService.RestrictedService.SetPricesOnNonShopItemRequest request) {
+            this.AuthenticationHeader = AuthenticationHeader;
+            this.AuthorizationHeader = AuthorizationHeader;
+            this.ConfigurationHeader = ConfigurationHeader;
+            this.request = request;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SetPricesOnNonShopItemsResponse", WrapperNamespace="http://api.tradera.com", IsWrapped=true)]
+    public partial class SetPricesOnNonShopItemsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://api.tradera.com", Order=0)]
+        public TraderaWebService.RestrictedService.SetPricesOnNonShopItemsResult SetPricesOnNonShopItemsResult;
+        
+        public SetPricesOnNonShopItemsResponse() {
+        }
+        
+        public SetPricesOnNonShopItemsResponse(TraderaWebService.RestrictedService.SetPricesOnNonShopItemsResult SetPricesOnNonShopItemsResult) {
+            this.SetPricesOnNonShopItemsResult = SetPricesOnNonShopItemsResult;
         }
     }
     
@@ -6221,6 +6481,179 @@ namespace TraderaWebService.RestrictedService {
     public partial class LeaveOrderFeedbackToBuyerResponse {
         
         public LeaveOrderFeedbackToBuyerResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetMemberPaymentOptions", WrapperNamespace="http://api.tradera.com", IsWrapped=true)]
+    public partial class GetMemberPaymentOptionsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
+        public TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader;
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
+        public TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader;
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
+        public TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://api.tradera.com", Order=0)]
+        public int memberId;
+        
+        public GetMemberPaymentOptionsRequest() {
+        }
+        
+        public GetMemberPaymentOptionsRequest(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader, int memberId) {
+            this.AuthenticationHeader = AuthenticationHeader;
+            this.AuthorizationHeader = AuthorizationHeader;
+            this.ConfigurationHeader = ConfigurationHeader;
+            this.memberId = memberId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetMemberPaymentOptionsResponse", WrapperNamespace="http://api.tradera.com", IsWrapped=true)]
+    public partial class GetMemberPaymentOptionsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://api.tradera.com", Order=0)]
+        public TraderaWebService.RestrictedService.GetMemberPaymentOptionsResult GetMemberPaymentOptionsResult;
+        
+        public GetMemberPaymentOptionsResponse() {
+        }
+        
+        public GetMemberPaymentOptionsResponse(TraderaWebService.RestrictedService.GetMemberPaymentOptionsResult GetMemberPaymentOptionsResult) {
+            this.GetMemberPaymentOptionsResult = GetMemberPaymentOptionsResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="BeginBankIdVerification", WrapperNamespace="http://api.tradera.com", IsWrapped=true)]
+    public partial class BeginBankIdVerificationRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
+        public TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader;
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
+        public TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader;
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
+        public TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader;
+        
+        public BeginBankIdVerificationRequest() {
+        }
+        
+        public BeginBankIdVerificationRequest(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader) {
+            this.AuthenticationHeader = AuthenticationHeader;
+            this.AuthorizationHeader = AuthorizationHeader;
+            this.ConfigurationHeader = ConfigurationHeader;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="BeginBankIdVerificationResponse", WrapperNamespace="http://api.tradera.com", IsWrapped=true)]
+    public partial class BeginBankIdVerificationResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://api.tradera.com", Order=0)]
+        public TraderaWebService.RestrictedService.BeginBankIdVerificationResult BeginBankIdVerificationResult;
+        
+        public BeginBankIdVerificationResponse() {
+        }
+        
+        public BeginBankIdVerificationResponse(TraderaWebService.RestrictedService.BeginBankIdVerificationResult BeginBankIdVerificationResult) {
+            this.BeginBankIdVerificationResult = BeginBankIdVerificationResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBankIdVerificationProgress", WrapperNamespace="http://api.tradera.com", IsWrapped=true)]
+    public partial class GetBankIdVerificationProgressRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
+        public TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader;
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
+        public TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader;
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
+        public TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://api.tradera.com", Order=0)]
+        public TraderaWebService.RestrictedService.GetBankIdVerificationProgress request;
+        
+        public GetBankIdVerificationProgressRequest() {
+        }
+        
+        public GetBankIdVerificationProgressRequest(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader, TraderaWebService.RestrictedService.GetBankIdVerificationProgress request) {
+            this.AuthenticationHeader = AuthenticationHeader;
+            this.AuthorizationHeader = AuthorizationHeader;
+            this.ConfigurationHeader = ConfigurationHeader;
+            this.request = request;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBankIdVerificationProgressResponse", WrapperNamespace="http://api.tradera.com", IsWrapped=true)]
+    public partial class GetBankIdVerificationProgressResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://api.tradera.com", Order=0)]
+        public TraderaWebService.RestrictedService.GetBankIdVerificationProgressResult GetBankIdVerificationProgressResult;
+        
+        public GetBankIdVerificationProgressResponse() {
+        }
+        
+        public GetBankIdVerificationProgressResponse(TraderaWebService.RestrictedService.GetBankIdVerificationProgressResult GetBankIdVerificationProgressResult) {
+            this.GetBankIdVerificationProgressResult = GetBankIdVerificationProgressResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CancelBankIdVerification", WrapperNamespace="http://api.tradera.com", IsWrapped=true)]
+    public partial class CancelBankIdVerificationRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
+        public TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader;
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
+        public TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader;
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
+        public TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://api.tradera.com", Order=0)]
+        public TraderaWebService.RestrictedService.CancelBankIdVerification request;
+        
+        public CancelBankIdVerificationRequest() {
+        }
+        
+        public CancelBankIdVerificationRequest(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader, TraderaWebService.RestrictedService.CancelBankIdVerification request) {
+            this.AuthenticationHeader = AuthenticationHeader;
+            this.AuthorizationHeader = AuthorizationHeader;
+            this.ConfigurationHeader = ConfigurationHeader;
+            this.request = request;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CancelBankIdVerificationResponse", WrapperNamespace="http://api.tradera.com", IsWrapped=true)]
+    public partial class CancelBankIdVerificationResponse {
+        
+        public CancelBankIdVerificationResponse() {
         }
     }
     
@@ -6561,35 +6994,6 @@ namespace TraderaWebService.RestrictedService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.RestrictedService.GetItemFeesResponse TraderaWebService.RestrictedService.RestrictedServiceSoap.GetItemFees(TraderaWebService.RestrictedService.GetItemFeesRequest request) {
-            return base.Channel.GetItemFees(request);
-        }
-        
-        public TraderaWebService.RestrictedService.Fee[] GetItemFees(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader, int itemId) {
-            TraderaWebService.RestrictedService.GetItemFeesRequest inValue = new TraderaWebService.RestrictedService.GetItemFeesRequest();
-            inValue.AuthenticationHeader = AuthenticationHeader;
-            inValue.AuthorizationHeader = AuthorizationHeader;
-            inValue.ConfigurationHeader = ConfigurationHeader;
-            inValue.itemId = itemId;
-            TraderaWebService.RestrictedService.GetItemFeesResponse retVal = ((TraderaWebService.RestrictedService.RestrictedServiceSoap)(this)).GetItemFees(inValue);
-            return retVal.GetItemFeesResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TraderaWebService.RestrictedService.GetItemFeesResponse> TraderaWebService.RestrictedService.RestrictedServiceSoap.GetItemFeesAsync(TraderaWebService.RestrictedService.GetItemFeesRequest request) {
-            return base.Channel.GetItemFeesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TraderaWebService.RestrictedService.GetItemFeesResponse> GetItemFeesAsync(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader, int itemId) {
-            TraderaWebService.RestrictedService.GetItemFeesRequest inValue = new TraderaWebService.RestrictedService.GetItemFeesRequest();
-            inValue.AuthenticationHeader = AuthenticationHeader;
-            inValue.AuthorizationHeader = AuthorizationHeader;
-            inValue.ConfigurationHeader = ConfigurationHeader;
-            inValue.itemId = itemId;
-            return ((TraderaWebService.RestrictedService.RestrictedServiceSoap)(this)).GetItemFeesAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         TraderaWebService.RestrictedService.EndItemResponse TraderaWebService.RestrictedService.RestrictedServiceSoap.EndItem(TraderaWebService.RestrictedService.EndItemRequest request) {
             return base.Channel.EndItem(request);
         }
@@ -6877,204 +7281,6 @@ namespace TraderaWebService.RestrictedService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.RestrictedService.AddCampaignResponse TraderaWebService.RestrictedService.RestrictedServiceSoap.AddCampaign(TraderaWebService.RestrictedService.AddCampaignRequest request) {
-            return base.Channel.AddCampaign(request);
-        }
-        
-        public int AddCampaign(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader, TraderaWebService.RestrictedService.CampaignData campaignData) {
-            TraderaWebService.RestrictedService.AddCampaignRequest inValue = new TraderaWebService.RestrictedService.AddCampaignRequest();
-            inValue.AuthenticationHeader = AuthenticationHeader;
-            inValue.AuthorizationHeader = AuthorizationHeader;
-            inValue.ConfigurationHeader = ConfigurationHeader;
-            inValue.campaignData = campaignData;
-            TraderaWebService.RestrictedService.AddCampaignResponse retVal = ((TraderaWebService.RestrictedService.RestrictedServiceSoap)(this)).AddCampaign(inValue);
-            return retVal.AddCampaignResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TraderaWebService.RestrictedService.AddCampaignResponse> TraderaWebService.RestrictedService.RestrictedServiceSoap.AddCampaignAsync(TraderaWebService.RestrictedService.AddCampaignRequest request) {
-            return base.Channel.AddCampaignAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TraderaWebService.RestrictedService.AddCampaignResponse> AddCampaignAsync(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader, TraderaWebService.RestrictedService.CampaignData campaignData) {
-            TraderaWebService.RestrictedService.AddCampaignRequest inValue = new TraderaWebService.RestrictedService.AddCampaignRequest();
-            inValue.AuthenticationHeader = AuthenticationHeader;
-            inValue.AuthorizationHeader = AuthorizationHeader;
-            inValue.ConfigurationHeader = ConfigurationHeader;
-            inValue.campaignData = campaignData;
-            return ((TraderaWebService.RestrictedService.RestrictedServiceSoap)(this)).AddCampaignAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.RestrictedService.UpdateCampaignResponse TraderaWebService.RestrictedService.RestrictedServiceSoap.UpdateCampaign(TraderaWebService.RestrictedService.UpdateCampaignRequest request) {
-            return base.Channel.UpdateCampaign(request);
-        }
-        
-        public void UpdateCampaign(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader, TraderaWebService.RestrictedService.CampaignData campaignData) {
-            TraderaWebService.RestrictedService.UpdateCampaignRequest inValue = new TraderaWebService.RestrictedService.UpdateCampaignRequest();
-            inValue.AuthenticationHeader = AuthenticationHeader;
-            inValue.AuthorizationHeader = AuthorizationHeader;
-            inValue.ConfigurationHeader = ConfigurationHeader;
-            inValue.campaignData = campaignData;
-            TraderaWebService.RestrictedService.UpdateCampaignResponse retVal = ((TraderaWebService.RestrictedService.RestrictedServiceSoap)(this)).UpdateCampaign(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TraderaWebService.RestrictedService.UpdateCampaignResponse> TraderaWebService.RestrictedService.RestrictedServiceSoap.UpdateCampaignAsync(TraderaWebService.RestrictedService.UpdateCampaignRequest request) {
-            return base.Channel.UpdateCampaignAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TraderaWebService.RestrictedService.UpdateCampaignResponse> UpdateCampaignAsync(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader, TraderaWebService.RestrictedService.CampaignData campaignData) {
-            TraderaWebService.RestrictedService.UpdateCampaignRequest inValue = new TraderaWebService.RestrictedService.UpdateCampaignRequest();
-            inValue.AuthenticationHeader = AuthenticationHeader;
-            inValue.AuthorizationHeader = AuthorizationHeader;
-            inValue.ConfigurationHeader = ConfigurationHeader;
-            inValue.campaignData = campaignData;
-            return ((TraderaWebService.RestrictedService.RestrictedServiceSoap)(this)).UpdateCampaignAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.RestrictedService.GetCampaignResponse TraderaWebService.RestrictedService.RestrictedServiceSoap.GetCampaign(TraderaWebService.RestrictedService.GetCampaignRequest request) {
-            return base.Channel.GetCampaign(request);
-        }
-        
-        public TraderaWebService.RestrictedService.CampaignData GetCampaign(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader, int campaignId) {
-            TraderaWebService.RestrictedService.GetCampaignRequest inValue = new TraderaWebService.RestrictedService.GetCampaignRequest();
-            inValue.AuthenticationHeader = AuthenticationHeader;
-            inValue.AuthorizationHeader = AuthorizationHeader;
-            inValue.ConfigurationHeader = ConfigurationHeader;
-            inValue.campaignId = campaignId;
-            TraderaWebService.RestrictedService.GetCampaignResponse retVal = ((TraderaWebService.RestrictedService.RestrictedServiceSoap)(this)).GetCampaign(inValue);
-            return retVal.GetCampaignResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TraderaWebService.RestrictedService.GetCampaignResponse> TraderaWebService.RestrictedService.RestrictedServiceSoap.GetCampaignAsync(TraderaWebService.RestrictedService.GetCampaignRequest request) {
-            return base.Channel.GetCampaignAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TraderaWebService.RestrictedService.GetCampaignResponse> GetCampaignAsync(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader, int campaignId) {
-            TraderaWebService.RestrictedService.GetCampaignRequest inValue = new TraderaWebService.RestrictedService.GetCampaignRequest();
-            inValue.AuthenticationHeader = AuthenticationHeader;
-            inValue.AuthorizationHeader = AuthorizationHeader;
-            inValue.ConfigurationHeader = ConfigurationHeader;
-            inValue.campaignId = campaignId;
-            return ((TraderaWebService.RestrictedService.RestrictedServiceSoap)(this)).GetCampaignAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.RestrictedService.GetCampaignsListResponse TraderaWebService.RestrictedService.RestrictedServiceSoap.GetCampaignsList(TraderaWebService.RestrictedService.GetCampaignsListRequest request) {
-            return base.Channel.GetCampaignsList(request);
-        }
-        
-        public TraderaWebService.RestrictedService.GetCampaignListResponse GetCampaignsList(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader) {
-            TraderaWebService.RestrictedService.GetCampaignsListRequest inValue = new TraderaWebService.RestrictedService.GetCampaignsListRequest();
-            inValue.AuthenticationHeader = AuthenticationHeader;
-            inValue.AuthorizationHeader = AuthorizationHeader;
-            inValue.ConfigurationHeader = ConfigurationHeader;
-            TraderaWebService.RestrictedService.GetCampaignsListResponse retVal = ((TraderaWebService.RestrictedService.RestrictedServiceSoap)(this)).GetCampaignsList(inValue);
-            return retVal.GetCampaignsListResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TraderaWebService.RestrictedService.GetCampaignsListResponse> TraderaWebService.RestrictedService.RestrictedServiceSoap.GetCampaignsListAsync(TraderaWebService.RestrictedService.GetCampaignsListRequest request) {
-            return base.Channel.GetCampaignsListAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TraderaWebService.RestrictedService.GetCampaignsListResponse> GetCampaignsListAsync(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader) {
-            TraderaWebService.RestrictedService.GetCampaignsListRequest inValue = new TraderaWebService.RestrictedService.GetCampaignsListRequest();
-            inValue.AuthenticationHeader = AuthenticationHeader;
-            inValue.AuthorizationHeader = AuthorizationHeader;
-            inValue.ConfigurationHeader = ConfigurationHeader;
-            return ((TraderaWebService.RestrictedService.RestrictedServiceSoap)(this)).GetCampaignsListAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.RestrictedService.RemoveCampaignResponse TraderaWebService.RestrictedService.RestrictedServiceSoap.RemoveCampaign(TraderaWebService.RestrictedService.RemoveCampaignRequest request) {
-            return base.Channel.RemoveCampaign(request);
-        }
-        
-        public void RemoveCampaign(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader, int campaignId) {
-            TraderaWebService.RestrictedService.RemoveCampaignRequest inValue = new TraderaWebService.RestrictedService.RemoveCampaignRequest();
-            inValue.AuthenticationHeader = AuthenticationHeader;
-            inValue.AuthorizationHeader = AuthorizationHeader;
-            inValue.ConfigurationHeader = ConfigurationHeader;
-            inValue.campaignId = campaignId;
-            TraderaWebService.RestrictedService.RemoveCampaignResponse retVal = ((TraderaWebService.RestrictedService.RestrictedServiceSoap)(this)).RemoveCampaign(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TraderaWebService.RestrictedService.RemoveCampaignResponse> TraderaWebService.RestrictedService.RestrictedServiceSoap.RemoveCampaignAsync(TraderaWebService.RestrictedService.RemoveCampaignRequest request) {
-            return base.Channel.RemoveCampaignAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TraderaWebService.RestrictedService.RemoveCampaignResponse> RemoveCampaignAsync(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader, int campaignId) {
-            TraderaWebService.RestrictedService.RemoveCampaignRequest inValue = new TraderaWebService.RestrictedService.RemoveCampaignRequest();
-            inValue.AuthenticationHeader = AuthenticationHeader;
-            inValue.AuthorizationHeader = AuthorizationHeader;
-            inValue.ConfigurationHeader = ConfigurationHeader;
-            inValue.campaignId = campaignId;
-            return ((TraderaWebService.RestrictedService.RestrictedServiceSoap)(this)).RemoveCampaignAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.RestrictedService.GetItemCampaignsResponse1 TraderaWebService.RestrictedService.RestrictedServiceSoap.GetItemCampaigns(TraderaWebService.RestrictedService.GetItemCampaignsRequest1 request) {
-            return base.Channel.GetItemCampaigns(request);
-        }
-        
-        public TraderaWebService.RestrictedService.GetItemCampaignsResponse GetItemCampaigns(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader, TraderaWebService.RestrictedService.GetItemCampaignsRequest request) {
-            TraderaWebService.RestrictedService.GetItemCampaignsRequest1 inValue = new TraderaWebService.RestrictedService.GetItemCampaignsRequest1();
-            inValue.AuthenticationHeader = AuthenticationHeader;
-            inValue.AuthorizationHeader = AuthorizationHeader;
-            inValue.ConfigurationHeader = ConfigurationHeader;
-            inValue.request = request;
-            TraderaWebService.RestrictedService.GetItemCampaignsResponse1 retVal = ((TraderaWebService.RestrictedService.RestrictedServiceSoap)(this)).GetItemCampaigns(inValue);
-            return retVal.GetItemCampaignsResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TraderaWebService.RestrictedService.GetItemCampaignsResponse1> TraderaWebService.RestrictedService.RestrictedServiceSoap.GetItemCampaignsAsync(TraderaWebService.RestrictedService.GetItemCampaignsRequest1 request) {
-            return base.Channel.GetItemCampaignsAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TraderaWebService.RestrictedService.GetItemCampaignsResponse1> GetItemCampaignsAsync(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader, TraderaWebService.RestrictedService.GetItemCampaignsRequest request) {
-            TraderaWebService.RestrictedService.GetItemCampaignsRequest1 inValue = new TraderaWebService.RestrictedService.GetItemCampaignsRequest1();
-            inValue.AuthenticationHeader = AuthenticationHeader;
-            inValue.AuthorizationHeader = AuthorizationHeader;
-            inValue.ConfigurationHeader = ConfigurationHeader;
-            inValue.request = request;
-            return ((TraderaWebService.RestrictedService.RestrictedServiceSoap)(this)).GetItemCampaignsAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TraderaWebService.RestrictedService.UpdateItemCampaignsResponse TraderaWebService.RestrictedService.RestrictedServiceSoap.UpdateItemCampaigns(TraderaWebService.RestrictedService.UpdateItemCampaignsRequest request) {
-            return base.Channel.UpdateItemCampaigns(request);
-        }
-        
-        public void UpdateItemCampaigns(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader, TraderaWebService.RestrictedService.ItemCampaignsData itemCampaignsData) {
-            TraderaWebService.RestrictedService.UpdateItemCampaignsRequest inValue = new TraderaWebService.RestrictedService.UpdateItemCampaignsRequest();
-            inValue.AuthenticationHeader = AuthenticationHeader;
-            inValue.AuthorizationHeader = AuthorizationHeader;
-            inValue.ConfigurationHeader = ConfigurationHeader;
-            inValue.itemCampaignsData = itemCampaignsData;
-            TraderaWebService.RestrictedService.UpdateItemCampaignsResponse retVal = ((TraderaWebService.RestrictedService.RestrictedServiceSoap)(this)).UpdateItemCampaigns(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TraderaWebService.RestrictedService.UpdateItemCampaignsResponse> TraderaWebService.RestrictedService.RestrictedServiceSoap.UpdateItemCampaignsAsync(TraderaWebService.RestrictedService.UpdateItemCampaignsRequest request) {
-            return base.Channel.UpdateItemCampaignsAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TraderaWebService.RestrictedService.UpdateItemCampaignsResponse> UpdateItemCampaignsAsync(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader, TraderaWebService.RestrictedService.ItemCampaignsData itemCampaignsData) {
-            TraderaWebService.RestrictedService.UpdateItemCampaignsRequest inValue = new TraderaWebService.RestrictedService.UpdateItemCampaignsRequest();
-            inValue.AuthenticationHeader = AuthenticationHeader;
-            inValue.AuthorizationHeader = AuthorizationHeader;
-            inValue.ConfigurationHeader = ConfigurationHeader;
-            inValue.itemCampaignsData = itemCampaignsData;
-            return ((TraderaWebService.RestrictedService.RestrictedServiceSoap)(this)).UpdateItemCampaignsAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         TraderaWebService.RestrictedService.GetUpdatedSellerItemsResponse1 TraderaWebService.RestrictedService.RestrictedServiceSoap.GetUpdatedSellerItems(TraderaWebService.RestrictedService.GetUpdatedSellerItemsRequest1 request) {
             return base.Channel.GetUpdatedSellerItems(request);
         }
@@ -7157,6 +7363,35 @@ namespace TraderaWebService.RestrictedService {
             inValue.ConfigurationHeader = ConfigurationHeader;
             inValue.request = request;
             return ((TraderaWebService.RestrictedService.RestrictedServiceSoap)(this)).SetPriceOnShopItemsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TraderaWebService.RestrictedService.SetPricesOnNonShopItemsResponse TraderaWebService.RestrictedService.RestrictedServiceSoap.SetPricesOnNonShopItems(TraderaWebService.RestrictedService.SetPricesOnNonShopItemsRequest request) {
+            return base.Channel.SetPricesOnNonShopItems(request);
+        }
+        
+        public TraderaWebService.RestrictedService.SetPricesOnNonShopItemsResult SetPricesOnNonShopItems(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader, TraderaWebService.RestrictedService.SetPricesOnNonShopItemRequest request) {
+            TraderaWebService.RestrictedService.SetPricesOnNonShopItemsRequest inValue = new TraderaWebService.RestrictedService.SetPricesOnNonShopItemsRequest();
+            inValue.AuthenticationHeader = AuthenticationHeader;
+            inValue.AuthorizationHeader = AuthorizationHeader;
+            inValue.ConfigurationHeader = ConfigurationHeader;
+            inValue.request = request;
+            TraderaWebService.RestrictedService.SetPricesOnNonShopItemsResponse retVal = ((TraderaWebService.RestrictedService.RestrictedServiceSoap)(this)).SetPricesOnNonShopItems(inValue);
+            return retVal.SetPricesOnNonShopItemsResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TraderaWebService.RestrictedService.SetPricesOnNonShopItemsResponse> TraderaWebService.RestrictedService.RestrictedServiceSoap.SetPricesOnNonShopItemsAsync(TraderaWebService.RestrictedService.SetPricesOnNonShopItemsRequest request) {
+            return base.Channel.SetPricesOnNonShopItemsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TraderaWebService.RestrictedService.SetPricesOnNonShopItemsResponse> SetPricesOnNonShopItemsAsync(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader, TraderaWebService.RestrictedService.SetPricesOnNonShopItemRequest request) {
+            TraderaWebService.RestrictedService.SetPricesOnNonShopItemsRequest inValue = new TraderaWebService.RestrictedService.SetPricesOnNonShopItemsRequest();
+            inValue.AuthenticationHeader = AuthenticationHeader;
+            inValue.AuthorizationHeader = AuthorizationHeader;
+            inValue.ConfigurationHeader = ConfigurationHeader;
+            inValue.request = request;
+            return ((TraderaWebService.RestrictedService.RestrictedServiceSoap)(this)).SetPricesOnNonShopItemsAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7247,6 +7482,119 @@ namespace TraderaWebService.RestrictedService {
             inValue.comment = comment;
             inValue.type = type;
             return ((TraderaWebService.RestrictedService.RestrictedServiceSoap)(this)).LeaveOrderFeedbackToBuyerAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TraderaWebService.RestrictedService.GetMemberPaymentOptionsResponse TraderaWebService.RestrictedService.RestrictedServiceSoap.GetMemberPaymentOptions(TraderaWebService.RestrictedService.GetMemberPaymentOptionsRequest request) {
+            return base.Channel.GetMemberPaymentOptions(request);
+        }
+        
+        public TraderaWebService.RestrictedService.GetMemberPaymentOptionsResult GetMemberPaymentOptions(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader, int memberId) {
+            TraderaWebService.RestrictedService.GetMemberPaymentOptionsRequest inValue = new TraderaWebService.RestrictedService.GetMemberPaymentOptionsRequest();
+            inValue.AuthenticationHeader = AuthenticationHeader;
+            inValue.AuthorizationHeader = AuthorizationHeader;
+            inValue.ConfigurationHeader = ConfigurationHeader;
+            inValue.memberId = memberId;
+            TraderaWebService.RestrictedService.GetMemberPaymentOptionsResponse retVal = ((TraderaWebService.RestrictedService.RestrictedServiceSoap)(this)).GetMemberPaymentOptions(inValue);
+            return retVal.GetMemberPaymentOptionsResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TraderaWebService.RestrictedService.GetMemberPaymentOptionsResponse> TraderaWebService.RestrictedService.RestrictedServiceSoap.GetMemberPaymentOptionsAsync(TraderaWebService.RestrictedService.GetMemberPaymentOptionsRequest request) {
+            return base.Channel.GetMemberPaymentOptionsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TraderaWebService.RestrictedService.GetMemberPaymentOptionsResponse> GetMemberPaymentOptionsAsync(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader, int memberId) {
+            TraderaWebService.RestrictedService.GetMemberPaymentOptionsRequest inValue = new TraderaWebService.RestrictedService.GetMemberPaymentOptionsRequest();
+            inValue.AuthenticationHeader = AuthenticationHeader;
+            inValue.AuthorizationHeader = AuthorizationHeader;
+            inValue.ConfigurationHeader = ConfigurationHeader;
+            inValue.memberId = memberId;
+            return ((TraderaWebService.RestrictedService.RestrictedServiceSoap)(this)).GetMemberPaymentOptionsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TraderaWebService.RestrictedService.BeginBankIdVerificationResponse TraderaWebService.RestrictedService.RestrictedServiceSoap.BeginBankIdVerification(TraderaWebService.RestrictedService.BeginBankIdVerificationRequest request) {
+            return base.Channel.BeginBankIdVerification(request);
+        }
+        
+        public TraderaWebService.RestrictedService.BeginBankIdVerificationResult BeginBankIdVerification(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader) {
+            TraderaWebService.RestrictedService.BeginBankIdVerificationRequest inValue = new TraderaWebService.RestrictedService.BeginBankIdVerificationRequest();
+            inValue.AuthenticationHeader = AuthenticationHeader;
+            inValue.AuthorizationHeader = AuthorizationHeader;
+            inValue.ConfigurationHeader = ConfigurationHeader;
+            TraderaWebService.RestrictedService.BeginBankIdVerificationResponse retVal = ((TraderaWebService.RestrictedService.RestrictedServiceSoap)(this)).BeginBankIdVerification(inValue);
+            return retVal.BeginBankIdVerificationResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TraderaWebService.RestrictedService.BeginBankIdVerificationResponse> TraderaWebService.RestrictedService.RestrictedServiceSoap.BeginBankIdVerificationAsync(TraderaWebService.RestrictedService.BeginBankIdVerificationRequest request) {
+            return base.Channel.BeginBankIdVerificationAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TraderaWebService.RestrictedService.BeginBankIdVerificationResponse> BeginBankIdVerificationAsync(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader) {
+            TraderaWebService.RestrictedService.BeginBankIdVerificationRequest inValue = new TraderaWebService.RestrictedService.BeginBankIdVerificationRequest();
+            inValue.AuthenticationHeader = AuthenticationHeader;
+            inValue.AuthorizationHeader = AuthorizationHeader;
+            inValue.ConfigurationHeader = ConfigurationHeader;
+            return ((TraderaWebService.RestrictedService.RestrictedServiceSoap)(this)).BeginBankIdVerificationAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TraderaWebService.RestrictedService.GetBankIdVerificationProgressResponse TraderaWebService.RestrictedService.RestrictedServiceSoap.GetBankIdVerificationProgress(TraderaWebService.RestrictedService.GetBankIdVerificationProgressRequest request) {
+            return base.Channel.GetBankIdVerificationProgress(request);
+        }
+        
+        public TraderaWebService.RestrictedService.GetBankIdVerificationProgressResult GetBankIdVerificationProgress(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader, TraderaWebService.RestrictedService.GetBankIdVerificationProgress request) {
+            TraderaWebService.RestrictedService.GetBankIdVerificationProgressRequest inValue = new TraderaWebService.RestrictedService.GetBankIdVerificationProgressRequest();
+            inValue.AuthenticationHeader = AuthenticationHeader;
+            inValue.AuthorizationHeader = AuthorizationHeader;
+            inValue.ConfigurationHeader = ConfigurationHeader;
+            inValue.request = request;
+            TraderaWebService.RestrictedService.GetBankIdVerificationProgressResponse retVal = ((TraderaWebService.RestrictedService.RestrictedServiceSoap)(this)).GetBankIdVerificationProgress(inValue);
+            return retVal.GetBankIdVerificationProgressResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TraderaWebService.RestrictedService.GetBankIdVerificationProgressResponse> TraderaWebService.RestrictedService.RestrictedServiceSoap.GetBankIdVerificationProgressAsync(TraderaWebService.RestrictedService.GetBankIdVerificationProgressRequest request) {
+            return base.Channel.GetBankIdVerificationProgressAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TraderaWebService.RestrictedService.GetBankIdVerificationProgressResponse> GetBankIdVerificationProgressAsync(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader, TraderaWebService.RestrictedService.GetBankIdVerificationProgress request) {
+            TraderaWebService.RestrictedService.GetBankIdVerificationProgressRequest inValue = new TraderaWebService.RestrictedService.GetBankIdVerificationProgressRequest();
+            inValue.AuthenticationHeader = AuthenticationHeader;
+            inValue.AuthorizationHeader = AuthorizationHeader;
+            inValue.ConfigurationHeader = ConfigurationHeader;
+            inValue.request = request;
+            return ((TraderaWebService.RestrictedService.RestrictedServiceSoap)(this)).GetBankIdVerificationProgressAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TraderaWebService.RestrictedService.CancelBankIdVerificationResponse TraderaWebService.RestrictedService.RestrictedServiceSoap.CancelBankIdVerification(TraderaWebService.RestrictedService.CancelBankIdVerificationRequest request) {
+            return base.Channel.CancelBankIdVerification(request);
+        }
+        
+        public void CancelBankIdVerification(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader, TraderaWebService.RestrictedService.CancelBankIdVerification request) {
+            TraderaWebService.RestrictedService.CancelBankIdVerificationRequest inValue = new TraderaWebService.RestrictedService.CancelBankIdVerificationRequest();
+            inValue.AuthenticationHeader = AuthenticationHeader;
+            inValue.AuthorizationHeader = AuthorizationHeader;
+            inValue.ConfigurationHeader = ConfigurationHeader;
+            inValue.request = request;
+            TraderaWebService.RestrictedService.CancelBankIdVerificationResponse retVal = ((TraderaWebService.RestrictedService.RestrictedServiceSoap)(this)).CancelBankIdVerification(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TraderaWebService.RestrictedService.CancelBankIdVerificationResponse> TraderaWebService.RestrictedService.RestrictedServiceSoap.CancelBankIdVerificationAsync(TraderaWebService.RestrictedService.CancelBankIdVerificationRequest request) {
+            return base.Channel.CancelBankIdVerificationAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TraderaWebService.RestrictedService.CancelBankIdVerificationResponse> CancelBankIdVerificationAsync(TraderaWebService.RestrictedService.AuthenticationHeader AuthenticationHeader, TraderaWebService.RestrictedService.AuthorizationHeader AuthorizationHeader, TraderaWebService.RestrictedService.ConfigurationHeader ConfigurationHeader, TraderaWebService.RestrictedService.CancelBankIdVerification request) {
+            TraderaWebService.RestrictedService.CancelBankIdVerificationRequest inValue = new TraderaWebService.RestrictedService.CancelBankIdVerificationRequest();
+            inValue.AuthenticationHeader = AuthenticationHeader;
+            inValue.AuthorizationHeader = AuthorizationHeader;
+            inValue.ConfigurationHeader = ConfigurationHeader;
+            inValue.request = request;
+            return ((TraderaWebService.RestrictedService.RestrictedServiceSoap)(this)).CancelBankIdVerificationAsync(inValue);
         }
     }
 }

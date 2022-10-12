@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://api.tradera.com" xmlns:s1="http://api.tradera.com/AbstractTypes" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://api.tradera.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s1="http://api.tradera.com/AbstractTypes" xmlns:tns="http://api.tradera.com" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://api.tradera.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Services that require authorization from the Tradera user being impersonated.</wsdl:documentation>
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://api.tradera.com">
@@ -27,10 +27,12 @@
           <s:element minOccurs="1" maxOccurs="1" name="StartQuantity" type="s:int" />
           <s:element minOccurs="1" maxOccurs="1" name="RemainingQuantity" type="s:int" />
           <s:element minOccurs="1" maxOccurs="1" name="ItemType" type="tns:ItemType" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DetailedImageLinks" type="tns:ImageLink" />
           <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
           <s:element minOccurs="1" maxOccurs="1" name="VAT" nillable="true" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="ShortDescription" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="OwnReferences" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="AttributeValues" type="tns:AttributeValues" />
           <s:element minOccurs="0" maxOccurs="1" name="ItemAttributes" type="tns:ArrayOfInt" />
           <s:element minOccurs="0" maxOccurs="1" name="LongDescription" type="s:string" />
           <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
@@ -39,7 +41,7 @@
           <s:element minOccurs="0" maxOccurs="1" name="OpeningBid" type="s:int" />
           <s:element minOccurs="1" maxOccurs="1" name="ReservePrice" nillable="true" type="s:int" />
           <s:element minOccurs="1" maxOccurs="1" name="ReservePriceReached" nillable="true" type="s:boolean" />
-          <s:element minOccurs="0" maxOccurs="1" name="BuyItNowPrice" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BuyItNowPrice" nillable="true" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="NextBid" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="PaymentCondition" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="ShippingCondition" type="s:string" />
@@ -53,8 +55,6 @@
           <s:element minOccurs="0" maxOccurs="1" name="ItemLink" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="ThumbnailLink" type="s:string" />
           <s:element minOccurs="1" maxOccurs="1" name="AcceptedBuyerId" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="Payson" type="s:boolean" />
-          <s:element minOccurs="1" maxOccurs="1" name="PaysonGuarantee" type="s:boolean" />
           <s:element minOccurs="1" maxOccurs="1" name="Paypal" type="s:boolean" />
           <s:element minOccurs="1" maxOccurs="1" name="PaymentTypeId" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="Seller" type="tns:User" />
@@ -65,6 +65,8 @@
         <s:sequence>
           <s:element minOccurs="1" maxOccurs="1" name="ShippingOptionId" type="s:int" />
           <s:element minOccurs="1" maxOccurs="1" name="Cost" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShippingWeight" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShippingProductId" nillable="true" type="s:int" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="ArrayOfInt">
@@ -91,6 +93,7 @@
           <s:element minOccurs="0" maxOccurs="1" name="ZipCode" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="CountryName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PersonalNumber" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="TransactionId" type="s:int" />
         </s:sequence>
       </s:complexType>
@@ -108,6 +111,47 @@
           <s:enumeration value="ShopItem" />
         </s:restriction>
       </s:simpleType>
+      <s:complexType name="ImageLink">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Url" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Format" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AttributeValues">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TermAttributeValues" type="tns:ArrayOfTermAttributeValue" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumberAttributeValues" type="tns:ArrayOfNumberAttributeValue" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTermAttributeValue">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TermAttributeValue" nillable="true" type="tns:TermAttributeValue" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TermAttributeValue">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Values" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfNumberAttributeValue">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="NumberAttributeValue" nillable="true" type="tns:NumberAttributeValue" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="NumberAttributeValue">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Values" type="tns:ArrayOfDecimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDecimal">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="decimal" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
       <s:element name="AuthenticationHeader" type="tns:AuthenticationHeader" />
       <s:complexType name="AuthenticationHeader">
         <s:sequence>
@@ -254,11 +298,41 @@
           <s:element minOccurs="1" maxOccurs="1" name="VAT" nillable="true" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="ShippingCondition" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="PaymentCondition" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CampaignCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AttributeValues" type="tns:ItemAttributeValues" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="ArrayOfItemShipping">
         <s:sequence>
           <s:element minOccurs="0" maxOccurs="unbounded" name="ItemShipping" nillable="true" type="tns:ItemShipping" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ItemAttributeValues">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Terms" type="tns:ArrayOfTermValues" />
+          <s:element minOccurs="0" maxOccurs="1" name="Numbers" type="tns:ArrayOfNumberValues" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTermValues">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TermValues" nillable="true" type="tns:TermValues" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TermValues">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Values" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfNumberValues">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="NumberValues" nillable="true" type="tns:NumberValues" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="NumberValues">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Values" type="tns:ArrayOfDecimal" />
         </s:sequence>
       </s:complexType>
       <s:element name="AddItemResponse">
@@ -383,34 +457,6 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="GetItemFees">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="GetItemFeesResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="GetItemFeesResult" type="tns:ArrayOfFee" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:complexType name="ArrayOfFee">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="Fee" nillable="true" type="tns:Fee" />
-        </s:sequence>
-      </s:complexType>
-      <s:complexType name="Fee">
-        <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="TypeId" type="s:int" />
-          <s:element minOccurs="0" maxOccurs="1" name="TypeDescription" type="s:string" />
-          <s:element minOccurs="1" maxOccurs="1" name="Value" type="s:decimal" />
-          <s:element minOccurs="1" maxOccurs="1" name="CreatedDate" type="s:dateTime" />
-          <s:element minOccurs="0" maxOccurs="1" name="InvoiceId" type="s:int" />
-        </s:sequence>
-      </s:complexType>
       <s:element name="EndItem">
         <s:complexType>
           <s:sequence>
@@ -443,6 +489,7 @@
           <s:element minOccurs="0" maxOccurs="1" name="PaymentCondition" type="s:string" />
           <s:element minOccurs="1" maxOccurs="1" name="Price" nillable="true" type="s:int" />
           <s:element minOccurs="1" maxOccurs="1" name="Quantity" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AbsoluteQuantity" nillable="true" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="ShippingCondition" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
           <s:element minOccurs="1" maxOccurs="1" name="VAT" nillable="true" type="s:int" />
@@ -451,6 +498,7 @@
           <s:element minOccurs="0" maxOccurs="1" name="OwnReferences" type="tns:ArrayOfString" />
           <s:element minOccurs="0" maxOccurs="1" name="ItemImages" type="tns:ArrayOfItemImageData" />
           <s:element minOccurs="1" maxOccurs="1" name="ExternalId" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="AttributeValues" type="tns:ItemAttributeValues" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="ArrayOfItemImageData">
@@ -482,25 +530,27 @@
       </s:element>
       <s:complexType name="ShopItemVariantData">
         <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="ActivateDate" nillable="true" type="s:dateTime" />
-          <s:element minOccurs="1" maxOccurs="1" name="AcceptedBuyerId" nillable="true" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="CategoryId" nillable="true" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="DeactivateDate" nillable="true" type="s:dateTime" />
-          <s:element minOccurs="0" maxOccurs="1" name="ItemAttributes" type="tns:ArrayOfInt" />
-          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="PaymentCondition" type="s:string" />
-          <s:element minOccurs="1" maxOccurs="1" name="Price" nillable="true" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="Quantity" nillable="true" type="s:int" />
-          <s:element minOccurs="0" maxOccurs="1" name="ShippingCondition" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
-          <s:element minOccurs="1" maxOccurs="1" name="VAT" nillable="true" type="s:int" />
-          <s:element minOccurs="0" maxOccurs="1" name="SellerPartNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CategoryId" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AcceptedBuyerId" nillable="true" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="ShippingOptions" type="tns:ArrayOfItemShipping" />
           <s:element minOccurs="0" maxOccurs="1" name="PaymentOptionIds" type="tns:ArrayOfInt" />
+          <s:element minOccurs="0" maxOccurs="1" name="ItemAttributes" type="tns:ArrayOfInt" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShippingCondition" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentCondition" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="OwnReferences" type="tns:ArrayOfString" />
+          <s:element minOccurs="1" maxOccurs="1" name="VAT" nillable="true" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="ItemImages" type="tns:ArrayOfItemImageData" />
+          <s:element minOccurs="1" maxOccurs="1" name="ActivateDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DeactivateDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Quantity" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AbsoluteQuantity" nillable="true" type="s:int" />
           <s:element minOccurs="1" maxOccurs="1" name="ExternalId" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Price" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SellerPartNo" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="VariantData" type="tns:VariantData" />
+          <s:element minOccurs="0" maxOccurs="1" name="AttributeValues" type="tns:ItemAttributeValues" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="VariantData">
@@ -689,139 +739,6 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="AddCampaign">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="campaignData" type="tns:CampaignData" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:complexType name="CampaignData">
-        <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="Id" nillable="true" type="s:int" />
-          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="UrlName" type="s:string" />
-          <s:element minOccurs="1" maxOccurs="1" name="Type" nillable="true" type="tns:CampaignType" />
-          <s:element minOccurs="1" maxOccurs="1" name="StartDate" nillable="true" type="s:dateTime" />
-          <s:element minOccurs="1" maxOccurs="1" name="EndDate" nillable="true" type="s:dateTime" />
-          <s:element minOccurs="0" maxOccurs="unbounded" name="AuctionIDs" type="s:int" />
-          <s:element minOccurs="0" maxOccurs="1" name="CampaignImage" type="tns:CampaignImageData" />
-          <s:element minOccurs="0" maxOccurs="1" name="ImageUrl" type="s:string" />
-        </s:sequence>
-      </s:complexType>
-      <s:simpleType name="CampaignType">
-        <s:restriction base="s:string">
-          <s:enumeration value="Product" />
-          <s:enumeration value="Graphical" />
-        </s:restriction>
-      </s:simpleType>
-      <s:complexType name="CampaignImageData">
-        <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="Format" type="tns:ImageFormat" />
-          <s:element minOccurs="0" maxOccurs="1" name="Data" type="s:base64Binary" />
-        </s:sequence>
-      </s:complexType>
-      <s:element name="AddCampaignResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="AddCampaignResult" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="UpdateCampaign">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="campaignData" type="tns:CampaignData" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="UpdateCampaignResponse">
-        <s:complexType />
-      </s:element>
-      <s:element name="GetCampaign">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="campaignId" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="GetCampaignResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="GetCampaignResult" type="tns:CampaignData" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="GetCampaignsList">
-        <s:complexType />
-      </s:element>
-      <s:element name="GetCampaignsListResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="GetCampaignsListResult" type="tns:GetCampaignListResponse" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:complexType name="GetCampaignListResponse">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="1" name="Campaigns" type="tns:ArrayOfCampaignData" />
-        </s:sequence>
-      </s:complexType>
-      <s:complexType name="ArrayOfCampaignData">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="CampaignData" nillable="true" type="tns:CampaignData" />
-        </s:sequence>
-      </s:complexType>
-      <s:element name="RemoveCampaign">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="campaignId" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="RemoveCampaignResponse">
-        <s:complexType />
-      </s:element>
-      <s:element name="GetItemCampaigns">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:GetItemCampaignsRequest" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:complexType name="GetItemCampaignsRequest">
-        <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="ItemId" type="s:int" />
-        </s:sequence>
-      </s:complexType>
-      <s:element name="GetItemCampaignsResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="GetItemCampaignsResult" type="tns:GetItemCampaignsResponse" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:complexType name="GetItemCampaignsResponse">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="1" name="CampaignIds" type="tns:ArrayOfInt" />
-        </s:sequence>
-      </s:complexType>
-      <s:element name="UpdateItemCampaigns">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="itemCampaignsData" type="tns:ItemCampaignsData" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:complexType name="ItemCampaignsData">
-        <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="AuctionId" type="s:int" />
-          <s:element minOccurs="0" maxOccurs="unbounded" name="CampaignIds" type="s:int" />
-        </s:sequence>
-      </s:complexType>
-      <s:element name="UpdateItemCampaignsResponse">
-        <s:complexType />
-      </s:element>
       <s:element name="GetUpdatedSellerItems">
         <s:complexType>
           <s:sequence>
@@ -917,6 +834,60 @@
       <s:complexType name="SetPriceOnShopItemsError">
         <s:sequence>
           <s:element minOccurs="0" maxOccurs="1" name="Item" type="tns:SetPriceShopItem" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SetPricesOnNonShopItems">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:SetPricesOnNonShopItemRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SetPricesOnNonShopItemRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NonShopItem" type="tns:SetPricesNonShopItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SetPricesNonShopItem">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OpeningPrice" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReservedPrice" type="tns:ReservedPrice" />
+          <s:element minOccurs="0" maxOccurs="1" name="BinPrice" type="tns:BinPrice" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ReservedPrice">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Price" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BinPrice">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Price" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SetPricesOnNonShopItemsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetPricesOnNonShopItemsResult" type="tns:SetPricesOnNonShopItemsResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SetPricesOnNonShopItemsResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IsSuccessful" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ValidationErrors" type="tns:ArrayOfSetPricesOnNonShopItemsError" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSetPricesOnNonShopItemsError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SetPricesOnNonShopItemsError" nillable="true" type="tns:SetPricesOnNonShopItemsError" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SetPricesOnNonShopItemsError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Item" type="tns:SetPricesNonShopItem" />
           <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
         </s:sequence>
       </s:complexType>
@@ -1026,16 +997,103 @@
       <s:element name="LeaveOrderFeedbackToBuyerResponse">
         <s:complexType />
       </s:element>
+      <s:element name="GetMemberPaymentOptions">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="memberId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberPaymentOptionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMemberPaymentOptionsResult" type="tns:GetMemberPaymentOptionsResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetMemberPaymentOptionsResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentOptions" type="tns:ArrayOfMemberPaymentOption" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfMemberPaymentOption">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MemberPaymentOption" nillable="true" type="tns:MemberPaymentOption" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MemberPaymentOption">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="BeginBankIdVerification">
+        <s:complexType />
+      </s:element>
+      <s:element name="BeginBankIdVerificationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BeginBankIdVerificationResult" type="tns:BeginBankIdVerificationResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="BeginBankIdVerificationResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BankIdOrderRef" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Error" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetBankIdVerificationProgress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:GetBankIdVerificationProgress" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetBankIdVerificationProgress">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BankIdOrderRef" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetBankIdVerificationProgressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBankIdVerificationProgressResult" type="tns:GetBankIdVerificationProgressResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetBankIdVerificationProgressResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IsCompleted" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Progress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Error" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CancelBankIdVerification">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:CancelBankIdVerification" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CancelBankIdVerification">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BankIdOrderRef" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CancelBankIdVerificationResponse">
+        <s:complexType />
+      </s:element>
       <s:element name="Item" nillable="true" type="tns:Item" />
       <s:element name="QueuedRequestResponse" nillable="true" type="tns:QueuedRequestResponse" />
       <s:element name="ValidateCampaignCodeResult" nillable="true" type="tns:ValidateCampaignCodeResult" />
       <s:element name="boolean" type="s:boolean" />
-      <s:element name="ArrayOfFee" nillable="true" type="tns:ArrayOfFee" />
       <s:element name="ArrayOfRequestResult" nillable="true" type="tns:ArrayOfRequestResult" />
       <s:element name="ShopSettingsData" nillable="true" type="tns:ShopSettingsData" />
-      <s:element name="CampaignData" nillable="true" type="tns:CampaignData" />
-      <s:element name="GetCampaignListResponse" nillable="true" type="tns:GetCampaignListResponse" />
       <s:element name="User" nillable="true" type="tns:User" />
+      <s:element name="GetMemberPaymentOptionsResult" nillable="true" type="tns:GetMemberPaymentOptionsResult" />
+      <s:element name="BeginBankIdVerificationResult" nillable="true" type="tns:BeginBankIdVerificationResult" />
     </s:schema>
     <s:schema targetNamespace="http://api.tradera.com/AbstractTypes">
       <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
@@ -1200,21 +1258,6 @@
   <wsdl:message name="LeaveFeedbackConfigurationHeader">
     <wsdl:part name="ConfigurationHeader" element="tns:ConfigurationHeader" />
   </wsdl:message>
-  <wsdl:message name="GetItemFeesSoapIn">
-    <wsdl:part name="parameters" element="tns:GetItemFees" />
-  </wsdl:message>
-  <wsdl:message name="GetItemFeesSoapOut">
-    <wsdl:part name="parameters" element="tns:GetItemFeesResponse" />
-  </wsdl:message>
-  <wsdl:message name="GetItemFeesAuthenticationHeader">
-    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
-  </wsdl:message>
-  <wsdl:message name="GetItemFeesAuthorizationHeader">
-    <wsdl:part name="AuthorizationHeader" element="tns:AuthorizationHeader" />
-  </wsdl:message>
-  <wsdl:message name="GetItemFeesConfigurationHeader">
-    <wsdl:part name="ConfigurationHeader" element="tns:ConfigurationHeader" />
-  </wsdl:message>
   <wsdl:message name="EndItemSoapIn">
     <wsdl:part name="parameters" element="tns:EndItem" />
   </wsdl:message>
@@ -1365,111 +1408,6 @@
   <wsdl:message name="UpdateTransactionStatusConfigurationHeader">
     <wsdl:part name="ConfigurationHeader" element="tns:ConfigurationHeader" />
   </wsdl:message>
-  <wsdl:message name="AddCampaignSoapIn">
-    <wsdl:part name="parameters" element="tns:AddCampaign" />
-  </wsdl:message>
-  <wsdl:message name="AddCampaignSoapOut">
-    <wsdl:part name="parameters" element="tns:AddCampaignResponse" />
-  </wsdl:message>
-  <wsdl:message name="AddCampaignAuthenticationHeader">
-    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
-  </wsdl:message>
-  <wsdl:message name="AddCampaignAuthorizationHeader">
-    <wsdl:part name="AuthorizationHeader" element="tns:AuthorizationHeader" />
-  </wsdl:message>
-  <wsdl:message name="AddCampaignConfigurationHeader">
-    <wsdl:part name="ConfigurationHeader" element="tns:ConfigurationHeader" />
-  </wsdl:message>
-  <wsdl:message name="UpdateCampaignSoapIn">
-    <wsdl:part name="parameters" element="tns:UpdateCampaign" />
-  </wsdl:message>
-  <wsdl:message name="UpdateCampaignSoapOut">
-    <wsdl:part name="parameters" element="tns:UpdateCampaignResponse" />
-  </wsdl:message>
-  <wsdl:message name="UpdateCampaignAuthenticationHeader">
-    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
-  </wsdl:message>
-  <wsdl:message name="UpdateCampaignAuthorizationHeader">
-    <wsdl:part name="AuthorizationHeader" element="tns:AuthorizationHeader" />
-  </wsdl:message>
-  <wsdl:message name="UpdateCampaignConfigurationHeader">
-    <wsdl:part name="ConfigurationHeader" element="tns:ConfigurationHeader" />
-  </wsdl:message>
-  <wsdl:message name="GetCampaignSoapIn">
-    <wsdl:part name="parameters" element="tns:GetCampaign" />
-  </wsdl:message>
-  <wsdl:message name="GetCampaignSoapOut">
-    <wsdl:part name="parameters" element="tns:GetCampaignResponse" />
-  </wsdl:message>
-  <wsdl:message name="GetCampaignAuthenticationHeader">
-    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
-  </wsdl:message>
-  <wsdl:message name="GetCampaignAuthorizationHeader">
-    <wsdl:part name="AuthorizationHeader" element="tns:AuthorizationHeader" />
-  </wsdl:message>
-  <wsdl:message name="GetCampaignConfigurationHeader">
-    <wsdl:part name="ConfigurationHeader" element="tns:ConfigurationHeader" />
-  </wsdl:message>
-  <wsdl:message name="GetCampaignsListSoapIn">
-    <wsdl:part name="parameters" element="tns:GetCampaignsList" />
-  </wsdl:message>
-  <wsdl:message name="GetCampaignsListSoapOut">
-    <wsdl:part name="parameters" element="tns:GetCampaignsListResponse" />
-  </wsdl:message>
-  <wsdl:message name="GetCampaignsListAuthenticationHeader">
-    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
-  </wsdl:message>
-  <wsdl:message name="GetCampaignsListAuthorizationHeader">
-    <wsdl:part name="AuthorizationHeader" element="tns:AuthorizationHeader" />
-  </wsdl:message>
-  <wsdl:message name="GetCampaignsListConfigurationHeader">
-    <wsdl:part name="ConfigurationHeader" element="tns:ConfigurationHeader" />
-  </wsdl:message>
-  <wsdl:message name="RemoveCampaignSoapIn">
-    <wsdl:part name="parameters" element="tns:RemoveCampaign" />
-  </wsdl:message>
-  <wsdl:message name="RemoveCampaignSoapOut">
-    <wsdl:part name="parameters" element="tns:RemoveCampaignResponse" />
-  </wsdl:message>
-  <wsdl:message name="RemoveCampaignAuthenticationHeader">
-    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
-  </wsdl:message>
-  <wsdl:message name="RemoveCampaignAuthorizationHeader">
-    <wsdl:part name="AuthorizationHeader" element="tns:AuthorizationHeader" />
-  </wsdl:message>
-  <wsdl:message name="RemoveCampaignConfigurationHeader">
-    <wsdl:part name="ConfigurationHeader" element="tns:ConfigurationHeader" />
-  </wsdl:message>
-  <wsdl:message name="GetItemCampaignsSoapIn">
-    <wsdl:part name="parameters" element="tns:GetItemCampaigns" />
-  </wsdl:message>
-  <wsdl:message name="GetItemCampaignsSoapOut">
-    <wsdl:part name="parameters" element="tns:GetItemCampaignsResponse" />
-  </wsdl:message>
-  <wsdl:message name="GetItemCampaignsAuthenticationHeader">
-    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
-  </wsdl:message>
-  <wsdl:message name="GetItemCampaignsAuthorizationHeader">
-    <wsdl:part name="AuthorizationHeader" element="tns:AuthorizationHeader" />
-  </wsdl:message>
-  <wsdl:message name="GetItemCampaignsConfigurationHeader">
-    <wsdl:part name="ConfigurationHeader" element="tns:ConfigurationHeader" />
-  </wsdl:message>
-  <wsdl:message name="UpdateItemCampaignsSoapIn">
-    <wsdl:part name="parameters" element="tns:UpdateItemCampaigns" />
-  </wsdl:message>
-  <wsdl:message name="UpdateItemCampaignsSoapOut">
-    <wsdl:part name="parameters" element="tns:UpdateItemCampaignsResponse" />
-  </wsdl:message>
-  <wsdl:message name="UpdateItemCampaignsAuthenticationHeader">
-    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
-  </wsdl:message>
-  <wsdl:message name="UpdateItemCampaignsAuthorizationHeader">
-    <wsdl:part name="AuthorizationHeader" element="tns:AuthorizationHeader" />
-  </wsdl:message>
-  <wsdl:message name="UpdateItemCampaignsConfigurationHeader">
-    <wsdl:part name="ConfigurationHeader" element="tns:ConfigurationHeader" />
-  </wsdl:message>
   <wsdl:message name="GetUpdatedSellerItemsSoapIn">
     <wsdl:part name="parameters" element="tns:GetUpdatedSellerItems" />
   </wsdl:message>
@@ -1513,6 +1451,21 @@
     <wsdl:part name="AuthorizationHeader" element="tns:AuthorizationHeader" />
   </wsdl:message>
   <wsdl:message name="SetPriceOnShopItemsConfigurationHeader">
+    <wsdl:part name="ConfigurationHeader" element="tns:ConfigurationHeader" />
+  </wsdl:message>
+  <wsdl:message name="SetPricesOnNonShopItemsSoapIn">
+    <wsdl:part name="parameters" element="tns:SetPricesOnNonShopItems" />
+  </wsdl:message>
+  <wsdl:message name="SetPricesOnNonShopItemsSoapOut">
+    <wsdl:part name="parameters" element="tns:SetPricesOnNonShopItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetPricesOnNonShopItemsAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="SetPricesOnNonShopItemsAuthorizationHeader">
+    <wsdl:part name="AuthorizationHeader" element="tns:AuthorizationHeader" />
+  </wsdl:message>
+  <wsdl:message name="SetPricesOnNonShopItemsConfigurationHeader">
     <wsdl:part name="ConfigurationHeader" element="tns:ConfigurationHeader" />
   </wsdl:message>
   <wsdl:message name="SetActivateDateOnShopItemsSoapIn">
@@ -1560,6 +1513,66 @@
   <wsdl:message name="LeaveOrderFeedbackToBuyerConfigurationHeader">
     <wsdl:part name="ConfigurationHeader" element="tns:ConfigurationHeader" />
   </wsdl:message>
+  <wsdl:message name="GetMemberPaymentOptionsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMemberPaymentOptions" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberPaymentOptionsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMemberPaymentOptionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberPaymentOptionsAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberPaymentOptionsAuthorizationHeader">
+    <wsdl:part name="AuthorizationHeader" element="tns:AuthorizationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberPaymentOptionsConfigurationHeader">
+    <wsdl:part name="ConfigurationHeader" element="tns:ConfigurationHeader" />
+  </wsdl:message>
+  <wsdl:message name="BeginBankIdVerificationSoapIn">
+    <wsdl:part name="parameters" element="tns:BeginBankIdVerification" />
+  </wsdl:message>
+  <wsdl:message name="BeginBankIdVerificationSoapOut">
+    <wsdl:part name="parameters" element="tns:BeginBankIdVerificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="BeginBankIdVerificationAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="BeginBankIdVerificationAuthorizationHeader">
+    <wsdl:part name="AuthorizationHeader" element="tns:AuthorizationHeader" />
+  </wsdl:message>
+  <wsdl:message name="BeginBankIdVerificationConfigurationHeader">
+    <wsdl:part name="ConfigurationHeader" element="tns:ConfigurationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetBankIdVerificationProgressSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBankIdVerificationProgress" />
+  </wsdl:message>
+  <wsdl:message name="GetBankIdVerificationProgressSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBankIdVerificationProgressResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBankIdVerificationProgressAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetBankIdVerificationProgressAuthorizationHeader">
+    <wsdl:part name="AuthorizationHeader" element="tns:AuthorizationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetBankIdVerificationProgressConfigurationHeader">
+    <wsdl:part name="ConfigurationHeader" element="tns:ConfigurationHeader" />
+  </wsdl:message>
+  <wsdl:message name="CancelBankIdVerificationSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelBankIdVerification" />
+  </wsdl:message>
+  <wsdl:message name="CancelBankIdVerificationSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelBankIdVerificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelBankIdVerificationAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="CancelBankIdVerificationAuthorizationHeader">
+    <wsdl:part name="AuthorizationHeader" element="tns:AuthorizationHeader" />
+  </wsdl:message>
+  <wsdl:message name="CancelBankIdVerificationConfigurationHeader">
+    <wsdl:part name="ConfigurationHeader" element="tns:ConfigurationHeader" />
+  </wsdl:message>
   <wsdl:message name="GetItemHttpGetIn">
     <wsdl:part name="itemId" type="s:string" />
   </wsdl:message>
@@ -1603,12 +1616,6 @@
   <wsdl:message name="LeaveFeedbackHttpGetOut">
     <wsdl:part name="Body" element="tns:boolean" />
   </wsdl:message>
-  <wsdl:message name="GetItemFeesHttpGetIn">
-    <wsdl:part name="itemId" type="s:string" />
-  </wsdl:message>
-  <wsdl:message name="GetItemFeesHttpGetOut">
-    <wsdl:part name="Body" element="tns:ArrayOfFee" />
-  </wsdl:message>
   <wsdl:message name="EndItemHttpGetIn">
     <wsdl:part name="itemId" type="s:string" />
   </wsdl:message>
@@ -1631,20 +1638,6 @@
   <wsdl:message name="GetShopSettingsHttpGetOut">
     <wsdl:part name="Body" element="tns:ShopSettingsData" />
   </wsdl:message>
-  <wsdl:message name="GetCampaignHttpGetIn">
-    <wsdl:part name="campaignId" type="s:string" />
-  </wsdl:message>
-  <wsdl:message name="GetCampaignHttpGetOut">
-    <wsdl:part name="Body" element="tns:CampaignData" />
-  </wsdl:message>
-  <wsdl:message name="GetCampaignsListHttpGetIn" />
-  <wsdl:message name="GetCampaignsListHttpGetOut">
-    <wsdl:part name="Body" element="tns:GetCampaignListResponse" />
-  </wsdl:message>
-  <wsdl:message name="RemoveCampaignHttpGetIn">
-    <wsdl:part name="campaignId" type="s:string" />
-  </wsdl:message>
-  <wsdl:message name="RemoveCampaignHttpGetOut" />
   <wsdl:message name="GetUserInfoHttpGetIn" />
   <wsdl:message name="GetUserInfoHttpGetOut">
     <wsdl:part name="Body" element="tns:User" />
@@ -1655,6 +1648,16 @@
     <wsdl:part name="type" type="s:string" />
   </wsdl:message>
   <wsdl:message name="LeaveOrderFeedbackToBuyerHttpGetOut" />
+  <wsdl:message name="GetMemberPaymentOptionsHttpGetIn">
+    <wsdl:part name="memberId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberPaymentOptionsHttpGetOut">
+    <wsdl:part name="Body" element="tns:GetMemberPaymentOptionsResult" />
+  </wsdl:message>
+  <wsdl:message name="BeginBankIdVerificationHttpGetIn" />
+  <wsdl:message name="BeginBankIdVerificationHttpGetOut">
+    <wsdl:part name="Body" element="tns:BeginBankIdVerificationResult" />
+  </wsdl:message>
   <wsdl:message name="GetItemHttpPostIn">
     <wsdl:part name="itemId" type="s:string" />
   </wsdl:message>
@@ -1698,12 +1701,6 @@
   <wsdl:message name="LeaveFeedbackHttpPostOut">
     <wsdl:part name="Body" element="tns:boolean" />
   </wsdl:message>
-  <wsdl:message name="GetItemFeesHttpPostIn">
-    <wsdl:part name="itemId" type="s:string" />
-  </wsdl:message>
-  <wsdl:message name="GetItemFeesHttpPostOut">
-    <wsdl:part name="Body" element="tns:ArrayOfFee" />
-  </wsdl:message>
   <wsdl:message name="EndItemHttpPostIn">
     <wsdl:part name="itemId" type="s:string" />
   </wsdl:message>
@@ -1726,20 +1723,6 @@
   <wsdl:message name="GetShopSettingsHttpPostOut">
     <wsdl:part name="Body" element="tns:ShopSettingsData" />
   </wsdl:message>
-  <wsdl:message name="GetCampaignHttpPostIn">
-    <wsdl:part name="campaignId" type="s:string" />
-  </wsdl:message>
-  <wsdl:message name="GetCampaignHttpPostOut">
-    <wsdl:part name="Body" element="tns:CampaignData" />
-  </wsdl:message>
-  <wsdl:message name="GetCampaignsListHttpPostIn" />
-  <wsdl:message name="GetCampaignsListHttpPostOut">
-    <wsdl:part name="Body" element="tns:GetCampaignListResponse" />
-  </wsdl:message>
-  <wsdl:message name="RemoveCampaignHttpPostIn">
-    <wsdl:part name="campaignId" type="s:string" />
-  </wsdl:message>
-  <wsdl:message name="RemoveCampaignHttpPostOut" />
   <wsdl:message name="GetUserInfoHttpPostIn" />
   <wsdl:message name="GetUserInfoHttpPostOut">
     <wsdl:part name="Body" element="tns:User" />
@@ -1750,6 +1733,16 @@
     <wsdl:part name="type" type="s:string" />
   </wsdl:message>
   <wsdl:message name="LeaveOrderFeedbackToBuyerHttpPostOut" />
+  <wsdl:message name="GetMemberPaymentOptionsHttpPostIn">
+    <wsdl:part name="memberId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberPaymentOptionsHttpPostOut">
+    <wsdl:part name="Body" element="tns:GetMemberPaymentOptionsResult" />
+  </wsdl:message>
+  <wsdl:message name="BeginBankIdVerificationHttpPostIn" />
+  <wsdl:message name="BeginBankIdVerificationHttpPostOut">
+    <wsdl:part name="Body" element="tns:BeginBankIdVerificationResult" />
+  </wsdl:message>
   <wsdl:portType name="RestrictedServiceSoap">
     <wsdl:operation name="GetItem">
       <wsdl:input message="tns:GetItemSoapIn" />
@@ -1791,10 +1784,6 @@
       <wsdl:input message="tns:LeaveFeedbackSoapIn" />
       <wsdl:output message="tns:LeaveFeedbackSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="GetItemFees">
-      <wsdl:input message="tns:GetItemFeesSoapIn" />
-      <wsdl:output message="tns:GetItemFeesSoapOut" />
-    </wsdl:operation>
     <wsdl:operation name="EndItem">
       <wsdl:input message="tns:EndItemSoapIn" />
       <wsdl:output message="tns:EndItemSoapOut" />
@@ -1835,34 +1824,6 @@
       <wsdl:input message="tns:UpdateTransactionStatusSoapIn" />
       <wsdl:output message="tns:UpdateTransactionStatusSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="AddCampaign">
-      <wsdl:input message="tns:AddCampaignSoapIn" />
-      <wsdl:output message="tns:AddCampaignSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="UpdateCampaign">
-      <wsdl:input message="tns:UpdateCampaignSoapIn" />
-      <wsdl:output message="tns:UpdateCampaignSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="GetCampaign">
-      <wsdl:input message="tns:GetCampaignSoapIn" />
-      <wsdl:output message="tns:GetCampaignSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="GetCampaignsList">
-      <wsdl:input message="tns:GetCampaignsListSoapIn" />
-      <wsdl:output message="tns:GetCampaignsListSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="RemoveCampaign">
-      <wsdl:input message="tns:RemoveCampaignSoapIn" />
-      <wsdl:output message="tns:RemoveCampaignSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="GetItemCampaigns">
-      <wsdl:input message="tns:GetItemCampaignsSoapIn" />
-      <wsdl:output message="tns:GetItemCampaignsSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="UpdateItemCampaigns">
-      <wsdl:input message="tns:UpdateItemCampaignsSoapIn" />
-      <wsdl:output message="tns:UpdateItemCampaignsSoapOut" />
-    </wsdl:operation>
     <wsdl:operation name="GetUpdatedSellerItems">
       <wsdl:input message="tns:GetUpdatedSellerItemsSoapIn" />
       <wsdl:output message="tns:GetUpdatedSellerItemsSoapOut" />
@@ -1875,6 +1836,10 @@
       <wsdl:input message="tns:SetPriceOnShopItemsSoapIn" />
       <wsdl:output message="tns:SetPriceOnShopItemsSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="SetPricesOnNonShopItems">
+      <wsdl:input message="tns:SetPricesOnNonShopItemsSoapIn" />
+      <wsdl:output message="tns:SetPricesOnNonShopItemsSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="SetActivateDateOnShopItems">
       <wsdl:input message="tns:SetActivateDateOnShopItemsSoapIn" />
       <wsdl:output message="tns:SetActivateDateOnShopItemsSoapOut" />
@@ -1886,6 +1851,22 @@
     <wsdl:operation name="LeaveOrderFeedbackToBuyer">
       <wsdl:input message="tns:LeaveOrderFeedbackToBuyerSoapIn" />
       <wsdl:output message="tns:LeaveOrderFeedbackToBuyerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberPaymentOptions">
+      <wsdl:input message="tns:GetMemberPaymentOptionsSoapIn" />
+      <wsdl:output message="tns:GetMemberPaymentOptionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BeginBankIdVerification">
+      <wsdl:input message="tns:BeginBankIdVerificationSoapIn" />
+      <wsdl:output message="tns:BeginBankIdVerificationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBankIdVerificationProgress">
+      <wsdl:input message="tns:GetBankIdVerificationProgressSoapIn" />
+      <wsdl:output message="tns:GetBankIdVerificationProgressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelBankIdVerification">
+      <wsdl:input message="tns:CancelBankIdVerificationSoapIn" />
+      <wsdl:output message="tns:CancelBankIdVerificationSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:portType name="RestrictedServiceHttpGet">
@@ -1917,10 +1898,6 @@
       <wsdl:input message="tns:LeaveFeedbackHttpGetIn" />
       <wsdl:output message="tns:LeaveFeedbackHttpGetOut" />
     </wsdl:operation>
-    <wsdl:operation name="GetItemFees">
-      <wsdl:input message="tns:GetItemFeesHttpGetIn" />
-      <wsdl:output message="tns:GetItemFeesHttpGetOut" />
-    </wsdl:operation>
     <wsdl:operation name="EndItem">
       <wsdl:input message="tns:EndItemHttpGetIn" />
       <wsdl:output message="tns:EndItemHttpGetOut" />
@@ -1937,18 +1914,6 @@
       <wsdl:input message="tns:GetShopSettingsHttpGetIn" />
       <wsdl:output message="tns:GetShopSettingsHttpGetOut" />
     </wsdl:operation>
-    <wsdl:operation name="GetCampaign">
-      <wsdl:input message="tns:GetCampaignHttpGetIn" />
-      <wsdl:output message="tns:GetCampaignHttpGetOut" />
-    </wsdl:operation>
-    <wsdl:operation name="GetCampaignsList">
-      <wsdl:input message="tns:GetCampaignsListHttpGetIn" />
-      <wsdl:output message="tns:GetCampaignsListHttpGetOut" />
-    </wsdl:operation>
-    <wsdl:operation name="RemoveCampaign">
-      <wsdl:input message="tns:RemoveCampaignHttpGetIn" />
-      <wsdl:output message="tns:RemoveCampaignHttpGetOut" />
-    </wsdl:operation>
     <wsdl:operation name="GetUserInfo">
       <wsdl:input message="tns:GetUserInfoHttpGetIn" />
       <wsdl:output message="tns:GetUserInfoHttpGetOut" />
@@ -1956,6 +1921,14 @@
     <wsdl:operation name="LeaveOrderFeedbackToBuyer">
       <wsdl:input message="tns:LeaveOrderFeedbackToBuyerHttpGetIn" />
       <wsdl:output message="tns:LeaveOrderFeedbackToBuyerHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberPaymentOptions">
+      <wsdl:input message="tns:GetMemberPaymentOptionsHttpGetIn" />
+      <wsdl:output message="tns:GetMemberPaymentOptionsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BeginBankIdVerification">
+      <wsdl:input message="tns:BeginBankIdVerificationHttpGetIn" />
+      <wsdl:output message="tns:BeginBankIdVerificationHttpGetOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:portType name="RestrictedServiceHttpPost">
@@ -1987,10 +1960,6 @@
       <wsdl:input message="tns:LeaveFeedbackHttpPostIn" />
       <wsdl:output message="tns:LeaveFeedbackHttpPostOut" />
     </wsdl:operation>
-    <wsdl:operation name="GetItemFees">
-      <wsdl:input message="tns:GetItemFeesHttpPostIn" />
-      <wsdl:output message="tns:GetItemFeesHttpPostOut" />
-    </wsdl:operation>
     <wsdl:operation name="EndItem">
       <wsdl:input message="tns:EndItemHttpPostIn" />
       <wsdl:output message="tns:EndItemHttpPostOut" />
@@ -2007,18 +1976,6 @@
       <wsdl:input message="tns:GetShopSettingsHttpPostIn" />
       <wsdl:output message="tns:GetShopSettingsHttpPostOut" />
     </wsdl:operation>
-    <wsdl:operation name="GetCampaign">
-      <wsdl:input message="tns:GetCampaignHttpPostIn" />
-      <wsdl:output message="tns:GetCampaignHttpPostOut" />
-    </wsdl:operation>
-    <wsdl:operation name="GetCampaignsList">
-      <wsdl:input message="tns:GetCampaignsListHttpPostIn" />
-      <wsdl:output message="tns:GetCampaignsListHttpPostOut" />
-    </wsdl:operation>
-    <wsdl:operation name="RemoveCampaign">
-      <wsdl:input message="tns:RemoveCampaignHttpPostIn" />
-      <wsdl:output message="tns:RemoveCampaignHttpPostOut" />
-    </wsdl:operation>
     <wsdl:operation name="GetUserInfo">
       <wsdl:input message="tns:GetUserInfoHttpPostIn" />
       <wsdl:output message="tns:GetUserInfoHttpPostOut" />
@@ -2026,6 +1983,14 @@
     <wsdl:operation name="LeaveOrderFeedbackToBuyer">
       <wsdl:input message="tns:LeaveOrderFeedbackToBuyerHttpPostIn" />
       <wsdl:output message="tns:LeaveOrderFeedbackToBuyerHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberPaymentOptions">
+      <wsdl:input message="tns:GetMemberPaymentOptionsHttpPostIn" />
+      <wsdl:output message="tns:GetMemberPaymentOptionsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BeginBankIdVerification">
+      <wsdl:input message="tns:BeginBankIdVerificationHttpPostIn" />
+      <wsdl:output message="tns:BeginBankIdVerificationHttpPostOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="RestrictedServiceSoap" type="tns:RestrictedServiceSoap">
@@ -2145,18 +2110,6 @@
         <soap:header message="tns:LeaveFeedbackAuthenticationHeader" part="AuthenticationHeader" use="literal" />
         <soap:header message="tns:LeaveFeedbackAuthorizationHeader" part="AuthorizationHeader" use="literal" />
         <soap:header message="tns:LeaveFeedbackConfigurationHeader" part="ConfigurationHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetItemFees">
-      <soap:operation soapAction="http://api.tradera.com/GetItemFees" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-        <soap:header message="tns:GetItemFeesAuthenticationHeader" part="AuthenticationHeader" use="literal" />
-        <soap:header message="tns:GetItemFeesAuthorizationHeader" part="AuthorizationHeader" use="literal" />
-        <soap:header message="tns:GetItemFeesConfigurationHeader" part="ConfigurationHeader" use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap:body use="literal" />
@@ -2282,90 +2235,6 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="AddCampaign">
-      <soap:operation soapAction="http://api.tradera.com/AddCampaign" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-        <soap:header message="tns:AddCampaignAuthenticationHeader" part="AuthenticationHeader" use="literal" />
-        <soap:header message="tns:AddCampaignAuthorizationHeader" part="AuthorizationHeader" use="literal" />
-        <soap:header message="tns:AddCampaignConfigurationHeader" part="ConfigurationHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="UpdateCampaign">
-      <soap:operation soapAction="http://api.tradera.com/UpdateCampaign" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-        <soap:header message="tns:UpdateCampaignAuthenticationHeader" part="AuthenticationHeader" use="literal" />
-        <soap:header message="tns:UpdateCampaignAuthorizationHeader" part="AuthorizationHeader" use="literal" />
-        <soap:header message="tns:UpdateCampaignConfigurationHeader" part="ConfigurationHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetCampaign">
-      <soap:operation soapAction="http://api.tradera.com/GetCampaign" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-        <soap:header message="tns:GetCampaignAuthenticationHeader" part="AuthenticationHeader" use="literal" />
-        <soap:header message="tns:GetCampaignAuthorizationHeader" part="AuthorizationHeader" use="literal" />
-        <soap:header message="tns:GetCampaignConfigurationHeader" part="ConfigurationHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetCampaignsList">
-      <soap:operation soapAction="http://api.tradera.com/GetCampaignsList" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-        <soap:header message="tns:GetCampaignsListAuthenticationHeader" part="AuthenticationHeader" use="literal" />
-        <soap:header message="tns:GetCampaignsListAuthorizationHeader" part="AuthorizationHeader" use="literal" />
-        <soap:header message="tns:GetCampaignsListConfigurationHeader" part="ConfigurationHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="RemoveCampaign">
-      <soap:operation soapAction="http://api.tradera.com/RemoveCampaign" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-        <soap:header message="tns:RemoveCampaignAuthenticationHeader" part="AuthenticationHeader" use="literal" />
-        <soap:header message="tns:RemoveCampaignAuthorizationHeader" part="AuthorizationHeader" use="literal" />
-        <soap:header message="tns:RemoveCampaignConfigurationHeader" part="ConfigurationHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetItemCampaigns">
-      <soap:operation soapAction="http://api.tradera.com/GetItemCampaigns" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-        <soap:header message="tns:GetItemCampaignsAuthenticationHeader" part="AuthenticationHeader" use="literal" />
-        <soap:header message="tns:GetItemCampaignsAuthorizationHeader" part="AuthorizationHeader" use="literal" />
-        <soap:header message="tns:GetItemCampaignsConfigurationHeader" part="ConfigurationHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="UpdateItemCampaigns">
-      <soap:operation soapAction="http://api.tradera.com/UpdateItemCampaigns" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-        <soap:header message="tns:UpdateItemCampaignsAuthenticationHeader" part="AuthenticationHeader" use="literal" />
-        <soap:header message="tns:UpdateItemCampaignsAuthorizationHeader" part="AuthorizationHeader" use="literal" />
-        <soap:header message="tns:UpdateItemCampaignsConfigurationHeader" part="ConfigurationHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="GetUpdatedSellerItems">
       <soap:operation soapAction="http://api.tradera.com/GetUpdatedSellerItems" style="document" />
       <wsdl:input>
@@ -2402,6 +2271,18 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="SetPricesOnNonShopItems">
+      <soap:operation soapAction="http://api.tradera.com/SetPricesOnNonShopItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SetPricesOnNonShopItemsAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:SetPricesOnNonShopItemsAuthorizationHeader" part="AuthorizationHeader" use="literal" />
+        <soap:header message="tns:SetPricesOnNonShopItemsConfigurationHeader" part="ConfigurationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="SetActivateDateOnShopItems">
       <soap:operation soapAction="http://api.tradera.com/SetActivateDateOnShopItems" style="document" />
       <wsdl:input>
@@ -2433,6 +2314,54 @@
         <soap:header message="tns:LeaveOrderFeedbackToBuyerAuthenticationHeader" part="AuthenticationHeader" use="literal" />
         <soap:header message="tns:LeaveOrderFeedbackToBuyerAuthorizationHeader" part="AuthorizationHeader" use="literal" />
         <soap:header message="tns:LeaveOrderFeedbackToBuyerConfigurationHeader" part="ConfigurationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberPaymentOptions">
+      <soap:operation soapAction="http://api.tradera.com/GetMemberPaymentOptions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetMemberPaymentOptionsAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetMemberPaymentOptionsAuthorizationHeader" part="AuthorizationHeader" use="literal" />
+        <soap:header message="tns:GetMemberPaymentOptionsConfigurationHeader" part="ConfigurationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BeginBankIdVerification">
+      <soap:operation soapAction="http://api.tradera.com/BeginBankIdVerification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:BeginBankIdVerificationAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:BeginBankIdVerificationAuthorizationHeader" part="AuthorizationHeader" use="literal" />
+        <soap:header message="tns:BeginBankIdVerificationConfigurationHeader" part="ConfigurationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankIdVerificationProgress">
+      <soap:operation soapAction="http://api.tradera.com/GetBankIdVerificationProgress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetBankIdVerificationProgressAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetBankIdVerificationProgressAuthorizationHeader" part="AuthorizationHeader" use="literal" />
+        <soap:header message="tns:GetBankIdVerificationProgressConfigurationHeader" part="ConfigurationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelBankIdVerification">
+      <soap:operation soapAction="http://api.tradera.com/CancelBankIdVerification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:CancelBankIdVerificationAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:CancelBankIdVerificationAuthorizationHeader" part="AuthorizationHeader" use="literal" />
+        <soap:header message="tns:CancelBankIdVerificationConfigurationHeader" part="ConfigurationHeader" use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap:body use="literal" />
@@ -2561,18 +2490,6 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetItemFees">
-      <soap12:operation soapAction="http://api.tradera.com/GetItemFees" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-        <soap12:header message="tns:GetItemFeesAuthenticationHeader" part="AuthenticationHeader" use="literal" />
-        <soap12:header message="tns:GetItemFeesAuthorizationHeader" part="AuthorizationHeader" use="literal" />
-        <soap12:header message="tns:GetItemFeesConfigurationHeader" part="ConfigurationHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="EndItem">
       <soap12:operation soapAction="http://api.tradera.com/EndItem" style="document" />
       <wsdl:input>
@@ -2693,90 +2610,6 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="AddCampaign">
-      <soap12:operation soapAction="http://api.tradera.com/AddCampaign" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-        <soap12:header message="tns:AddCampaignAuthenticationHeader" part="AuthenticationHeader" use="literal" />
-        <soap12:header message="tns:AddCampaignAuthorizationHeader" part="AuthorizationHeader" use="literal" />
-        <soap12:header message="tns:AddCampaignConfigurationHeader" part="ConfigurationHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="UpdateCampaign">
-      <soap12:operation soapAction="http://api.tradera.com/UpdateCampaign" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-        <soap12:header message="tns:UpdateCampaignAuthenticationHeader" part="AuthenticationHeader" use="literal" />
-        <soap12:header message="tns:UpdateCampaignAuthorizationHeader" part="AuthorizationHeader" use="literal" />
-        <soap12:header message="tns:UpdateCampaignConfigurationHeader" part="ConfigurationHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetCampaign">
-      <soap12:operation soapAction="http://api.tradera.com/GetCampaign" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-        <soap12:header message="tns:GetCampaignAuthenticationHeader" part="AuthenticationHeader" use="literal" />
-        <soap12:header message="tns:GetCampaignAuthorizationHeader" part="AuthorizationHeader" use="literal" />
-        <soap12:header message="tns:GetCampaignConfigurationHeader" part="ConfigurationHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetCampaignsList">
-      <soap12:operation soapAction="http://api.tradera.com/GetCampaignsList" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-        <soap12:header message="tns:GetCampaignsListAuthenticationHeader" part="AuthenticationHeader" use="literal" />
-        <soap12:header message="tns:GetCampaignsListAuthorizationHeader" part="AuthorizationHeader" use="literal" />
-        <soap12:header message="tns:GetCampaignsListConfigurationHeader" part="ConfigurationHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="RemoveCampaign">
-      <soap12:operation soapAction="http://api.tradera.com/RemoveCampaign" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-        <soap12:header message="tns:RemoveCampaignAuthenticationHeader" part="AuthenticationHeader" use="literal" />
-        <soap12:header message="tns:RemoveCampaignAuthorizationHeader" part="AuthorizationHeader" use="literal" />
-        <soap12:header message="tns:RemoveCampaignConfigurationHeader" part="ConfigurationHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetItemCampaigns">
-      <soap12:operation soapAction="http://api.tradera.com/GetItemCampaigns" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-        <soap12:header message="tns:GetItemCampaignsAuthenticationHeader" part="AuthenticationHeader" use="literal" />
-        <soap12:header message="tns:GetItemCampaignsAuthorizationHeader" part="AuthorizationHeader" use="literal" />
-        <soap12:header message="tns:GetItemCampaignsConfigurationHeader" part="ConfigurationHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="UpdateItemCampaigns">
-      <soap12:operation soapAction="http://api.tradera.com/UpdateItemCampaigns" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-        <soap12:header message="tns:UpdateItemCampaignsAuthenticationHeader" part="AuthenticationHeader" use="literal" />
-        <soap12:header message="tns:UpdateItemCampaignsAuthorizationHeader" part="AuthorizationHeader" use="literal" />
-        <soap12:header message="tns:UpdateItemCampaignsConfigurationHeader" part="ConfigurationHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="GetUpdatedSellerItems">
       <soap12:operation soapAction="http://api.tradera.com/GetUpdatedSellerItems" style="document" />
       <wsdl:input>
@@ -2813,6 +2646,18 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="SetPricesOnNonShopItems">
+      <soap12:operation soapAction="http://api.tradera.com/SetPricesOnNonShopItems" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SetPricesOnNonShopItemsAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:SetPricesOnNonShopItemsAuthorizationHeader" part="AuthorizationHeader" use="literal" />
+        <soap12:header message="tns:SetPricesOnNonShopItemsConfigurationHeader" part="ConfigurationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="SetActivateDateOnShopItems">
       <soap12:operation soapAction="http://api.tradera.com/SetActivateDateOnShopItems" style="document" />
       <wsdl:input>
@@ -2844,6 +2689,54 @@
         <soap12:header message="tns:LeaveOrderFeedbackToBuyerAuthenticationHeader" part="AuthenticationHeader" use="literal" />
         <soap12:header message="tns:LeaveOrderFeedbackToBuyerAuthorizationHeader" part="AuthorizationHeader" use="literal" />
         <soap12:header message="tns:LeaveOrderFeedbackToBuyerConfigurationHeader" part="ConfigurationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberPaymentOptions">
+      <soap12:operation soapAction="http://api.tradera.com/GetMemberPaymentOptions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetMemberPaymentOptionsAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetMemberPaymentOptionsAuthorizationHeader" part="AuthorizationHeader" use="literal" />
+        <soap12:header message="tns:GetMemberPaymentOptionsConfigurationHeader" part="ConfigurationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BeginBankIdVerification">
+      <soap12:operation soapAction="http://api.tradera.com/BeginBankIdVerification" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BeginBankIdVerificationAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:BeginBankIdVerificationAuthorizationHeader" part="AuthorizationHeader" use="literal" />
+        <soap12:header message="tns:BeginBankIdVerificationConfigurationHeader" part="ConfigurationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankIdVerificationProgress">
+      <soap12:operation soapAction="http://api.tradera.com/GetBankIdVerificationProgress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetBankIdVerificationProgressAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetBankIdVerificationProgressAuthorizationHeader" part="AuthorizationHeader" use="literal" />
+        <soap12:header message="tns:GetBankIdVerificationProgressConfigurationHeader" part="ConfigurationHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelBankIdVerification">
+      <soap12:operation soapAction="http://api.tradera.com/CancelBankIdVerification" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:CancelBankIdVerificationAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:CancelBankIdVerificationAuthorizationHeader" part="AuthorizationHeader" use="literal" />
+        <soap12:header message="tns:CancelBankIdVerificationConfigurationHeader" part="ConfigurationHeader" use="literal" />
       </wsdl:input>
       <wsdl:output>
         <soap12:body use="literal" />
@@ -2909,15 +2802,6 @@
         <mime:mimeXml part="Body" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetItemFees">
-      <http:operation location="/GetItemFees" />
-      <wsdl:input>
-        <http:urlEncoded />
-      </wsdl:input>
-      <wsdl:output>
-        <mime:mimeXml part="Body" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="EndItem">
       <http:operation location="/EndItem" />
       <wsdl:input>
@@ -2954,31 +2838,6 @@
         <mime:mimeXml part="Body" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetCampaign">
-      <http:operation location="/GetCampaign" />
-      <wsdl:input>
-        <http:urlEncoded />
-      </wsdl:input>
-      <wsdl:output>
-        <mime:mimeXml part="Body" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetCampaignsList">
-      <http:operation location="/GetCampaignsList" />
-      <wsdl:input>
-        <http:urlEncoded />
-      </wsdl:input>
-      <wsdl:output>
-        <mime:mimeXml part="Body" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="RemoveCampaign">
-      <http:operation location="/RemoveCampaign" />
-      <wsdl:input>
-        <http:urlEncoded />
-      </wsdl:input>
-      <wsdl:output />
-    </wsdl:operation>
     <wsdl:operation name="GetUserInfo">
       <http:operation location="/GetUserInfo" />
       <wsdl:input>
@@ -2994,6 +2853,24 @@
         <http:urlEncoded />
       </wsdl:input>
       <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberPaymentOptions">
+      <http:operation location="/GetMemberPaymentOptions" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BeginBankIdVerification">
+      <http:operation location="/BeginBankIdVerification" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
     </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="RestrictedServiceHttpPost" type="tns:RestrictedServiceHttpPost">
@@ -3055,15 +2932,6 @@
         <mime:mimeXml part="Body" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetItemFees">
-      <http:operation location="/GetItemFees" />
-      <wsdl:input>
-        <mime:content type="application/x-www-form-urlencoded" />
-      </wsdl:input>
-      <wsdl:output>
-        <mime:mimeXml part="Body" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="EndItem">
       <http:operation location="/EndItem" />
       <wsdl:input>
@@ -3100,31 +2968,6 @@
         <mime:mimeXml part="Body" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetCampaign">
-      <http:operation location="/GetCampaign" />
-      <wsdl:input>
-        <mime:content type="application/x-www-form-urlencoded" />
-      </wsdl:input>
-      <wsdl:output>
-        <mime:mimeXml part="Body" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetCampaignsList">
-      <http:operation location="/GetCampaignsList" />
-      <wsdl:input>
-        <mime:content type="application/x-www-form-urlencoded" />
-      </wsdl:input>
-      <wsdl:output>
-        <mime:mimeXml part="Body" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="RemoveCampaign">
-      <http:operation location="/RemoveCampaign" />
-      <wsdl:input>
-        <mime:content type="application/x-www-form-urlencoded" />
-      </wsdl:input>
-      <wsdl:output />
-    </wsdl:operation>
     <wsdl:operation name="GetUserInfo">
       <http:operation location="/GetUserInfo" />
       <wsdl:input>
@@ -3141,14 +2984,32 @@
       </wsdl:input>
       <wsdl:output />
     </wsdl:operation>
+    <wsdl:operation name="GetMemberPaymentOptions">
+      <http:operation location="/GetMemberPaymentOptions" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BeginBankIdVerification">
+      <http:operation location="/BeginBankIdVerification" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="RestrictedService">
     <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Services that require authorization from the Tradera user being impersonated.</wsdl:documentation>
     <wsdl:port name="RestrictedServiceSoap" binding="tns:RestrictedServiceSoap">
-      <soap:address location="http://api.tradera.com/v3/restrictedservice.asmx" />
+      <soap:address location="https://api.tradera.com/v3/restrictedservice.asmx" />
     </wsdl:port>
     <wsdl:port name="RestrictedServiceSoap12" binding="tns:RestrictedServiceSoap12">
-      <soap12:address location="http://api.tradera.com/v3/restrictedservice.asmx" />
+      <soap12:address location="https://api.tradera.com/v3/restrictedservice.asmx" />
     </wsdl:port>
     <wsdl:port name="RestrictedServiceHttpGet" binding="tns:RestrictedServiceHttpGet">
       <http:address location="http://api.tradera.com/v3/restrictedservice.asmx" />

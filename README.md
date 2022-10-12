@@ -9,10 +9,10 @@ This is .NET .dll you can refer to in your projects if you want to use the [Trad
 
 The only thing this project does is add a Service Reference to:
 
-1. https://api.tradera.com/v3/publicservice.asmx?WSDL. 
-2. https://api.tradera.com/v3/restrictedservice.asmx?WSDL. 
-3. https://api.tradera.com/v3/searchservice.asmx?WSDL. 
-4. https://api.tradera.com/v3/buyerservice.asmx?WSDL. 
+1. https://api.tradera.com/v3/publicservice.asmx?WSDL.
+2. https://api.tradera.com/v3/restrictedservice.asmx?WSDL.
+3. https://api.tradera.com/v3/searchservice.asmx?WSDL.
+4. https://api.tradera.com/v3/buyerservice.asmx?WSDL.
 
 All the API code is then generated generated.
 

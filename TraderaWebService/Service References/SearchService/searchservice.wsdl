@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://api.tradera.com" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://api.tradera.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://api.tradera.com" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://api.tradera.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Services that can be called without any specific authorization (except for a Developer account).</wsdl:documentation>
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://api.tradera.com">
@@ -43,6 +43,62 @@
           <s:element minOccurs="1" maxOccurs="1" name="HasBids" type="s:boolean" />
           <s:element minOccurs="1" maxOccurs="1" name="IsEnded" type="s:boolean" />
           <s:element minOccurs="0" maxOccurs="1" name="ItemType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ItemUrl" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CategoryId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BidCount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ImageLinks" type="tns:ArrayOfImageLink" />
+          <s:element minOccurs="0" maxOccurs="1" name="AttributeValues" type="tns:AttributeValues" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfImageLink">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ImageLink" nillable="true" type="tns:ImageLink" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ImageLink">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Url" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Format" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AttributeValues">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TermAttributeValues" type="tns:ArrayOfTermAttributeValue" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumberAttributeValues" type="tns:ArrayOfNumberAttributeValue" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTermAttributeValue">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TermAttributeValue" nillable="true" type="tns:TermAttributeValue" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TermAttributeValue">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Values" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfNumberAttributeValue">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="NumberAttributeValue" nillable="true" type="tns:NumberAttributeValue" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="NumberAttributeValue">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Values" type="tns:ArrayOfDecimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDecimal">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="decimal" type="s:decimal" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="Error">
@@ -96,6 +152,20 @@
           <s:element minOccurs="1" maxOccurs="1" name="PageNumber" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="ItemCondition" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="SellerType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Brands" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="CampaignCodeIds" type="tns:ArrayOfInt" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Attributes" type="tns:AttributeFilter" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AttributeFilter">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Values" type="s:string" />
         </s:sequence>
       </s:complexType>
       <s:element name="SearchAdvancedResponse">
@@ -457,10 +527,10 @@
   <wsdl:service name="SearchService">
     <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Services that can be called without any specific authorization (except for a Developer account).</wsdl:documentation>
     <wsdl:port name="SearchServiceSoap" binding="tns:SearchServiceSoap">
-      <soap:address location="http://api.tradera.com/v3/searchservice.asmx" />
+      <soap:address location="https://api.tradera.com/v3/searchservice.asmx" />
     </wsdl:port>
     <wsdl:port name="SearchServiceSoap12" binding="tns:SearchServiceSoap12">
-      <soap12:address location="http://api.tradera.com/v3/searchservice.asmx" />
+      <soap12:address location="https://api.tradera.com/v3/searchservice.asmx" />
     </wsdl:port>
     <wsdl:port name="SearchServiceHttpGet" binding="tns:SearchServiceHttpGet">
       <http:address location="http://api.tradera.com/v3/searchservice.asmx" />

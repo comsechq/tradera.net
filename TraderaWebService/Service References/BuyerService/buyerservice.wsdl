@@ -1,80 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://api.tradera.com" xmlns:s1="http://api.tradera.com/AbstractTypes" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://api.tradera.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s1="http://api.tradera.com/AbstractTypes" xmlns:tns="http://api.tradera.com" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://api.tradera.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Services for the buyer.</wsdl:documentation>
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://api.tradera.com">
-      <s:element name="Bid">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="bidAmount" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="BidResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="BidResult" type="tns:BidResult" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:complexType name="BidResult">
-        <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="Status" type="tns:BidStatus" />
-          <s:element minOccurs="0" maxOccurs="1" name="LeadingBidder" type="tns:Bidder" />
-          <s:element minOccurs="1" maxOccurs="1" name="LeadingBid" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="NextBid" type="s:int" />
-        </s:sequence>
-      </s:complexType>
-      <s:simpleType name="BidStatus">
-        <s:restriction base="s:string">
-          <s:enumeration value="LeadingBidder" />
-          <s:enumeration value="HigherBidderExists" />
-          <s:enumeration value="NotAllowed" />
-          <s:enumeration value="BelowMinimum" />
-          <s:enumeration value="Ended" />
-          <s:enumeration value="UnexpectedError" />
-          <s:enumeration value="NotStarted" />
-          <s:enumeration value="RegionNotAccepted" />
-          <s:enumeration value="OwnItem" />
-          <s:enumeration value="ItemNotFound" />
-          <s:enumeration value="NumberOfBidsLimitReached" />
-          <s:enumeration value="BelowReservePrice" />
-          <s:enumeration value="BidNotAvailableOnItem" />
-          <s:enumeration value="ChangedMaxBid" />
-        </s:restriction>
-      </s:simpleType>
-      <s:complexType name="Bidder">
-        <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
-          <s:element minOccurs="0" maxOccurs="1" name="Alias" type="s:string" />
-          <s:element minOccurs="1" maxOccurs="1" name="TotalRating" type="s:int" />
-        </s:sequence>
-      </s:complexType>
-      <s:element name="AuthenticationHeader" type="tns:AuthenticationHeader" />
-      <s:complexType name="AuthenticationHeader">
-        <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="AppId" type="s:int" />
-          <s:element minOccurs="0" maxOccurs="1" name="AppKey" type="s:string" />
-        </s:sequence>
-        <s:anyAttribute />
-      </s:complexType>
-      <s:element name="AuthorizationHeader" type="tns:AuthorizationHeader" />
-      <s:complexType name="AuthorizationHeader">
-        <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="UserId" type="s:int" />
-          <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
-        </s:sequence>
-        <s:anyAttribute />
-      </s:complexType>
-      <s:element name="ConfigurationHeader" type="tns:ConfigurationHeader" />
-      <s:complexType name="ConfigurationHeader">
-        <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="Sandbox" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="MaxResultAge" type="s:int" />
-        </s:sequence>
-        <s:anyAttribute />
-      </s:complexType>
       <s:element name="Buy">
         <s:complexType>
           <s:sequence>
@@ -112,6 +40,30 @@
           <s:enumeration value="BuyNotAvailableOnItem" />
         </s:restriction>
       </s:simpleType>
+      <s:element name="AuthenticationHeader" type="tns:AuthenticationHeader" />
+      <s:complexType name="AuthenticationHeader">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AppId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="AppKey" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="AuthorizationHeader" type="tns:AuthorizationHeader" />
+      <s:complexType name="AuthorizationHeader">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="UserId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="ConfigurationHeader" type="tns:ConfigurationHeader" />
+      <s:complexType name="ConfigurationHeader">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Sandbox" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxResultAge" type="s:int" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
       <s:element name="GetMemorylistItems">
         <s:complexType>
           <s:sequence>
@@ -150,10 +102,12 @@
           <s:element minOccurs="1" maxOccurs="1" name="StartQuantity" type="s:int" />
           <s:element minOccurs="1" maxOccurs="1" name="RemainingQuantity" type="s:int" />
           <s:element minOccurs="1" maxOccurs="1" name="ItemType" type="tns:ItemType" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DetailedImageLinks" type="tns:ImageLink" />
           <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
           <s:element minOccurs="1" maxOccurs="1" name="VAT" nillable="true" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="ShortDescription" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="OwnReferences" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="AttributeValues" type="tns:AttributeValues" />
           <s:element minOccurs="0" maxOccurs="1" name="ItemAttributes" type="tns:ArrayOfInt" />
           <s:element minOccurs="0" maxOccurs="1" name="LongDescription" type="s:string" />
           <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
@@ -162,7 +116,7 @@
           <s:element minOccurs="0" maxOccurs="1" name="OpeningBid" type="s:int" />
           <s:element minOccurs="1" maxOccurs="1" name="ReservePrice" nillable="true" type="s:int" />
           <s:element minOccurs="1" maxOccurs="1" name="ReservePriceReached" nillable="true" type="s:boolean" />
-          <s:element minOccurs="0" maxOccurs="1" name="BuyItNowPrice" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BuyItNowPrice" nillable="true" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="NextBid" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="PaymentCondition" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="ShippingCondition" type="s:string" />
@@ -176,8 +130,6 @@
           <s:element minOccurs="0" maxOccurs="1" name="ItemLink" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="ThumbnailLink" type="s:string" />
           <s:element minOccurs="1" maxOccurs="1" name="AcceptedBuyerId" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="Payson" type="s:boolean" />
-          <s:element minOccurs="1" maxOccurs="1" name="PaysonGuarantee" type="s:boolean" />
           <s:element minOccurs="1" maxOccurs="1" name="Paypal" type="s:boolean" />
           <s:element minOccurs="1" maxOccurs="1" name="PaymentTypeId" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="Seller" type="tns:User" />
@@ -188,6 +140,8 @@
         <s:sequence>
           <s:element minOccurs="1" maxOccurs="1" name="ShippingOptionId" type="s:int" />
           <s:element minOccurs="1" maxOccurs="1" name="Cost" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShippingWeight" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShippingProductId" nillable="true" type="s:int" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="ArrayOfInt">
@@ -214,6 +168,7 @@
           <s:element minOccurs="0" maxOccurs="1" name="ZipCode" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="CountryName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PersonalNumber" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="TransactionId" type="s:int" />
         </s:sequence>
       </s:complexType>
@@ -231,6 +186,47 @@
           <s:enumeration value="ShopItem" />
         </s:restriction>
       </s:simpleType>
+      <s:complexType name="ImageLink">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Url" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Format" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AttributeValues">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TermAttributeValues" type="tns:ArrayOfTermAttributeValue" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumberAttributeValues" type="tns:ArrayOfNumberAttributeValue" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTermAttributeValue">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TermAttributeValue" nillable="true" type="tns:TermAttributeValue" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TermAttributeValue">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Values" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfNumberAttributeValue">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="NumberAttributeValue" nillable="true" type="tns:NumberAttributeValue" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="NumberAttributeValue">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Values" type="tns:ArrayOfDecimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDecimal">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="decimal" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
       <s:element name="AddToMemorylist">
         <s:complexType>
           <s:sequence>
@@ -432,52 +428,9 @@
           <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
         </s:sequence>
       </s:complexType>
-      <s:element name="InitPayPalPayment">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="transactionId" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="InitPayPalPaymentResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="InitPayPalPaymentResult" type="tns:InitPayPalPaymentResult" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:complexType name="InitPayPalPaymentResult">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="1" name="PaymentUrl" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="ErrorCode" type="s:string" />
-        </s:sequence>
-      </s:complexType>
-      <s:element name="VerifyPayPalPayment">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="transactionId" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="VerifyPayPalPaymentResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="VerifyPayPalPaymentResult" type="tns:VerifyPayPalPaymentResult" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:complexType name="VerifyPayPalPaymentResult">
-        <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="IsCompleted" type="s:boolean" />
-          <s:element minOccurs="0" maxOccurs="1" name="ErrorCode" type="s:string" />
-        </s:sequence>
-      </s:complexType>
-      <s:element name="BidResult" nillable="true" type="tns:BidResult" />
       <s:element name="BuyResult" nillable="true" type="tns:BuyResult" />
       <s:element name="SellerInfo" nillable="true" type="tns:SellerInfo" />
       <s:element name="ContactSellerResult" nillable="true" type="tns:ContactSellerResult" />
-      <s:element name="InitPayPalPaymentResult" nillable="true" type="tns:InitPayPalPaymentResult" />
-      <s:element name="VerifyPayPalPaymentResult" nillable="true" type="tns:VerifyPayPalPaymentResult" />
     </s:schema>
     <s:schema targetNamespace="http://api.tradera.com/AbstractTypes">
       <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
@@ -492,21 +445,6 @@
       </s:complexType>
     </s:schema>
   </wsdl:types>
-  <wsdl:message name="BidSoapIn">
-    <wsdl:part name="parameters" element="tns:Bid" />
-  </wsdl:message>
-  <wsdl:message name="BidSoapOut">
-    <wsdl:part name="parameters" element="tns:BidResponse" />
-  </wsdl:message>
-  <wsdl:message name="BidAuthenticationHeader">
-    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
-  </wsdl:message>
-  <wsdl:message name="BidAuthorizationHeader">
-    <wsdl:part name="AuthorizationHeader" element="tns:AuthorizationHeader" />
-  </wsdl:message>
-  <wsdl:message name="BidConfigurationHeader">
-    <wsdl:part name="ConfigurationHeader" element="tns:ConfigurationHeader" />
-  </wsdl:message>
   <wsdl:message name="BuySoapIn">
     <wsdl:part name="parameters" element="tns:Buy" />
   </wsdl:message>
@@ -639,43 +577,6 @@
   <wsdl:message name="SendQuestionToSellerConfigurationHeader">
     <wsdl:part name="ConfigurationHeader" element="tns:ConfigurationHeader" />
   </wsdl:message>
-  <wsdl:message name="InitPayPalPaymentSoapIn">
-    <wsdl:part name="parameters" element="tns:InitPayPalPayment" />
-  </wsdl:message>
-  <wsdl:message name="InitPayPalPaymentSoapOut">
-    <wsdl:part name="parameters" element="tns:InitPayPalPaymentResponse" />
-  </wsdl:message>
-  <wsdl:message name="InitPayPalPaymentAuthenticationHeader">
-    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
-  </wsdl:message>
-  <wsdl:message name="InitPayPalPaymentAuthorizationHeader">
-    <wsdl:part name="AuthorizationHeader" element="tns:AuthorizationHeader" />
-  </wsdl:message>
-  <wsdl:message name="InitPayPalPaymentConfigurationHeader">
-    <wsdl:part name="ConfigurationHeader" element="tns:ConfigurationHeader" />
-  </wsdl:message>
-  <wsdl:message name="VerifyPayPalPaymentSoapIn">
-    <wsdl:part name="parameters" element="tns:VerifyPayPalPayment" />
-  </wsdl:message>
-  <wsdl:message name="VerifyPayPalPaymentSoapOut">
-    <wsdl:part name="parameters" element="tns:VerifyPayPalPaymentResponse" />
-  </wsdl:message>
-  <wsdl:message name="VerifyPayPalPaymentAuthenticationHeader">
-    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
-  </wsdl:message>
-  <wsdl:message name="VerifyPayPalPaymentAuthorizationHeader">
-    <wsdl:part name="AuthorizationHeader" element="tns:AuthorizationHeader" />
-  </wsdl:message>
-  <wsdl:message name="VerifyPayPalPaymentConfigurationHeader">
-    <wsdl:part name="ConfigurationHeader" element="tns:ConfigurationHeader" />
-  </wsdl:message>
-  <wsdl:message name="BidHttpGetIn">
-    <wsdl:part name="itemId" type="s:string" />
-    <wsdl:part name="bidAmount" type="s:string" />
-  </wsdl:message>
-  <wsdl:message name="BidHttpGetOut">
-    <wsdl:part name="Body" element="tns:BidResult" />
-  </wsdl:message>
   <wsdl:message name="BuyHttpGetIn">
     <wsdl:part name="itemId" type="s:string" />
     <wsdl:part name="buyAmount" type="s:string" />
@@ -704,25 +605,6 @@
   </wsdl:message>
   <wsdl:message name="SendQuestionToSellerHttpGetOut">
     <wsdl:part name="Body" element="tns:ContactSellerResult" />
-  </wsdl:message>
-  <wsdl:message name="InitPayPalPaymentHttpGetIn">
-    <wsdl:part name="transactionId" type="s:string" />
-  </wsdl:message>
-  <wsdl:message name="InitPayPalPaymentHttpGetOut">
-    <wsdl:part name="Body" element="tns:InitPayPalPaymentResult" />
-  </wsdl:message>
-  <wsdl:message name="VerifyPayPalPaymentHttpGetIn">
-    <wsdl:part name="transactionId" type="s:string" />
-  </wsdl:message>
-  <wsdl:message name="VerifyPayPalPaymentHttpGetOut">
-    <wsdl:part name="Body" element="tns:VerifyPayPalPaymentResult" />
-  </wsdl:message>
-  <wsdl:message name="BidHttpPostIn">
-    <wsdl:part name="itemId" type="s:string" />
-    <wsdl:part name="bidAmount" type="s:string" />
-  </wsdl:message>
-  <wsdl:message name="BidHttpPostOut">
-    <wsdl:part name="Body" element="tns:BidResult" />
   </wsdl:message>
   <wsdl:message name="BuyHttpPostIn">
     <wsdl:part name="itemId" type="s:string" />
@@ -753,23 +635,7 @@
   <wsdl:message name="SendQuestionToSellerHttpPostOut">
     <wsdl:part name="Body" element="tns:ContactSellerResult" />
   </wsdl:message>
-  <wsdl:message name="InitPayPalPaymentHttpPostIn">
-    <wsdl:part name="transactionId" type="s:string" />
-  </wsdl:message>
-  <wsdl:message name="InitPayPalPaymentHttpPostOut">
-    <wsdl:part name="Body" element="tns:InitPayPalPaymentResult" />
-  </wsdl:message>
-  <wsdl:message name="VerifyPayPalPaymentHttpPostIn">
-    <wsdl:part name="transactionId" type="s:string" />
-  </wsdl:message>
-  <wsdl:message name="VerifyPayPalPaymentHttpPostOut">
-    <wsdl:part name="Body" element="tns:VerifyPayPalPaymentResult" />
-  </wsdl:message>
   <wsdl:portType name="BuyerServiceSoap">
-    <wsdl:operation name="Bid">
-      <wsdl:input message="tns:BidSoapIn" />
-      <wsdl:output message="tns:BidSoapOut" />
-    </wsdl:operation>
     <wsdl:operation name="Buy">
       <wsdl:input message="tns:BuySoapIn" />
       <wsdl:output message="tns:BuySoapOut" />
@@ -806,20 +672,8 @@
       <wsdl:input message="tns:SendQuestionToSellerSoapIn" />
       <wsdl:output message="tns:SendQuestionToSellerSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="InitPayPalPayment">
-      <wsdl:input message="tns:InitPayPalPaymentSoapIn" />
-      <wsdl:output message="tns:InitPayPalPaymentSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="VerifyPayPalPayment">
-      <wsdl:input message="tns:VerifyPayPalPaymentSoapIn" />
-      <wsdl:output message="tns:VerifyPayPalPaymentSoapOut" />
-    </wsdl:operation>
   </wsdl:portType>
   <wsdl:portType name="BuyerServiceHttpGet">
-    <wsdl:operation name="Bid">
-      <wsdl:input message="tns:BidHttpGetIn" />
-      <wsdl:output message="tns:BidHttpGetOut" />
-    </wsdl:operation>
     <wsdl:operation name="Buy">
       <wsdl:input message="tns:BuyHttpGetIn" />
       <wsdl:output message="tns:BuyHttpGetOut" />
@@ -840,20 +694,8 @@
       <wsdl:input message="tns:SendQuestionToSellerHttpGetIn" />
       <wsdl:output message="tns:SendQuestionToSellerHttpGetOut" />
     </wsdl:operation>
-    <wsdl:operation name="InitPayPalPayment">
-      <wsdl:input message="tns:InitPayPalPaymentHttpGetIn" />
-      <wsdl:output message="tns:InitPayPalPaymentHttpGetOut" />
-    </wsdl:operation>
-    <wsdl:operation name="VerifyPayPalPayment">
-      <wsdl:input message="tns:VerifyPayPalPaymentHttpGetIn" />
-      <wsdl:output message="tns:VerifyPayPalPaymentHttpGetOut" />
-    </wsdl:operation>
   </wsdl:portType>
   <wsdl:portType name="BuyerServiceHttpPost">
-    <wsdl:operation name="Bid">
-      <wsdl:input message="tns:BidHttpPostIn" />
-      <wsdl:output message="tns:BidHttpPostOut" />
-    </wsdl:operation>
     <wsdl:operation name="Buy">
       <wsdl:input message="tns:BuyHttpPostIn" />
       <wsdl:output message="tns:BuyHttpPostOut" />
@@ -874,29 +716,9 @@
       <wsdl:input message="tns:SendQuestionToSellerHttpPostIn" />
       <wsdl:output message="tns:SendQuestionToSellerHttpPostOut" />
     </wsdl:operation>
-    <wsdl:operation name="InitPayPalPayment">
-      <wsdl:input message="tns:InitPayPalPaymentHttpPostIn" />
-      <wsdl:output message="tns:InitPayPalPaymentHttpPostOut" />
-    </wsdl:operation>
-    <wsdl:operation name="VerifyPayPalPayment">
-      <wsdl:input message="tns:VerifyPayPalPaymentHttpPostIn" />
-      <wsdl:output message="tns:VerifyPayPalPaymentHttpPostOut" />
-    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BuyerServiceSoap" type="tns:BuyerServiceSoap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="Bid">
-      <soap:operation soapAction="http://api.tradera.com/Bid" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-        <soap:header message="tns:BidAuthenticationHeader" part="AuthenticationHeader" use="literal" />
-        <soap:header message="tns:BidAuthorizationHeader" part="AuthorizationHeader" use="literal" />
-        <soap:header message="tns:BidConfigurationHeader" part="ConfigurationHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="Buy">
       <soap:operation soapAction="http://api.tradera.com/Buy" style="document" />
       <wsdl:input>
@@ -1004,45 +826,9 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="InitPayPalPayment">
-      <soap:operation soapAction="http://api.tradera.com/InitPayPalPayment" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-        <soap:header message="tns:InitPayPalPaymentAuthenticationHeader" part="AuthenticationHeader" use="literal" />
-        <soap:header message="tns:InitPayPalPaymentAuthorizationHeader" part="AuthorizationHeader" use="literal" />
-        <soap:header message="tns:InitPayPalPaymentConfigurationHeader" part="ConfigurationHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="VerifyPayPalPayment">
-      <soap:operation soapAction="http://api.tradera.com/VerifyPayPalPayment" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-        <soap:header message="tns:VerifyPayPalPaymentAuthenticationHeader" part="AuthenticationHeader" use="literal" />
-        <soap:header message="tns:VerifyPayPalPaymentAuthorizationHeader" part="AuthorizationHeader" use="literal" />
-        <soap:header message="tns:VerifyPayPalPaymentConfigurationHeader" part="ConfigurationHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="BuyerServiceSoap12" type="tns:BuyerServiceSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="Bid">
-      <soap12:operation soapAction="http://api.tradera.com/Bid" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-        <soap12:header message="tns:BidAuthenticationHeader" part="AuthenticationHeader" use="literal" />
-        <soap12:header message="tns:BidAuthorizationHeader" part="AuthorizationHeader" use="literal" />
-        <soap12:header message="tns:BidConfigurationHeader" part="ConfigurationHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="Buy">
       <soap12:operation soapAction="http://api.tradera.com/Buy" style="document" />
       <wsdl:input>
@@ -1150,42 +936,9 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="InitPayPalPayment">
-      <soap12:operation soapAction="http://api.tradera.com/InitPayPalPayment" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-        <soap12:header message="tns:InitPayPalPaymentAuthenticationHeader" part="AuthenticationHeader" use="literal" />
-        <soap12:header message="tns:InitPayPalPaymentAuthorizationHeader" part="AuthorizationHeader" use="literal" />
-        <soap12:header message="tns:InitPayPalPaymentConfigurationHeader" part="ConfigurationHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="VerifyPayPalPayment">
-      <soap12:operation soapAction="http://api.tradera.com/VerifyPayPalPayment" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-        <soap12:header message="tns:VerifyPayPalPaymentAuthenticationHeader" part="AuthenticationHeader" use="literal" />
-        <soap12:header message="tns:VerifyPayPalPaymentAuthorizationHeader" part="AuthorizationHeader" use="literal" />
-        <soap12:header message="tns:VerifyPayPalPaymentConfigurationHeader" part="ConfigurationHeader" use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="BuyerServiceHttpGet" type="tns:BuyerServiceHttpGet">
     <http:binding verb="GET" />
-    <wsdl:operation name="Bid">
-      <http:operation location="/Bid" />
-      <wsdl:input>
-        <http:urlEncoded />
-      </wsdl:input>
-      <wsdl:output>
-        <mime:mimeXml part="Body" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="Buy">
       <http:operation location="/Buy" />
       <wsdl:input>
@@ -1220,24 +973,6 @@
     </wsdl:operation>
     <wsdl:operation name="SendQuestionToSeller">
       <http:operation location="/SendQuestionToSeller" />
-      <wsdl:input>
-        <http:urlEncoded />
-      </wsdl:input>
-      <wsdl:output>
-        <mime:mimeXml part="Body" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="InitPayPalPayment">
-      <http:operation location="/InitPayPalPayment" />
-      <wsdl:input>
-        <http:urlEncoded />
-      </wsdl:input>
-      <wsdl:output>
-        <mime:mimeXml part="Body" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="VerifyPayPalPayment">
-      <http:operation location="/VerifyPayPalPayment" />
       <wsdl:input>
         <http:urlEncoded />
       </wsdl:input>
@@ -1248,15 +983,6 @@
   </wsdl:binding>
   <wsdl:binding name="BuyerServiceHttpPost" type="tns:BuyerServiceHttpPost">
     <http:binding verb="POST" />
-    <wsdl:operation name="Bid">
-      <http:operation location="/Bid" />
-      <wsdl:input>
-        <mime:content type="application/x-www-form-urlencoded" />
-      </wsdl:input>
-      <wsdl:output>
-        <mime:mimeXml part="Body" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="Buy">
       <http:operation location="/Buy" />
       <wsdl:input>
@@ -1291,24 +1017,6 @@
     </wsdl:operation>
     <wsdl:operation name="SendQuestionToSeller">
       <http:operation location="/SendQuestionToSeller" />
-      <wsdl:input>
-        <mime:content type="application/x-www-form-urlencoded" />
-      </wsdl:input>
-      <wsdl:output>
-        <mime:mimeXml part="Body" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="InitPayPalPayment">
-      <http:operation location="/InitPayPalPayment" />
-      <wsdl:input>
-        <mime:content type="application/x-www-form-urlencoded" />
-      </wsdl:input>
-      <wsdl:output>
-        <mime:mimeXml part="Body" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="VerifyPayPalPayment">
-      <http:operation location="/VerifyPayPalPayment" />
       <wsdl:input>
         <mime:content type="application/x-www-form-urlencoded" />
       </wsdl:input>
@@ -1320,10 +1028,10 @@
   <wsdl:service name="BuyerService">
     <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Services for the buyer.</wsdl:documentation>
     <wsdl:port name="BuyerServiceSoap" binding="tns:BuyerServiceSoap">
-      <soap:address location="http://api.tradera.com/v3/buyerservice.asmx" />
+      <soap:address location="https://api.tradera.com/v3/buyerservice.asmx" />
     </wsdl:port>
     <wsdl:port name="BuyerServiceSoap12" binding="tns:BuyerServiceSoap12">
-      <soap12:address location="http://api.tradera.com/v3/buyerservice.asmx" />
+      <soap12:address location="https://api.tradera.com/v3/buyerservice.asmx" />
     </wsdl:port>
     <wsdl:port name="BuyerServiceHttpGet" binding="tns:BuyerServiceHttpGet">
       <http:address location="http://api.tradera.com/v3/buyerservice.asmx" />

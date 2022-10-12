@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TraderaWebService</RootNamespace>
     <AssemblyName>TraderaWebService</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -69,20 +69,12 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="app.config" />
     <None Include="Service References\BuyerService\buyerservice.wsdl" />
     <None Include="Service References\BuyerService\TraderaWebService.BuyerService.AddToMemorylistResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\BuyerService\TraderaWebService.BuyerService.AuctionBiddingInfo.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\BuyerService\TraderaWebService.BuyerService.BidResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\BuyerService\TraderaWebService.BuyerService.BidResult.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\BuyerService\TraderaWebService.BuyerService.BuyResponse.datasource">
@@ -106,12 +98,6 @@
     <None Include="Service References\BuyerService\TraderaWebService.BuyerService.GetSellerInfoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\BuyerService\TraderaWebService.BuyerService.InitPayPalPaymentResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\BuyerService\TraderaWebService.BuyerService.InitPayPalPaymentResult.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Service References\BuyerService\TraderaWebService.BuyerService.Item.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -130,13 +116,10 @@
     <None Include="Service References\BuyerService\TraderaWebService.BuyerService.Transaction.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\BuyerService\TraderaWebService.BuyerService.VerifyPayPalPaymentResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\BuyerService\TraderaWebService.BuyerService.VerifyPayPalPaymentResult.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Service References\PublicService\publicservice.wsdl" />
+    <None Include="Service References\PublicService\TraderaWebService.PublicService.AttributeDefinition.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\PublicService\TraderaWebService.PublicService.Category.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -144,6 +127,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\PublicService\TraderaWebService.PublicService.GetAcceptedBidderTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PublicService\TraderaWebService.PublicService.GetAttributeDefinitionsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\PublicService\TraderaWebService.PublicService.GetCategoriesResponse.datasource">
@@ -231,9 +217,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\RestrictedService\restrictedservice.wsdl" />
-    <None Include="Service References\RestrictedService\TraderaWebService.RestrictedService.AddCampaignResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Service References\RestrictedService\TraderaWebService.RestrictedService.AddItemCampaignCodeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -255,34 +238,31 @@
     <None Include="Service References\RestrictedService\TraderaWebService.RestrictedService.AddShopItemVariantResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\RestrictedService\TraderaWebService.RestrictedService.CampaignData.datasource">
+    <None Include="Service References\RestrictedService\TraderaWebService.RestrictedService.BeginBankIdVerificationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RestrictedService\TraderaWebService.RestrictedService.BeginBankIdVerificationResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RestrictedService\TraderaWebService.RestrictedService.CancelBankIdVerificationResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\RestrictedService\TraderaWebService.RestrictedService.EndItemResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\RestrictedService\TraderaWebService.RestrictedService.Fee.datasource">
+    <None Include="Service References\RestrictedService\TraderaWebService.RestrictedService.GetBankIdVerificationProgressResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\RestrictedService\TraderaWebService.RestrictedService.GetCampaignListResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\RestrictedService\TraderaWebService.RestrictedService.GetCampaignResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\RestrictedService\TraderaWebService.RestrictedService.GetCampaignsListResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\RestrictedService\TraderaWebService.RestrictedService.GetItemCampaignsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\RestrictedService\TraderaWebService.RestrictedService.GetItemCampaignsResponse1.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\RestrictedService\TraderaWebService.RestrictedService.GetItemFeesResponse.datasource">
+    <None Include="Service References\RestrictedService\TraderaWebService.RestrictedService.GetBankIdVerificationProgressResult.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\RestrictedService\TraderaWebService.RestrictedService.GetItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RestrictedService\TraderaWebService.RestrictedService.GetMemberPaymentOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RestrictedService\TraderaWebService.RestrictedService.GetMemberPaymentOptionsResult.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\RestrictedService\TraderaWebService.RestrictedService.GetRequestResultsResponse.datasource">
@@ -318,9 +298,6 @@
     <None Include="Service References\RestrictedService\TraderaWebService.RestrictedService.QueuedRequestResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\RestrictedService\TraderaWebService.RestrictedService.RemoveCampaignResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Service References\RestrictedService\TraderaWebService.RestrictedService.RemoveShopItemResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -339,6 +316,12 @@
     <None Include="Service References\RestrictedService\TraderaWebService.RestrictedService.SetPriceOnShopItemsResult.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\RestrictedService\TraderaWebService.RestrictedService.SetPricesOnNonShopItemsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RestrictedService\TraderaWebService.RestrictedService.SetPricesOnNonShopItemsResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\RestrictedService\TraderaWebService.RestrictedService.SetQuantityOnShopItemsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -352,12 +335,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\RestrictedService\TraderaWebService.RestrictedService.Transaction.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\RestrictedService\TraderaWebService.RestrictedService.UpdateCampaignResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\RestrictedService\TraderaWebService.RestrictedService.UpdateItemCampaignsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\RestrictedService\TraderaWebService.RestrictedService.UpdateShopItemResponse.datasource">

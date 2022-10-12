@@ -95,6 +95,14 @@ namespace TraderaWebService.PublicService {
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetCategories", ReplyAction="*")]
         System.Threading.Tasks.Task<TraderaWebService.PublicService.GetCategoriesResponse> GetCategoriesAsync(TraderaWebService.PublicService.GetCategoriesRequest request);
         
+        // CODEGEN: Generating message contract since message GetAttributeDefinitionsRequest has headers
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetAttributeDefinitions", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        TraderaWebService.PublicService.GetAttributeDefinitionsResponse GetAttributeDefinitions(TraderaWebService.PublicService.GetAttributeDefinitionsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetAttributeDefinitions", ReplyAction="*")]
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetAttributeDefinitionsResponse> GetAttributeDefinitionsAsync(TraderaWebService.PublicService.GetAttributeDefinitionsRequest request);
+        
         // CODEGEN: Generating message contract since message GetPaymentTypesRequest has headers
         [System.ServiceModel.OperationContractAttribute(Action="http://api.tradera.com/GetPaymentTypes", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -177,7 +185,7 @@ namespace TraderaWebService.PublicService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -237,7 +245,7 @@ namespace TraderaWebService.PublicService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -283,7 +291,7 @@ namespace TraderaWebService.PublicService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -357,7 +365,7 @@ namespace TraderaWebService.PublicService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -389,7 +397,7 @@ namespace TraderaWebService.PublicService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -491,7 +499,7 @@ namespace TraderaWebService.PublicService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
     public enum FeedbackRole {
@@ -504,7 +512,7 @@ namespace TraderaWebService.PublicService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
     public enum FeedbackRating {
@@ -520,7 +528,7 @@ namespace TraderaWebService.PublicService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -580,7 +588,7 @@ namespace TraderaWebService.PublicService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
     public enum GetFeedbackRole {
@@ -596,7 +604,7 @@ namespace TraderaWebService.PublicService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -642,7 +650,7 @@ namespace TraderaWebService.PublicService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -716,7 +724,7 @@ namespace TraderaWebService.PublicService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -776,7 +784,123 @@ namespace TraderaWebService.PublicService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
+    public partial class AttributeDefinition : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private long idField;
+        
+        private string nameField;
+        
+        private string descriptionField;
+        
+        private int maxNumberOfValuesField;
+        
+        private int minNumberOfValuesField;
+        
+        private string[] possibleTermValuesField;
+        
+        private string keyField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public long Id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("Id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("Name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string Description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+                this.RaisePropertyChanged("Description");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public int MaxNumberOfValues {
+            get {
+                return this.maxNumberOfValuesField;
+            }
+            set {
+                this.maxNumberOfValuesField = value;
+                this.RaisePropertyChanged("MaxNumberOfValues");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public int MinNumberOfValues {
+            get {
+                return this.minNumberOfValuesField;
+            }
+            set {
+                this.minNumberOfValuesField = value;
+                this.RaisePropertyChanged("MinNumberOfValues");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=5)]
+        public string[] PossibleTermValues {
+            get {
+                return this.possibleTermValuesField;
+            }
+            set {
+                this.possibleTermValuesField = value;
+                this.RaisePropertyChanged("PossibleTermValues");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public string Key {
+            get {
+                return this.keyField;
+            }
+            set {
+                this.keyField = value;
+                this.RaisePropertyChanged("Key");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -836,7 +960,7 @@ namespace TraderaWebService.PublicService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -882,7 +1006,7 @@ namespace TraderaWebService.PublicService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1180,7 +1304,7 @@ namespace TraderaWebService.PublicService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
     public enum SearchMode {
@@ -1193,7 +1317,7 @@ namespace TraderaWebService.PublicService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
     public enum SearchOrderBy {
@@ -1215,7 +1339,7 @@ namespace TraderaWebService.PublicService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
     public enum SearchItemStatus {
@@ -1228,7 +1352,7 @@ namespace TraderaWebService.PublicService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
     public enum SearchItemType {
@@ -1244,7 +1368,7 @@ namespace TraderaWebService.PublicService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
     public enum SearchItemConditon {
@@ -1260,7 +1384,7 @@ namespace TraderaWebService.PublicService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
     public enum SearchSellerType {
@@ -1276,7 +1400,7 @@ namespace TraderaWebService.PublicService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1336,7 +1460,7 @@ namespace TraderaWebService.PublicService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1359,6 +1483,8 @@ namespace TraderaWebService.PublicService {
         
         private ItemType itemTypeField;
         
+        private ImageLink[] detailedImageLinksField;
+        
         private int idField;
         
         private System.Nullable<int> vATField;
@@ -1366,6 +1492,8 @@ namespace TraderaWebService.PublicService {
         private string shortDescriptionField;
         
         private string[] ownReferencesField;
+        
+        private AttributeValues attributeValuesField;
         
         private int[] itemAttributesField;
         
@@ -1385,7 +1513,7 @@ namespace TraderaWebService.PublicService {
         
         private System.Nullable<bool> reservePriceReachedField;
         
-        private int buyItNowPriceField;
+        private System.Nullable<int> buyItNowPriceField;
         
         private bool buyItNowPriceFieldSpecified;
         
@@ -1418,10 +1546,6 @@ namespace TraderaWebService.PublicService {
         private string thumbnailLinkField;
         
         private int acceptedBuyerIdField;
-        
-        private bool paysonField;
-        
-        private bool paysonGuaranteeField;
         
         private bool paypalField;
         
@@ -1528,7 +1652,19 @@ namespace TraderaWebService.PublicService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute("DetailedImageLinks", Order=8)]
+        public ImageLink[] DetailedImageLinks {
+            get {
+                return this.detailedImageLinksField;
+            }
+            set {
+                this.detailedImageLinksField = value;
+                this.RaisePropertyChanged("DetailedImageLinks");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
         public int Id {
             get {
                 return this.idField;
@@ -1540,7 +1676,7 @@ namespace TraderaWebService.PublicService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=10)]
         public System.Nullable<int> VAT {
             get {
                 return this.vATField;
@@ -1552,7 +1688,7 @@ namespace TraderaWebService.PublicService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
         public string ShortDescription {
             get {
                 return this.shortDescriptionField;
@@ -1564,7 +1700,7 @@ namespace TraderaWebService.PublicService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=11)]
+        [System.Xml.Serialization.XmlArrayAttribute(Order=12)]
         public string[] OwnReferences {
             get {
                 return this.ownReferencesField;
@@ -1576,7 +1712,19 @@ namespace TraderaWebService.PublicService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=12)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
+        public AttributeValues AttributeValues {
+            get {
+                return this.attributeValuesField;
+            }
+            set {
+                this.attributeValuesField = value;
+                this.RaisePropertyChanged("AttributeValues");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=14)]
         public int[] ItemAttributes {
             get {
                 return this.itemAttributesField;
@@ -1588,7 +1736,7 @@ namespace TraderaWebService.PublicService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
         public string LongDescription {
             get {
                 return this.longDescriptionField;
@@ -1600,7 +1748,7 @@ namespace TraderaWebService.PublicService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=16)]
         public System.DateTime StartDate {
             get {
                 return this.startDateField;
@@ -1612,7 +1760,7 @@ namespace TraderaWebService.PublicService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=17)]
         public System.DateTime EndDate {
             get {
                 return this.endDateField;
@@ -1624,7 +1772,7 @@ namespace TraderaWebService.PublicService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=16)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=18)]
         public int CategoryId {
             get {
                 return this.categoryIdField;
@@ -1636,7 +1784,7 @@ namespace TraderaWebService.PublicService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=17)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=19)]
         public int OpeningBid {
             get {
                 return this.openingBidField;
@@ -1660,7 +1808,7 @@ namespace TraderaWebService.PublicService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=18)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=20)]
         public System.Nullable<int> ReservePrice {
             get {
                 return this.reservePriceField;
@@ -1672,7 +1820,7 @@ namespace TraderaWebService.PublicService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=19)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=21)]
         public System.Nullable<bool> ReservePriceReached {
             get {
                 return this.reservePriceReachedField;
@@ -1684,8 +1832,8 @@ namespace TraderaWebService.PublicService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=20)]
-        public int BuyItNowPrice {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=22)]
+        public System.Nullable<int> BuyItNowPrice {
             get {
                 return this.buyItNowPriceField;
             }
@@ -1708,7 +1856,7 @@ namespace TraderaWebService.PublicService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=21)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=23)]
         public int NextBid {
             get {
                 return this.nextBidField;
@@ -1732,7 +1880,7 @@ namespace TraderaWebService.PublicService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=22)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=24)]
         public string PaymentCondition {
             get {
                 return this.paymentConditionField;
@@ -1744,7 +1892,7 @@ namespace TraderaWebService.PublicService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=23)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=25)]
         public string ShippingCondition {
             get {
                 return this.shippingConditionField;
@@ -1756,7 +1904,7 @@ namespace TraderaWebService.PublicService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=24)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=26)]
         public bool AcceptsPickup {
             get {
                 return this.acceptsPickupField;
@@ -1768,7 +1916,7 @@ namespace TraderaWebService.PublicService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=25)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=27)]
         public int TotalBids {
             get {
                 return this.totalBidsField;
@@ -1780,7 +1928,7 @@ namespace TraderaWebService.PublicService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=26)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=28)]
         public int MaxBid {
             get {
                 return this.maxBidField;
@@ -1804,7 +1952,7 @@ namespace TraderaWebService.PublicService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=27)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=29)]
         public bool Bold {
             get {
                 return this.boldField;
@@ -1816,7 +1964,7 @@ namespace TraderaWebService.PublicService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=28)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=30)]
         public bool Thumbnail {
             get {
                 return this.thumbnailField;
@@ -1828,7 +1976,7 @@ namespace TraderaWebService.PublicService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=29)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=31)]
         public bool Highlight {
             get {
                 return this.highlightField;
@@ -1840,7 +1988,7 @@ namespace TraderaWebService.PublicService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=30)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=32)]
         public bool FeaturedItem {
             get {
                 return this.featuredItemField;
@@ -1852,7 +2000,7 @@ namespace TraderaWebService.PublicService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=31)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=33)]
         public string ItemLink {
             get {
                 return this.itemLinkField;
@@ -1864,7 +2012,7 @@ namespace TraderaWebService.PublicService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=32)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=34)]
         public string ThumbnailLink {
             get {
                 return this.thumbnailLinkField;
@@ -1876,7 +2024,7 @@ namespace TraderaWebService.PublicService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=33)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=35)]
         public int AcceptedBuyerId {
             get {
                 return this.acceptedBuyerIdField;
@@ -1884,30 +2032,6 @@ namespace TraderaWebService.PublicService {
             set {
                 this.acceptedBuyerIdField = value;
                 this.RaisePropertyChanged("AcceptedBuyerId");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=34)]
-        public bool Payson {
-            get {
-                return this.paysonField;
-            }
-            set {
-                this.paysonField = value;
-                this.RaisePropertyChanged("Payson");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=35)]
-        public bool PaysonGuarantee {
-            get {
-                return this.paysonGuaranteeField;
-            }
-            set {
-                this.paysonGuaranteeField = value;
-                this.RaisePropertyChanged("PaysonGuarantee");
             }
         }
         
@@ -1970,7 +2094,7 @@ namespace TraderaWebService.PublicService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1980,6 +2104,14 @@ namespace TraderaWebService.PublicService {
         private int shippingOptionIdField;
         
         private int costField;
+        
+        private System.Nullable<decimal> shippingWeightField;
+        
+        private bool shippingWeightFieldSpecified;
+        
+        private System.Nullable<int> shippingProductIdField;
+        
+        private bool shippingProductIdFieldSpecified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -2005,6 +2137,54 @@ namespace TraderaWebService.PublicService {
             }
         }
         
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        public System.Nullable<decimal> ShippingWeight {
+            get {
+                return this.shippingWeightField;
+            }
+            set {
+                this.shippingWeightField = value;
+                this.RaisePropertyChanged("ShippingWeight");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ShippingWeightSpecified {
+            get {
+                return this.shippingWeightFieldSpecified;
+            }
+            set {
+                this.shippingWeightFieldSpecified = value;
+                this.RaisePropertyChanged("ShippingWeightSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
+        public System.Nullable<int> ShippingProductId {
+            get {
+                return this.shippingProductIdField;
+            }
+            set {
+                this.shippingProductIdField = value;
+                this.RaisePropertyChanged("ShippingProductId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ShippingProductIdSpecified {
+            get {
+                return this.shippingProductIdFieldSpecified;
+            }
+            set {
+                this.shippingProductIdFieldSpecified = value;
+                this.RaisePropertyChanged("ShippingProductIdSpecified");
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -2016,7 +2196,7 @@ namespace TraderaWebService.PublicService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2048,6 +2228,8 @@ namespace TraderaWebService.PublicService {
         private string cityField;
         
         private string countryNameField;
+        
+        private string personalNumberField;
         
         private int transactionIdField;
         
@@ -2211,6 +2393,18 @@ namespace TraderaWebService.PublicService {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=12)]
+        public string PersonalNumber {
+            get {
+                return this.personalNumberField;
+            }
+            set {
+                this.personalNumberField = value;
+                this.RaisePropertyChanged("PersonalNumber");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
         public int TransactionId {
             get {
                 return this.transactionIdField;
@@ -2244,7 +2438,7 @@ namespace TraderaWebService.PublicService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2304,7 +2498,7 @@ namespace TraderaWebService.PublicService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
     public enum ItemType {
@@ -2320,7 +2514,219 @@ namespace TraderaWebService.PublicService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
+    public partial class ImageLink : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string urlField;
+        
+        private string formatField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string Url {
+            get {
+                return this.urlField;
+            }
+            set {
+                this.urlField = value;
+                this.RaisePropertyChanged("Url");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Format {
+            get {
+                return this.formatField;
+            }
+            set {
+                this.formatField = value;
+                this.RaisePropertyChanged("Format");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
+    public partial class AttributeValues : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private TermAttributeValue[] termAttributeValuesField;
+        
+        private NumberAttributeValue[] numberAttributeValuesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public TermAttributeValue[] TermAttributeValues {
+            get {
+                return this.termAttributeValuesField;
+            }
+            set {
+                this.termAttributeValuesField = value;
+                this.RaisePropertyChanged("TermAttributeValues");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=1)]
+        public NumberAttributeValue[] NumberAttributeValues {
+            get {
+                return this.numberAttributeValuesField;
+            }
+            set {
+                this.numberAttributeValuesField = value;
+                this.RaisePropertyChanged("NumberAttributeValues");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
+    public partial class TermAttributeValue : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int idField;
+        
+        private string nameField;
+        
+        private string[] valuesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int Id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("Id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("Name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=2)]
+        public string[] Values {
+            get {
+                return this.valuesField;
+            }
+            set {
+                this.valuesField = value;
+                this.RaisePropertyChanged("Values");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
+    public partial class NumberAttributeValue : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int idField;
+        
+        private string nameField;
+        
+        private decimal[] valuesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int Id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("Id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("Name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=2)]
+        public decimal[] Values {
+            get {
+                return this.valuesField;
+            }
+            set {
+                this.valuesField = value;
+                this.RaisePropertyChanged("Values");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2380,7 +2786,7 @@ namespace TraderaWebService.PublicService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2510,7 +2916,7 @@ namespace TraderaWebService.PublicService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
     public enum ItemTypeFilter {
@@ -2529,7 +2935,7 @@ namespace TraderaWebService.PublicService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.tradera.com")]
     public enum ActiveFilter {
@@ -2545,7 +2951,7 @@ namespace TraderaWebService.PublicService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3051,6 +3457,48 @@ namespace TraderaWebService.PublicService {
         
         public GetCategoriesResponse(TraderaWebService.PublicService.Category[] GetCategoriesResult) {
             this.GetCategoriesResult = GetCategoriesResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetAttributeDefinitions", WrapperNamespace="http://api.tradera.com", IsWrapped=true)]
+    public partial class GetAttributeDefinitionsRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
+        public TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader;
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://api.tradera.com")]
+        public TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://api.tradera.com", Order=0)]
+        public int categoryId;
+        
+        public GetAttributeDefinitionsRequest() {
+        }
+        
+        public GetAttributeDefinitionsRequest(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, int categoryId) {
+            this.AuthenticationHeader = AuthenticationHeader;
+            this.ConfigurationHeader = ConfigurationHeader;
+            this.categoryId = categoryId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetAttributeDefinitionsResponse", WrapperNamespace="http://api.tradera.com", IsWrapped=true)]
+    public partial class GetAttributeDefinitionsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://api.tradera.com", Order=0)]
+        public TraderaWebService.PublicService.AttributeDefinition[] GetAttributeDefinitionsResult;
+        
+        public GetAttributeDefinitionsResponse() {
+        }
+        
+        public GetAttributeDefinitionsResponse(TraderaWebService.PublicService.AttributeDefinition[] GetAttributeDefinitionsResult) {
+            this.GetAttributeDefinitionsResult = GetAttributeDefinitionsResult;
         }
     }
     
@@ -3755,6 +4203,33 @@ namespace TraderaWebService.PublicService {
             inValue.AuthenticationHeader = AuthenticationHeader;
             inValue.ConfigurationHeader = ConfigurationHeader;
             return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).GetCategoriesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TraderaWebService.PublicService.GetAttributeDefinitionsResponse TraderaWebService.PublicService.PublicServiceSoap.GetAttributeDefinitions(TraderaWebService.PublicService.GetAttributeDefinitionsRequest request) {
+            return base.Channel.GetAttributeDefinitions(request);
+        }
+        
+        public TraderaWebService.PublicService.AttributeDefinition[] GetAttributeDefinitions(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, int categoryId) {
+            TraderaWebService.PublicService.GetAttributeDefinitionsRequest inValue = new TraderaWebService.PublicService.GetAttributeDefinitionsRequest();
+            inValue.AuthenticationHeader = AuthenticationHeader;
+            inValue.ConfigurationHeader = ConfigurationHeader;
+            inValue.categoryId = categoryId;
+            TraderaWebService.PublicService.GetAttributeDefinitionsResponse retVal = ((TraderaWebService.PublicService.PublicServiceSoap)(this)).GetAttributeDefinitions(inValue);
+            return retVal.GetAttributeDefinitionsResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TraderaWebService.PublicService.GetAttributeDefinitionsResponse> TraderaWebService.PublicService.PublicServiceSoap.GetAttributeDefinitionsAsync(TraderaWebService.PublicService.GetAttributeDefinitionsRequest request) {
+            return base.Channel.GetAttributeDefinitionsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TraderaWebService.PublicService.GetAttributeDefinitionsResponse> GetAttributeDefinitionsAsync(TraderaWebService.PublicService.AuthenticationHeader AuthenticationHeader, TraderaWebService.PublicService.ConfigurationHeader ConfigurationHeader, int categoryId) {
+            TraderaWebService.PublicService.GetAttributeDefinitionsRequest inValue = new TraderaWebService.PublicService.GetAttributeDefinitionsRequest();
+            inValue.AuthenticationHeader = AuthenticationHeader;
+            inValue.ConfigurationHeader = ConfigurationHeader;
+            inValue.categoryId = categoryId;
+            return ((TraderaWebService.PublicService.PublicServiceSoap)(this)).GetAttributeDefinitionsAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
