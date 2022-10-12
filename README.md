@@ -49,9 +49,9 @@ dotnet-svcutil --update .\SearchService
 
 Clone this source source, compile, add a reference to `TraderaWebService.dll`.
 
-## Using nuget
+## From nuget.org
 
-We've uploaded this class libary to [nuget](https://www.nuget.org/packages/tradera.net/)!
+This class libary is on [nuget](https://www.nuget.org/packages/TraderaWebService)!
 
 In Visual Studio, type the following commmand in the `Package Manager Console`:
 
